@@ -1,6 +1,6 @@
-import Layout from "components/layout/Layout";
-import { Link } from "react-router-dom";
-import CountUp, { useCountUp } from "react-countup";
+import Layout from '../components/layout/Layout';
+import { Link } from 'react-router-dom';
+import CountUp, { useCountUp } from 'react-countup';
 
 export default function About() {
   return (

@@ -1,0 +1,15 @@
+.modal-footer {
+  padding-top: 0;
+
+  & > .btn-link {
+    color: $white;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    &:hover,
+    &:focus {
+      background-color: $bg-highlighted-light;
+    }
+  }
+}

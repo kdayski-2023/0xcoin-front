@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import VideoPopup from "components/video/VideoPopup";
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import VideoPopup from '../../video/VideoPopup';
 
 const Voices = () => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -29,7 +29,7 @@ const Voices = () => {
                 <li className="nav-item" onClick={() => handleOnClick(1)}>
                   <button
                     className={
-                      activeIndex == 1 ? "nav-link active" : "nav-link"
+                      activeIndex == 1 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <svg
@@ -50,7 +50,7 @@ const Voices = () => {
                 <li className="nav-item" onClick={() => handleOnClick(2)}>
                   <button
                     className={
-                      activeIndex == 2 ? "nav-link active" : "nav-link"
+                      activeIndex == 2 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <svg
@@ -89,7 +89,7 @@ const Voices = () => {
                 <li className="nav-item" onClick={() => handleOnClick(3)}>
                   <button
                     className={
-                      activeIndex == 3 ? "nav-link active" : "nav-link"
+                      activeIndex == 3 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <svg
@@ -108,7 +108,7 @@ const Voices = () => {
                 <li className="nav-item" onClick={() => handleOnClick(4)}>
                   <button
                     className={
-                      activeIndex == 5 ? "nav-link active" : "nav-link"
+                      activeIndex == 5 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <svg
@@ -135,7 +135,7 @@ const Voices = () => {
                 <li className="nav-item" onClick={() => handleOnClick(5)}>
                   <button
                     className={
-                      activeIndex == 5 ? "nav-link active" : "nav-link"
+                      activeIndex == 5 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <svg
@@ -172,8 +172,8 @@ const Voices = () => {
                 <div
                   className={
                     activeIndex == 1
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="row justify-content-center">
@@ -387,8 +387,8 @@ const Voices = () => {
                 <div
                   className={
                     activeIndex == 2
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="row justify-content-center">
@@ -602,8 +602,8 @@ const Voices = () => {
                 <div
                   className={
                     activeIndex == 3
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="row justify-content-center">
@@ -817,8 +817,8 @@ const Voices = () => {
                 <div
                   className={
                     activeIndex == 4
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="row justify-content-center">
@@ -1032,8 +1032,8 @@ const Voices = () => {
                 <div
                   className={
                     activeIndex == 5
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="row justify-content-center">

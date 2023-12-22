@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="resources/vendors/zwicon/zwicon.min.css">
+        <link rel="stylesheet" href="resources/vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="resources/vendors/overlay-scrollbars/OverlayScrollbars.min.css">
+        <link rel="stylesheet" href="resources/vendors/select2/css/select2.min.css">
+        <link rel="stylesheet" href="resources/vendors/dropzone/dropzone.css">
+        <link rel="stylesheet" href="resources/vendors/flatpickr/flatpickr.min.css" />
+        <link rel="stylesheet" href="resources/vendors/nouislider/nouislider.min.css">
+        <link rel="stylesheet" href="resources/vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.css">
+        <link rel="stylesheet" href="resources/vendors/trumbowyg/ui/trumbowyg.min.css">
+        <link rel="stylesheet" href="resources/vendors/rateyo/jquery.rateyo.min.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="resources/css/app.min.css">
+
+        <!-- Demo only -->
+        <link rel="stylesheet" href="demo/css/demo.css">
+    </head>
+
+    <body data-sa-theme="1">
+        <main class="main">
+            @@include('_includes/_page-loader.html')
+
+            @@include('_includes/_header/_header.html')
+
+            @@include('_includes/_sidebar.html', {
+                "group": "forms",
+                "link": "form-components"
+            })
+
+            @@include('_includes/_theme-switch.html')
+
+            <section class="content">
+                <div class="content__inner">
+                    <header class="content__title">
+                        <h1>Form Components</h1>
+
+                        @@include('_includes/_page-actions.html')
+                    </header>
+
+                    @@include('_includes/_form-components/_input-groups.html')
+
+                    @@include('_includes/_form-components/_autosize-textarea.html')
+
+                    @@include('_includes/_form-components/_input-masking.html')
+
+                    @@include('_includes/_form-components/_select2.html')
+
+                    @@include('_includes/_form-components/_file-browser.html')
+
+                    @@include('_includes/_form-components/_drag-drop-upload.html')
+
+                    @@include('_includes/_form-components/_toggle-switch.html')
+
+                    @@include('_includes/_form-components/_date-time-picker.html')
+
+                    @@include('_includes/_form-components/_color-picker.html')
+
+                    @@include('_includes/_form-components/_input-slider.html')
+
+                    @@include('_includes/_form-components/_buttons.html')
+
+                    @@include('_includes/_form-components/_custom-checkboxes.html')
+
+                    @@include('_includes/_form-components/_icon-toggles.html')
+
+                    @@include('_includes/_form-components/_wysiwyg-editor.html')
+
+                    @@include('_includes/_form-components/_ratings.html')
+
+                    @@include('_includes/_form-components/_text-counters.html')
+                </div>
+
+                @@include('_includes/_footer.html')
+            </section>
+        </main>
+
+        @@include('_includes/_ie-warning.html')
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="resources/vendors/jquery/jquery.min.js"></script>
+        <script src="resources/vendors/popper.js/popper.min.js"></script>
+        <script src="resources/vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="resources/vendors/overlay-scrollbars/jquery.overlayScrollbars.min.js"></script>
+
+        <script src="resources/vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
+        <script src="resources/vendors/select2/js/select2.full.min.js"></script>
+        <script src="resources/vendors/dropzone/dropzone.min.js"></script>
+        <script src="resources/vendors/flatpickr/flatpickr.min.js"></script>
+        <script src="resources/vendors/nouislider/nouislider.min.js"></script>
+        <script src="resources/vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+        <script src="resources/vendors/trumbowyg/trumbowyg.min.js"></script>
+        <script src="resources/vendors/rateyo/jquery.rateyo.min.js"></script>
+        <script src="resources/vendors/jquery-text-counter/textcounter.min.js"></script>
+        <script src="resources/vendors/autosize/autosize.min.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="resources/js/app.min.js"></script>
+    </body>
+</html>

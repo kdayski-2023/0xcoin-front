@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="resources/vendors/zwicon/zwicon.min.css">
+        <link rel="stylesheet" href="resources/vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="resources/vendors/overlay-scrollbars/OverlayScrollbars.min.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="resources/css/app.min.css">
+
+        <!-- Demo -->
+        <link rel="stylesheet" href="demo/css/demo.css">
+    </head>
+
+    <body data-sa-theme="1">
+        <main class="main">
+            @@include('_includes/_page-loader.html')
+
+            @@include('_includes/_header/_header.html')
+
+            @@include('_includes/_sidebar.html', {
+                "group": "ui",
+                "link": "colors"
+            })
+
+            @@include('_includes/_theme-switch.html')
+
+            <section class="content">
+                <div class="content__inner">
+                    <header class="content__title">
+                        <h1>Colors <small>All these colors are available in SCSS variable. You can include this with any class/ID as mentioned below.</small></h1>
+
+                        @@include('_includes/_page-actions.html')
+                    </header>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Color</h4>
+                            <h6 class="card-subtitle">Utility text color casses from both Bootstrap and Super Admin 2.0.</h6>
+
+                            <table class="table table-bordered mb-0">
+                                <thead>
+                                    <tr>
+                                        <th width="50%">Bootstrap</th>
+                                        <th>Custom</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="text-primary">.text-primary</span></td>
+                                        <td><span class="text-indigo">.text-indigo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="text-secondary">.text-secondary</span></td>
+                                        <td><span class="text-blue">.text-blue</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="text-success">.text-success</span></td>
+                                        <td><span class="text-purple">.text-purple</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="text-danger">.text-danger</span></td>
+                                        <td><span class="text-pink">.text-pink</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="text-warning">.text-warning</span></td>
+                                        <td><span class="text-red">.text-red</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="text-info">.text-info</span></td>
+                                        <td><span class="text-orange">.text-orange</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="text-light">.text-light</span></td>
+                                        <td><span class="text-yellow">.text-yellow</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="text-dark">.text-dark</span></td>
+                                        <td><span class="text-green">.text-green</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="text-body">.text-body</span></td>
+                                        <td><span class="text-teal">.text-teal</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="text-muted">.text-muted</span></td>
+                                        <td><span class="text-cyan">.text-cyan</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="text-white">.text-white</span></td>
+                                        <td><span class="text-black">.text-black</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="text-black-50">.text-black-50</span></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="text-white-50">.text-white-50</span></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Background color</h4>
+                            <h6 class="card-subtitle">Easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes. Bootstrap background utilities do not set <code>color</code>, so in some cases you’ll want to use <code>.text-*</code> utilities.</h6>
+                        
+                            <table class="table table-bordered mb-0">
+                                <thead>
+                                    <tr>
+                                        <th width="50%">Bootstrap</th>
+                                        <th>Custom</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="color-demo bg-primary">.bg-primary</span></td>
+                                        <td><span class="color-demo bg-indigo">.bg-indigo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-demo bg-secondary">.bg-secondary</span></td>
+                                        <td><span class="color-demo bg-blue">.bg-blue</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-demo bg-success">.bg-success</span></td>
+                                        <td><span class="color-demo bg-purple">.bg-purple</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-demo bg-danger">.bg-danger</span></td>
+                                        <td><span class="color-demo bg-pink">.bg-pink</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-demo bg-warning">.bg-warning</span></td>
+                                        <td><span class="color-demo bg-red">.bg-red</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-demo bg-info">.bg-info</span></td>
+                                        <td><span class="color-demo bg-orange">.bg-orange</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-demo bg-light text-dark">.bg-light</span></td>
+                                        <td><span class="color-demo bg-yellow">.bg-yellow</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-demo bg-dark">.bg-dark</span></td>
+                                        <td><span class="color-demo bg-green">.bg-green</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-demo bg-white text-dark">.bg-white</span></td>
+                                        <td><span class="color-demo bg-teal">.bg-teal</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-demo bg-transparent">.bg-transparent</span></td>
+                                        <td><span class="color-demo bg-cyan">.bg-cyan</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><span class="color-demo bg-black">.bg-black</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                @@include('_includes/_footer.html')
+            </section>
+        </main>
+
+        @@include('_includes/_ie-warning.html')
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="resources/vendors/jquery/jquery.min.js"></script>
+        <script src="resources/vendors/popper.js/popper.min.js"></script>
+        <script src="resources/vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="resources/vendors/overlay-scrollbars/jquery.overlayScrollbars.min.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="resources/js/app.min.js"></script>
+    </body>
+</html>

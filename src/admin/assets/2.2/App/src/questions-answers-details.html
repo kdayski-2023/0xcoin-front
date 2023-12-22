@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="resources/vendors/zwicon/zwicon.min.css">
+        <link rel="stylesheet" href="resources/vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="resources/vendors/overlay-scrollbars/OverlayScrollbars.min.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="resources/css/app.min.css">
+    </head>
+
+    <body data-sa-theme="1">
+        <main class="main">
+            @@include('_includes/_page-loader.html')
+
+            @@include('_includes/_header/_header.html')
+
+            @@include('_includes/_sidebar.html', {
+                "group": "pages",
+                "link": "qa-details"
+            })
+            @@include('_includes/_theme-switch.html')
+
+            <section class="content">
+                <div class="content__inner q-a">
+                    <div class="q-a__question">
+                        <div class="q-a__vote d-none d-sm-block">
+                            <div class="icon-toggle">
+                                <input type="radio" name="q-a-vote">
+                                <i class="zwicon-chevron-up"></i>
+                            </div>
+
+                            <div class="q-a__vote__votes">356</div>
+
+                            <div class="icon-toggle">
+                                <input type="radio" name="q-a-vote">
+                                <i class="zwicon-chevron-down"></i>
+                            </div>
+                        </div>
+
+                        <h2>Dulla vel metus scelerisque ante sollicitudin commodo purus odio Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</h2>
+                        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus.</p>
+
+                        <div class="tags mt-4">
+                            <a href="">#Sollicitudin</a>
+                            <a href="">#Ultricies</a>
+                            <a href="">#Elit</a>
+                            <a href="">#Crastortor</a>
+                        </div>
+
+                        <div class="q-a__info">
+                            <div class="q-a__op">
+                                <a href=""><img src="demo/img/contacts/1.jpg" alt=""></a>
+                                <span>Asked by James Williams 5 days ago</span>
+                            </div>
+
+                            <div class="actions d-none d-sm-flex">
+                                <a href="" class="actions__item">
+                                    <i href="" data-toggle="tooltip" data-title="Report" class="zwicon-flag"></i>
+                                </a>
+                                <a href="" class="actions__item">
+                                    <i href="" data-toggle="tooltip" data-title="Make Favourite" class="zwicon-heart"></i>
+                                </a>
+                                <a href="" class="actions__item">
+                                    <i href="" data-toggle="tooltip" data-title="Share" class="zwicon-share"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content__inner content__inner--sm">
+                    <div class="card">
+                        <div class="toolbar toolbar--inner">
+                            <div class="toolbar__label">Total 10 Answers</div>
+
+                            <nav class="toolbar__nav ml-auto d-none d-sm-block">
+                                <a href="" class="active">Newest</a>
+                                <a href="">Oldest</a>
+                                <a href="">Active</a>
+                            </nav>
+                        </div>
+
+                        <div class="listview listview--bordered listview--block">
+                            <div class="listview__item">
+                                <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus.</p>
+                                <p>Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                                <div class="q-a__info">
+                                    <div class="q-a__op">
+                                        <a href=""><img src="demo/img/contacts/2.jpg" alt=""></a>
+                                        <span>Replied by Jane Cross 6 days ago</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listview__item">
+                                <p>Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui.</p>
+
+                                <div class="q-a__info">
+                                    <div class="q-a__op">
+                                        <a href=""><img src="demo/img/contacts/5.jpg" alt=""></a>
+                                        <span>Replied by Xena Williams 6 days ago</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listview__item">
+                                <p>Mauris accumsan neque sit amet blandit commodo. Aliquam sapien est, finibus non libero vitae, mattis egestas tellus. Aliquam faucibus in odio id feugiat. Quisque eu lacus justo. Sed ut dolor nunc. In fringilla lacus ac magna porttitor, posuere volutpat quam ultrices. Suspendisse vehicula mi eros, sed feugiat dolor condimentum elementum.</p>
+
+                                <div class="q-a__info">
+                                    <div class="q-a__op">
+                                        <a href=""><img src="demo/img/contacts/8.jpg" alt=""></a>
+                                        <span>Replied by Rose Taylor 6 days ago</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <form class="listview__item">
+                                <textarea class="form-control mb-3" placeholder="Start typing..."></textarea>
+                                <button class="btn btn-theme">Answer</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                @@include('_includes/_footer.html')
+            </section>
+        </main>
+
+        @@include('_includes/_ie-warning.html')
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="resources/vendors/jquery/jquery.min.js"></script>
+        <script src="resources/vendors/popper.js/popper.min.js"></script>
+        <script src="resources/vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="resources/vendors/overlay-scrollbars/jquery.overlayScrollbars.min.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="resources/js/app.min.js"></script>
+    </body>
+</html>

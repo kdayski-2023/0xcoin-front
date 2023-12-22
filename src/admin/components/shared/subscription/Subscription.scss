@@ -1,0 +1,17 @@
+.subscription {
+    .card-body {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__period {
+        text-align: center;
+        color: #fff;
+        font-size: 25px;
+    }
+
+    &__descr {
+        margin-top: 71px;
+        margin-bottom: 0;
+    }
+}

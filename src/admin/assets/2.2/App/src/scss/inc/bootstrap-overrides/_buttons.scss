@@ -1,0 +1,173 @@
+// Custom theme buttons
+@mixin custom-theme-buttons ($color, $bg, $hover-bg, $active-bg) {
+  background-color: $bg;
+  color: $color;
+
+  &:not([disabled]) {
+    &:hover,
+    &:focus {
+      color: inherit;
+      background-color: $hover-bg;
+    }
+
+    &.active {
+      color: inherit;
+      background-color: $active-bg;
+    }
+  }
+
+  &[disabled] {
+    cursor: default;
+    opacity: 0.75;
+  }
+}
+
+@mixin custom-theme-outline-buttons ($color, $border-color, $hover-bg) {
+  background-color: transparent;
+  border-color: $border-color;
+  color: $color;
+
+  &:not([disabled]) {
+    &:hover,
+    &:focus {
+      color: inherit;
+      background-color: $hover-bg;
+      border-color: transparent;
+    }
+  }
+}
+
+.btn-theme {
+  @include custom-theme-buttons($btn-theme-color, $btn-theme-bg, $btn-theme-hover-bg, $btn-theme-active-bg);
+}
+
+.btn-theme-dark {
+  @include custom-theme-buttons($btn-theme-dark-color, $btn-theme-dark-bg, $btn-theme-dark-hover-bg, $btn-theme-dark-active-bg);
+}
+
+.btn-outline-theme {
+  @include custom-theme-outline-buttons($btn-theme-color, rgba($btn-theme-color, 0.25), $btn-theme-bg);
+}
+
+.btn-outline-theme-dark {
+  @include custom-theme-outline-buttons($btn-theme-dark-color, $btn-theme-dark-bg, $btn-theme-dark-bg);
+}
+
+
+// Icon Buttons
+.btn--icon {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  padding: 0; 
+  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--icon-text {
+  & > [class*="zwicon-"] {
+    font-size: 1.2rem;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0.15rem 0.5rem 0 0;
+  }
+}
+
+
+// Action and Fixed Buttons
+.btn--action {
+  z-index: 2;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 3px 7px rgba($black, 0.15);
+}
+
+.btn--fixed {
+  position: fixed !important;
+  bottom: 30px;
+  right: 30px;
+  font-size: 2.25rem;
+}
+
+
+// Button Groups
+.btn-group-justified {
+  display: flex;
+  width: 100%;
+  .btn,
+  .btn-group {
+    flex: 1;
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.btn-group--colors {
+  & > .btn {
+    box-shadow: none;
+    border-radius: 50% !important;
+    width: 30px;
+    height: 30px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    position: relative;
+
+    &:before {
+      @include font-icon('\ea48', 2rem);
+      transition: transform 200ms, opacity 200ms;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: $white;
+      transform: scale(0);
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1px 0 0 1px;
+      @include size(100%, 100%);
+    }
+
+    &.btn:not([class*="bg-"]) {
+      border: 1px solid darken($input-border-color, 5%);
+
+      &:before {
+        color: $body-color;
+      }
+    }
+
+    &.active {
+      &:before {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.btn-group,
+.btn-group-vertical {
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: 0;
+  }
+}
+
+.btn-group-vertical {
+  & > .btn:not(:first-child) {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="resources/vendors/zwicon/zwicon.min.css">
+        <link rel="stylesheet" href="resources/vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="resources/vendors/overlay-scrollbars/OverlayScrollbars.min.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="resources/css/app.min.css">
+
+        <!-- Demo -->
+        <link rel="stylesheet" href="demo/css/demo.css">
+    </head>
+
+    <body data-sa-theme="1">
+        <main class="main">
+            @@include('_includes/_page-loader.html')
+
+            @@include('_includes/_header/_header.html')
+
+            @@include('_includes/_sidebar.html', {
+                "group": "components",
+                "link": "popover"
+            })
+            @@include('_includes/_theme-switch.html')
+
+            <section class="content">
+                <div class="content__inner">
+                    <header class="content__title">
+                        <h1>Popover <small>Add small overlay content, like those found in iOS, to any element for housing secondary information.</small></h1>
+
+                        @@include('_includes/_page-actions.html')
+                    </header>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Basic example</h4>
+                            <h6 class="card-subtitle">Click on the button below to toggle the Popover</h6>
+
+                            <button type="button" class="btn btn-theme" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">All four directions</h4>
+                            <h6 class="card-subtitle">Four positioning options are available: top, right, bottom, and left aligned.</h6>
+
+                            <div class="btn-demo">
+                                <button type="button" class="btn btn-theme" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                    Popover on top
+                                </button>
+
+                                <button type="button" class="btn btn-theme" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                    Popover on right
+                                </button>
+
+                                <button type="button" class="btn btn-theme" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+                                    Popover on bottom
+                                </button>
+
+                                <button type="button" class="btn btn-theme" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                    Popover on left
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Hoverable</h4>
+                            <h6 class="card-subtitle">Use <code>focus: hover</code> to make Popovers hoverable.</h6>
+
+                            <button class="btn btn-theme" data-toggle="popover" data-trigger="hover" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Dismiss on next click</h4>
+                            <h6 class="card-subtitle">Use the <code>focus</code> trigger to dismiss popovers on the next click that the user makes.</h6>
+
+                            <button tabindex="0" class="btn btn-theme" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</button>
+                        </div>
+                    </div>
+                </div>
+
+                @@include('_includes/_footer.html')
+            </section>
+        </main>
+
+        @@include('_includes/_ie-warning.html')
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="resources/vendors/jquery/jquery.min.js"></script>
+        <script src="resources/vendors/popper.js/popper.min.js"></script>
+        <script src="resources/vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="resources/vendors/overlay-scrollbars/jquery.overlayScrollbars.min.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="resources/js/app.min.js"></script>
+    </body>
+</html>

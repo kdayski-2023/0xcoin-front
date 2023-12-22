@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="resources/vendors/zwicon/zwicon.min.css">
+        <link rel="stylesheet" href="resources/vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="resources/vendors/overlay-scrollbars/OverlayScrollbars.min.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="resources/css/app.min.css">
+
+        <!-- Demo -->
+        <link rel="stylesheet" href="demo/css/demo.css">
+    </head>
+
+    <body data-sa-theme="1">
+        <main class="main">
+            @@include('_includes/_page-loader.html')
+
+            @@include('_includes/_header/_header.html')
+
+            @@include('_includes/_sidebar.html', {
+                "group": "ui",
+                "link": "cards"
+            })
+
+            @@include('_includes/_theme-switch.html')
+
+            <section class="content">
+                <div class="content__inner">
+                    <header class="content__title">
+                        <h1>Basic example <small>Below is an example of a basic card with mixed content and a fixed width. Cards have no fixed width to start, so they’ll naturally fill the full width of its parent element.</small></h1>
+
+                        @@include('_includes/_page-actions.html')
+                    </header>
+
+                    <div class="card-demo">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <h6 class="card-subtitle">Praesent commodo cursus magna scelerisque consectetur.</h6>
+
+                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <header class="content__title">
+                        <h1>Card with actions <small>Cards can also contains action links in icon format.</small></h1>
+                    </header>
+
+                    <div class="card-demo">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <h6 class="card-subtitle">Praesent commodo cursus magna scelerisque consectetur.</h6>
+
+                                @@include('_includes/_page-actions.html')
+
+                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <header class="content__title">
+                        <h1>Body <small>The building block of a card is the <code>.card-body</code>. Use it whenever you need a padded section within a card.</small></h1>
+                    </header>
+
+                    <div class="card-demo">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <header class="content__title">
+                        <h1>Card links <small>Links are added and placed next to each other by adding <code>.card-link</code> to a <code>&#x3C;a&#x3E;</code> tag.</small></h1>
+                    </header>
+
+                    <div class="card-demo">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <h6 class="card-subtitle">Praesent commodo cursus magna scelerisque consectetur</h6>
+
+                                <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-demo">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <header class="content__title">
+                        <h1>Images <small>Cards can also include images in the top and bottom.</small></h1>
+                    </header>
+
+                    <div class="card-demo">
+                        <div class="card">
+                            <img class="card-img-top" src="demo/img/headers/6.png">
+
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <h6 class="card-subtitle">Praesent commodo cursus magna scelerisque consectetur</h6>
+
+                                <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-demo">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <h6 class="card-subtitle">Praesent commodo cursus magna scelerisque consectetur</h6>
+
+                                <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+                            </div>
+
+                            <img class="card-img-bottom" src="demo/img/headers/4.png">
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <header class="content__title">
+                        <h1>Image overlays <small>Turn an image into a card background and overlay your card’s text. Depending on the image, you may or may not need additional styles or utilities.</small></h1>
+                    </header>
+
+                    <div class="card-demo">
+                        <div class="card">
+                            <img class="card-img" src="demo/img/card-img-overlay.jpg">
+
+                            <div class="card-img-overlay">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card title</h4>
+                                    <h6 class="card-subtitle">Praesent commodo cursus magna scelerisque consectetur</h6>
+
+                                    <p class="card-text">Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <header class="content__title">
+                        <h1>Header and footer <small>Add an optional header and/or footer within a card.</small></h1>
+                    </header>
+
+                    <div class="card-demo">
+                        <div class="card">
+                            <div class="card-header">Featured</div>
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <h6 class="card-subtitle">Praesent commodo cursus magna scelerisque consectetur</h6>
+
+                                <p class="card-text">Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-demo">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <h6 class="card-subtitle">Praesent commodo cursus magna scelerisque consectetur</h6>
+
+                                <p class="card-text">Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+                            </div>
+                            <div class="card-header"><small>2 days ago</small></div>
+                        </div>
+                    </div>
+
+                    <div class="card-demo">
+                        <div class="card">
+                            <div class="card-header">Featured</div>
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <h6 class="card-subtitle">Praesent commodo cursus magna scelerisque consectetur</h6>
+
+                                <p class="card-text">Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+                            </div>
+                            <div class="card-header"><small>2 days ago</small></div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <header class="content__title">
+                        <h1>Background and color <small>Custom background colors and text colors can be added using Bootstrap's color utility classes</small></h1>
+                    </header>
+
+                    <div class="card-demo">
+                        <div class="card text-white bg-primary">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h4 class="card-title">Primary card title</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-demo">
+                        <div class="card text-white bg-success">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h4 class="card-title">Primary card title</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-demo">
+                        <div class="card text-white bg-danger">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h4 class="card-title">Primary card title</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <header class="content__title">
+                        <h1>Text alignment <small>You can quickly change the text alignment of any card in its entirety or specific parts with Bootstrap's text align classes.</small></h1>
+                    </header>
+
+                    <div class="card-demo">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Special title treatment</h4>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="" class="card-link">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-demo">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h4 class="card-title">Special title treatment</h4>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="" class="card-link">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-demo">
+                        <div class="card text-right">
+                            <div class="card-body">
+                                <h4 class="card-title">Special title treatment</h4>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="" class="card-link">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <header class="content__title">
+                        <h1>Card groups <small>Use card groups to render cards as a single, attached element with equal width and height columns. Card groups use <code>display: flex;</code> to achieve their uniform sizing.</small></h1>
+                    </header>
+
+                    <div class="card-group">
+                        <div class="card">
+                            <img class="card-img-top" src="demo/img/headers/6.png">
+
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <h6 class="card-subtitle">Praesent commodo cursus magna scelerisque consectetur</h6>
+
+                                <p class="card-text">Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top" src="demo/img/headers/7.png">
+
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <h6 class="card-subtitle">Praesent commodo cursus magna scelerisque consectetur</h6>
+
+                                <p class="card-text">Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top" src="demo/img/headers/8.png">
+
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <h6 class="card-subtitle">Praesent commodo cursus magna scelerisque consectetur</h6>
+
+                                <p class="card-text">Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <header class="content__title">
+                        <h1>Card decks <small>Need a set of equal width and height cards that aren’t attached to one another? Use card decks.</small></h1>
+                    </header>
+
+                    <div class="card-deck">
+                        <div class="card">
+                            <img class="card-img-top" src="demo/img/headers/3.png">
+
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <h6 class="card-subtitle">Praesent commodo cursus magna scelerisque consectetur</h6>
+
+                                <p class="card-text">Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, fermentum massa justo sit amet risus. Donec sed odio dui eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top" src="demo/img/headers/4.png">
+
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <h6 class="card-subtitle">Praesent commodo cursus magna scelerisque consectetur</h6>
+
+                                <p class="card-text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top" src="demo/img/headers/5.png">
+
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <h6 class="card-subtitle">Praesent commodo cursus magna scelerisque consectetur</h6>
+
+                                <p class="card-text">Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    @@include('_includes/_footer.html')
+                </div>
+            </section>
+        </main>
+
+        @@include('_includes/_ie-warning.html')
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="resources/vendors/jquery/jquery.min.js"></script>
+        <script src="resources/vendors/popper.js/popper.min.js"></script>
+        <script src="resources/vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="resources/vendors/overlay-scrollbars/jquery.overlayScrollbars.min.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="resources/js/app.min.js"></script>
+    </body>
+</html>

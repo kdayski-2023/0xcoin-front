@@ -1,0 +1,29 @@
+.scrollbar,
+.scrollbar-light {
+  height: 100%
+}
+
+.os-theme-dark,
+.os-theme-light {
+  .os-scrollbar {
+    padding: 0;
+  }
+
+  & > .os-scrollbar-vertical {
+    width: 3px;
+  }
+
+  & > .os-scrollbar-horizontal {
+    height: 3px;
+  }
+}
+
+.os-theme-light {
+  & > .os-scrollbar {
+    & > .os-scrollbar-track {
+      & > .os-scrollbar-handle {
+        background-color: rgba($white, 0.25);
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.subscription .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.subscription__period {
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+}
+.subscription__descr {
+  margin-top: 71px;
+  margin-bottom: 0;
+}/*# sourceMappingURL=Subscription.min.css.map */

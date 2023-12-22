@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="resources/vendors/zwicon/zwicon.min.css">
+        <link rel="stylesheet" href="resources/vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="resources/vendors/overlay-scrollbars/OverlayScrollbars.min.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="resources/css/app.min.css">
+    </head>
+
+    <body data-sa-theme="1">
+        <main class="main">
+            @@include('_includes/_page-loader.html')
+
+            @@include('_includes/_header/_header.html')
+
+            @@include('_includes/_sidebar.html', {
+                "group": "components",
+                "link": "carousel"
+            })
+
+            @@include('_includes/_theme-switch.html')
+
+            <section class="content">
+                <div class="content__inner">
+                    <header class="content__title">
+                        <h1>Carousel <small>A slide show component for cycling through element-images or slides of text-like a carousel. Nested carousels are not supported.</small></h1>
+
+                        @@include('_includes/_page-actions.html')
+                    </header>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Slides only</h4>
+                            <h6 class="card-subtitle">Here's a carousel with slides only.</h6>
+
+                            <div class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <img src="demo/img/carousel/c-1.jpg" alt="First slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="demo/img/carousel/c-2.jpg" alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="demo/img/carousel/c-3.jpg" alt="Third slide">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">With controls</h4>
+                            <h6 class="card-subtitle">Adding in the previous and next controls:</h6>
+
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <img src="demo/img/carousel/c-1.jpg" alt="First slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="demo/img/carousel/c-2.jpg" alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="demo/img/carousel/c-3.jpg" alt="Third slide">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">With indicators</h4>
+                            <h6 class="card-subtitle">You can also add the indicators to the carousel, alongside the controls, too.</h6>
+
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <img src="demo/img/carousel/c-1.jpg" alt="First slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="demo/img/carousel/c-2.jpg" alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="demo/img/carousel/c-3.jpg" alt="Third slide">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">With captions</h4>
+                            <h6 class="card-subtitle">Add captions to your slides easily with the <code>.carousel-caption</code> element within any <code>.carousel-item.</code> </h6>
+
+                            <div id="carouselExampleCaption" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleCaption" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleCaption" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleCaption" data-slide-to="2"></li>
+                                </ol>
+
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <img src="demo/img/carousel/c-1.jpg" alt="First slide">
+                                        <div class="carousel-caption">
+                                            <h3>First slide label</h3>
+                                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="demo/img/carousel/c-2.jpg" alt="Second slide">
+                                        <div class="carousel-caption">
+                                            <h3>Second slide label</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="demo/img/carousel/c-3.jpg" alt="Third slide">
+                                        <div class="carousel-caption">
+                                            <h3>Third slide label</h3>
+                                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleCaption" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleCaption" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @@include('_includes/_footer.html')
+            </section>
+        </main>
+
+        @@include('_includes/_ie-warning.html')
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="resources/vendors/jquery/jquery.min.js"></script>
+        <script src="resources/vendors/popper.js/popper.min.js"></script>
+        <script src="resources/vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="resources/vendors/overlay-scrollbars/jquery.overlayScrollbars.min.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="resources/js/app.min.js"></script>
+    </body>
+</html>

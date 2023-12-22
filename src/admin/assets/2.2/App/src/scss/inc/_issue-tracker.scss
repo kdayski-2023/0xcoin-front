@@ -1,0 +1,21 @@
+.issue-tracker {
+  .listview__item {
+    position: relative;
+
+    .actions {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.issue-tracker__item {
+  margin-left: 2rem;
+
+  & > [class*="zwicon-"] {
+    font-size: 1.4rem;
+    vertical-align: top;
+    position: relative;
+    top: 0.05rem;
+    margin-right: 0.5rem;
+  }
+}

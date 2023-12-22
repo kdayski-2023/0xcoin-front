@@ -1,5 +1,5 @@
-import VideoPopup from "components/video/VideoPopup";
-import { useState } from "react";
+import VideoPopup from '../../video/VideoPopup';
+import { useState } from 'react';
 
 export default function About1() {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -16,8 +16,8 @@ export default function About1() {
                 <div
                   className={
                     activeIndex == 1
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="row">
@@ -112,8 +112,8 @@ export default function About1() {
                 <div
                   className={
                     activeIndex == 2
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="row">
@@ -202,8 +202,8 @@ export default function About1() {
                 <div
                   className={
                     activeIndex == 3
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="row">
@@ -294,36 +294,36 @@ export default function About1() {
                 <li className="nav-item" onClick={() => handleOnClick(1)}>
                   <button
                     className={
-                      activeIndex == 1 ? "nav-link active" : "nav-link"
+                      activeIndex == 1 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <span className="icon">
                       <img src="/assets/img/icon/about_icon01.svg" alt="" />
-                    </span>{" "}
+                    </span>{' '}
                     How to make videos
                   </button>
                 </li>
                 <li className="nav-item" onClick={() => handleOnClick(2)}>
                   <button
                     className={
-                      activeIndex == 2 ? "nav-link active" : "nav-link"
+                      activeIndex == 2 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <span className="icon">
                       <img src="/assets/img/icon/about_icon02.svg" alt="" />
-                    </span>{" "}
+                    </span>{' '}
                     Training videos
                   </button>
                 </li>
                 <li className="nav-item" onClick={() => handleOnClick(3)}>
                   <button
                     className={
-                      activeIndex == 3 ? "nav-link active" : "nav-link"
+                      activeIndex == 3 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <span className="icon">
                       <img src="/assets/img/icon/about_icon03.svg" alt="" />
-                    </span>{" "}
+                    </span>{' '}
                     Marketing videos
                   </button>
                 </li>

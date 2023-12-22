@@ -1,0 +1,26 @@
+.form-control {
+  resize: none;
+  appearance: none;
+  -ms-overflow-style: none;
+}
+
+.form-group {
+  position: relative;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select.form-control {
+  background: $select-bg;
+}
+
+
+// validation
+.valid-tooltip,
+.invalid-tooltip {
+  margin-top: 0;
+  border-radius: 0;
+  padding: 0.25rem 0.5rem 0.35rem;
+}

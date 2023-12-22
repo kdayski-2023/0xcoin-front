@@ -1,0 +1,94 @@
+// Custom checkbox
+.checkbox-char {
+  position: relative;
+
+  & > input[type="checkbox"] {
+    display: none;
+
+    &:checked {
+      & ~ label {
+        background-color: rgba($white, 0.75);
+        font-size: 0;
+
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  & > label {
+    border-radius: 50%;
+    background-color: $bg-highlighted-light;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 100%;
+    padding-bottom: 2px;
+    transition: background-color 250ms;
+
+    &:hover {
+      background-color: rgba($white, 0.15);
+    }
+
+    &:before {
+      @include size(100%, 100%);
+      @include font-icon('\ea48', 2rem);
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      transition: opacity 250ms;
+      color: $black;
+      cursor: pointer;
+    }
+
+    &, &:before {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include size(40px, 40px);
+    }
+  }
+}
+
+// Icon toggles
+.icon-toggle {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  line-height: 35px;
+
+  [class*="zwicon-"] {
+    z-index: 2;
+    font-size: 1.75rem;
+    color: rgba($white, 0.25);
+    transition: color 300ms;
+  }
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    
+    &:checked {
+      & ~ [class*="zwicon-"] {
+        color: $white;
+      }
+    }
+  }
+
+  &:hover {
+    [class*="zwicon-"] {
+      color: rgba($white, 0.5);
+    }
+  }
+}

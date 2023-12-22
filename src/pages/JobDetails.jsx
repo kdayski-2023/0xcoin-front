@@ -1,10 +1,16 @@
-import Layout from "components/layout/Layout";
+import Layout from '../components/layout/Layout';
 const JobDetails = () => {
   return (
     <Layout
       headerStyle={1}
       footerStyle={1}
-      breadcrumbTitle={ <> Job <span>Details</span> </> } >
+      breadcrumbTitle={
+        <>
+          {' '}
+          Job <span>Details</span>{' '}
+        </>
+      }
+    >
       <section className="job-details-area pb-150">
         <div className="container">
           <div className="row">

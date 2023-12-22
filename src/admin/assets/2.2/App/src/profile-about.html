@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="resources/vendors/zwicon/zwicon.min.css">
+        <link rel="stylesheet" href="resources/vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="resources/vendors/overlay-scrollbars/OverlayScrollbars.min.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="resources/css/app.min.css">
+    </head>
+
+    <body data-sa-theme="1">
+        <main class="main">
+            @@include('_includes/_page-loader.html')
+
+            @@include('_includes/_header/_header.html')
+
+            @@include('_includes/_sidebar.html', {
+                "group": "pages",
+                "link": "profile"
+            })
+            @@include('_includes/_theme-switch.html')
+
+            <section class="content">
+                <div class="content__inner content__inner--sm">
+                    <header class="content__title">
+                        <h1>Malinda Hollaway <small>Web/UI Developer, Edinburgh, Scotland</small></h1>
+
+                        @@include('_includes/_page-actions.html')
+                    </header>
+
+                    <div class="card profile">
+                        <div class="profile__img">
+                            <img src="demo/img/contacts/2.jpg" alt="">
+
+                            <a href="" class="zwicon-camera profile__img__edit"></a>
+                        </div>
+
+                        <div class="profile__info">
+                            <p>Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magnae tiam porta sem malesuada magna mollis euismod.</p>
+
+                            <ul class="icon-list">
+                                <li><i class="zwicon-phone"></i> 308-360-8938</li>
+                                <li><i class="zwicon-mail"></i> malinda@inbound.plus</li>
+                                <li><i class="zwicon-chat"></i>@malinda-h</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toolbar">
+                        <nav class="toolbar__nav">
+                            <a class="active" href="profile-about.html">About</a>
+                            <a href="profile-photos.html">Photos</a>
+                            <a href="profile-contacts.html">Contacts</a>
+                        </nav>
+
+                        <div class="actions">
+                            <i class="actions__item zwicon-search" data-sa-action="toolbar-search-open"></i>
+                        </div>
+
+                        <div class="toolbar__search">
+                            <input type="text" placeholder="Search...">
+
+                            <i class="toolbar__search__close zwicon-arrow-left" data-sa-action="toolbar-search-close"></i>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-body__title">About Mallinda Hollaway</h5>
+
+                            <p>Pellentesque vitae quam quis tellus dignissim faucibus. Suspendisse mattis felis at faucibus lobortis. Sed sit amet tellus dolor. Fusce quis sollicitudin velit. Praesent gravida ullamcorper lectus et tincidunt. Phasellus lectus quam, porta pharetra feugiat in, auctor eget dolor.</p>
+
+                            <p>Vestibulum tincidunt imperdiet egestas. In in nunc vitae elit tincidunt tristique id eu justo. Quisque gravida maximus orci, vulputate pharetra mauris commodo at. Mauris eget fermentum ipsum, quis faucibus neque. Fusce eleifend sapien sit amet convallis rhoncus. Proin commodo lacinia lectus, et tempus turpis.</p>
+
+                            <br>
+
+                            <h5 class="card-body__title">Contact Information</h5>
+
+                            <ul class="icon-list">
+                                <li><i class="zwicon-phone"></i>308-360-8938</li>
+                                <li><i class="zwicon-mail"></i>robertbosborne@inbound.plus</li>
+                                <li><i class="zwicon-pin"></i>5470 Madison Street Severna Park, MD 21146</li>
+                                <li><i class="zwicon-chat"></i>@malinda-h</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                @@include('_includes/_footer.html')
+            </section>
+        </main>
+
+        @@include('_includes/_ie-warning.html')
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="resources/vendors/jquery/jquery.min.js"></script>
+        <script src="resources/vendors/popper.js/popper.min.js"></script>
+        <script src="resources/vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="resources/vendors/overlay-scrollbars/jquery.overlayScrollbars.min.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="resources/js/app.min.js"></script>
+    </body>
+</html>

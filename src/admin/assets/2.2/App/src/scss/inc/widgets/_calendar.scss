@@ -1,0 +1,52 @@
+.widget-calendar {
+  & > .actions {
+    top: 30px;
+  }
+
+  td, th {
+    border-color: transparent;
+    text-align: center;
+  }
+
+  .fc-toolbar {
+    h2 {
+      font-size: 1.2rem;
+      padding-top: 0.3rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .fc-day-number {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+#widget-calendar-body {
+  padding: 1rem;
+}
+
+.widget-calendar__header {
+  padding: $card-spacer-y $card-spacer-x;
+  background-color: $bg-highlighted-lightest;
+  border-radius: $border-radius $border-radius 0 0;
+}
+
+.widget-calendar__year {
+  font-size: 1.2rem;
+  line-height: 100%;
+  margin-bottom: 0.6rem;
+  color: rgba($white, 0.8);
+}
+
+.widget-calendar__day {
+  font-size: 1.5rem;
+  line-height: 100%;
+  color: $white;
+}
+
+.widget-calendar__body {
+  padding: 1rem;
+  margin-top: 1rem;
+}

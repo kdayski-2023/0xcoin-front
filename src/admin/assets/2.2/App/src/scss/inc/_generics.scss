@@ -1,0 +1,10 @@
+// Generate background color and color classes
+@each $color in $custom-colors {
+  .bg-#{nth($color, 1)} {
+    background-color: #{nth($color, 2)} !important;
+  }
+
+  .text-#{nth($color, 1)} {
+    color: #{nth($color, 2)} !important;
+  }
+}   

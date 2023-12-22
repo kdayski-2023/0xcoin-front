@@ -1,6 +1,6 @@
-import Layout from "components/layout/Layout";
-import { Link } from "react-router-dom";
-const Error = ()=> {
+import Layout from '../components/layout/Layout';
+import { Link } from 'react-router-dom';
+const Error = () => {
   return (
     <Layout headerStyle={1} footerStyle={1}>
       <section className="error-area">
@@ -27,5 +27,5 @@ const Error = ()=> {
       </section>
     </Layout>
   );
-}
-export default Error
+};
+export default Error;

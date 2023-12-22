@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="resources/vendors/zwicon/zwicon.min.css">
+        <link rel="stylesheet" href="resources/vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="resources/vendors/overlay-scrollbars/OverlayScrollbars.min.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="resources/css/app.min.css">
+    </head>
+
+    <body data-sa-theme="1">
+        <main class="main">
+            @@include('_includes/_page-loader.html')
+
+            @@include('_includes/_header/_header.html')
+
+            @@include('_includes/_sidebar.html', {
+                "group": "pages",
+                "link": "new-contact"
+            })
+            @@include('_includes/_theme-switch.html')
+
+            <section class="content">
+                <div class="content__inner content__inner--sm">
+                    <header class="content__title">
+                        <h1>Add new contact <small>Nullam id dolor id nibh ultricies vehicula ut id elit</small></h1>
+                    </header>
+
+                    <div class="card new-contact">
+                        <div class="new-contact__header">
+                            <a href="" class="zwicon-camera new-contact__upload"></a>
+
+                            <img src="demo/img/contacts/user_empty.png" class="new-contact__img" alt="">
+                        </div>
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>First Name</label>
+                                        <input type="text" class="form-control" placeholder="i.e. John">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Last Name</label>
+                                        <input type="text" class="form-control" placeholder="i.e. Smith">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Company</label>
+                                        <input type="text" class="form-control" placeholder="i.e. Google Inc.">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Job Title</label>
+                                        <input type="text" class="form-control" placeholder="i.e. Web Developer">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Email Address</label>
+                                        <input type="text" class="form-control" placeholder="i.e. smith@gmail.com">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Website</label>
+                                        <input type="text" class="form-control" placeholder="i.e. http://smith.com">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Mobile Phone</label>
+                                        <input type="text" class="form-control" placeholder="i.e. +14155552671">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Home Phone</label>
+                                        <input type="text" class="form-control" placeholder="i.e. +415 555 2671">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Address</label>
+                                <textarea class="form-control textarea-autosize" placeholder="i.e. 711-2880 Nulla St. Mankato, Mississippi, 96522."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Notes</label>
+                                <textarea class="form-control textarea-autosize"></textarea>
+                            </div>
+
+                            <div class="clearfix"></div>
+
+                            <div class="mt-5 text-center">
+                                <a href="" class="btn btn-theme">Save new contact</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    @@include('_includes/_footer.html')
+                </div>
+            </section>
+        </main>
+
+        @@include('_includes/_ie-warning.html')
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="resources/vendors/jquery/jquery.min.js"></script>
+        <script src="resources/vendors/popper.js/popper.min.js"></script>
+        <script src="resources/vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="resources/vendors/overlay-scrollbars/jquery.overlayScrollbars.min.js"></script>
+        <script src="resources/vendors/autosize/autosize.min.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="resources/js/app.min.js"></script>
+    </body>
+</html>

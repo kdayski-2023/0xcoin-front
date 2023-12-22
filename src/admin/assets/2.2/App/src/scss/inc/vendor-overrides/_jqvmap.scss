@@ -1,0 +1,33 @@
+.jqvmap-label {
+  position: absolute;
+  background-color: $tooltip-bg;
+  font-size: 0.95rem;
+  color: $white;
+  border-radius: $border-radius;
+  padding: $tooltip-padding-y $tooltip-padding-y;
+  pointer-events:none;
+}
+
+.jqvmap-zoomin,
+.jqvmap-zoomout {
+  @include size(30px, 30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($black, 0.5);
+
+  &:hover {
+    background-color: rgba($black, 0.75);
+  }
+}
+
+.jqvmap-zoomin {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.jqvmap-zoomout {
+  top: 40px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

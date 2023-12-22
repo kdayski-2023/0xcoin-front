@@ -1,9 +1,9 @@
 // import BlogPost from "@/components/blog/BlogPost"
-import Layout from "components/layout/Layout";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import BlogList from "components/layout/blog/BlogList";
-import BlogPagination from "components/layout/blog/BlogPagination";
+import Layout from '../components/layout/Layout';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BlogList from '../components/layout/blog/BlogList';
+import BlogPagination from '../components/layout/blog/BlogPagination';
 export default function Blog() {
   const [activeIndex, setActiveIndex] = useState(1);
   const handleOnClick = (index) => {
@@ -29,7 +29,7 @@ export default function Blog() {
                   <li className="nav-item" onClick={() => handleOnClick(1)}>
                     <button
                       className={
-                        activeIndex == 1 ? "nav-link active" : "nav-link"
+                        activeIndex == 1 ? 'nav-link active' : 'nav-link'
                       }
                     >
                       Community
@@ -38,7 +38,7 @@ export default function Blog() {
                   <li className="nav-item" onClick={() => handleOnClick(2)}>
                     <button
                       className={
-                        activeIndex == 2 ? "nav-link active" : "nav-link"
+                        activeIndex == 2 ? 'nav-link active' : 'nav-link'
                       }
                     >
                       Ai Technology
@@ -47,7 +47,7 @@ export default function Blog() {
                   <li className="nav-item" onClick={() => handleOnClick(3)}>
                     <button
                       className={
-                        activeIndex == 3 ? "nav-link active" : "nav-link"
+                        activeIndex == 3 ? 'nav-link active' : 'nav-link'
                       }
                     >
                       Developers
@@ -56,7 +56,7 @@ export default function Blog() {
                   <li className="nav-item" onClick={() => handleOnClick(4)}>
                     <button
                       className={
-                        activeIndex == 4 ? "nav-link active" : "nav-link"
+                        activeIndex == 4 ? 'nav-link active' : 'nav-link'
                       }
                     >
                       Announcements
@@ -65,7 +65,7 @@ export default function Blog() {
                   <li className="nav-item" onClick={() => handleOnClick(5)}>
                     <button
                       className={
-                        activeIndex == 5 ? "nav-link active" : "nav-link"
+                        activeIndex == 5 ? 'nav-link active' : 'nav-link'
                       }
                     >
                       video Library
@@ -76,8 +76,8 @@ export default function Blog() {
                   <div
                     className={
                       activeIndex == 1
-                        ? "tab-pane fade show active"
-                        : "tab-pane fade"
+                        ? 'tab-pane fade show active'
+                        : 'tab-pane fade'
                     }
                   >
                     <div className="blog-item-wrap">
@@ -97,7 +97,7 @@ export default function Blog() {
                                 life easier when used appropriately. If you're
                                 going to use it, we recommend using it to assist
                                 your work instead of relying on it entirely. For
-                                Link risk-free alternative,{" "}
+                                Link risk-free alternative,{' '}
                               </p>
                             </div>
                             <div className="blog-img">
@@ -110,16 +110,16 @@ export default function Blog() {
                             </div>
                           </div>
                         </div>
-                        <BlogList/>
+                        <BlogList />
                       </div>
-                      <BlogPagination/>
+                      <BlogPagination />
                     </div>
                   </div>
                   <div
                     className={
                       activeIndex == 2
-                        ? "tab-pane fade show active"
-                        : "tab-pane fade"
+                        ? 'tab-pane fade show active'
+                        : 'tab-pane fade'
                     }
                   >
                     <div className="blog-item-wrap">
@@ -139,7 +139,7 @@ export default function Blog() {
                                 life easier when used appropriately. If you're
                                 going to use it, we recommend using it to assist
                                 your work instead of relying on it entirely. For
-                                Link risk-free alternative,{" "}
+                                Link risk-free alternative,{' '}
                               </p>
                             </div>
                             <div className="blog-img">
@@ -152,16 +152,16 @@ export default function Blog() {
                             </div>
                           </div>
                         </div>
-                        <BlogList/>
+                        <BlogList />
                       </div>
-                      <BlogPagination/>
+                      <BlogPagination />
                     </div>
                   </div>
                   <div
                     className={
                       activeIndex == 3
-                        ? "tab-pane fade show active"
-                        : "tab-pane fade"
+                        ? 'tab-pane fade show active'
+                        : 'tab-pane fade'
                     }
                   >
                     <div className="blog-item-wrap">
@@ -181,7 +181,7 @@ export default function Blog() {
                                 life easier when used appropriately. If you're
                                 going to use it, we recommend using it to assist
                                 your work instead of relying on it entirely. For
-                                Link risk-free alternative,{" "}
+                                Link risk-free alternative,{' '}
                               </p>
                             </div>
                             <div className="blog-img">
@@ -194,17 +194,16 @@ export default function Blog() {
                             </div>
                           </div>
                         </div>
-                        <BlogList/>
-                        
+                        <BlogList />
                       </div>
-                      <BlogPagination/>
+                      <BlogPagination />
                     </div>
                   </div>
                   <div
                     className={
                       activeIndex == 4
-                        ? "tab-pane fade show active"
-                        : "tab-pane fade"
+                        ? 'tab-pane fade show active'
+                        : 'tab-pane fade'
                     }
                   >
                     <div className="blog-item-wrap">
@@ -224,7 +223,7 @@ export default function Blog() {
                                 life easier when used appropriately. If you're
                                 going to use it, we recommend using it to assist
                                 your work instead of relying on it entirely. For
-                                Link risk-free alternative,{" "}
+                                Link risk-free alternative,{' '}
                               </p>
                             </div>
                             <div className="blog-img">
@@ -237,17 +236,16 @@ export default function Blog() {
                             </div>
                           </div>
                         </div>
-                        <BlogList/>
-                        
+                        <BlogList />
                       </div>
-                      <BlogPagination/>
+                      <BlogPagination />
                     </div>
                   </div>
                   <div
                     className={
                       activeIndex == 5
-                        ? "tab-pane fade show active"
-                        : "tab-pane fade"
+                        ? 'tab-pane fade show active'
+                        : 'tab-pane fade'
                     }
                   >
                     <div className="blog-item-wrap">
@@ -267,7 +265,7 @@ export default function Blog() {
                                 life easier when used appropriately. If you're
                                 going to use it, we recommend using it to assist
                                 your work instead of relying on it entirely. For
-                                Link risk-free alternative,{" "}
+                                Link risk-free alternative,{' '}
                               </p>
                             </div>
                             <div className="blog-img">
@@ -280,9 +278,9 @@ export default function Blog() {
                             </div>
                           </div>
                         </div>
-                        <BlogList/>
+                        <BlogList />
                       </div>
-                      <BlogPagination/>
+                      <BlogPagination />
                     </div>
                   </div>
                 </div>

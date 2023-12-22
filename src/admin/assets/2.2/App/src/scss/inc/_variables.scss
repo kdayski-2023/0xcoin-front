@@ -1,0 +1,361 @@
+// Options
+$enable-transitions: true;
+$enable-shadows: false;
+
+
+// Colors
+$white: #ffffff;
+$black: #000000;
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+
+$custom-colors: (
+  'blue': $blue,
+  'indigo': $indigo,
+  'purple': $purple,
+  'pink': $pink,
+  'red': $red,
+  'orange': $orange,
+  'yellow': $yellow,
+  'green': $green,
+  'teal': $teal,
+  'cyan': $cyan,
+  'black': $black
+);
+
+$theme-colors: (
+  primary: $blue,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red
+);
+
+// Common action colors
+$bg-hover: rgba($white, 0.06);
+$bg-highlighted-light: rgba($white, 0.08);
+$bg-highlighted-lightest: rgba($white, 0.02);
+$bg-highlighted-dark: rgba($black, 0.2);
+$bg-highlighted-darkest: rgba($black, 0.96);
+$border-light: rgba($white, 0.125);
+$border-lightest: rgba($white, 0.04);
+$color-inverse: #131313;
+
+
+// Buttons
+$btn-box-shadow: 0 2px 2px 0 rgba($black, 0.12);
+$btn-focus-box-shadow: none;
+$btn-focus-width: 0;
+$btn-active-box-shadow: $btn-focus-box-shadow;
+$input-btn-padding-y: 0.6rem;
+$input-btn-padding-x: 1rem;
+$input-btn-padding-y-sm: 0.25rem;
+$input-btn-padding-x-sm: 0.55rem;
+
+$btn-theme-color: $white;
+$btn-theme-bg: rgba($white, 0.125);
+$btn-theme-hover-bg: rgba($white, 0.15);
+$btn-theme-active-bg: rgba($white, 0.35);
+$btn-theme-dark-color: $white;
+$btn-theme-dark-bg: rgba($black, 0.25);
+$btn-theme-dark-hover-bg: rgba($black, 0.5);
+$btn-theme-dark-active-bg: rgba($black, 0.75);
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-icon: 'zwicon';
+$font-size-root: 13px;
+$text-muted: rgba($white, 0.5);
+$headings-color: $white;
+$font-weight-bold: 600;
+$headings-font-weight: $font-weight-bold;
+$blockquote-small-color: $text-muted;
+
+
+// Links
+$link-hover-decoration: none;
+$link-color: #a4d0ff;
+
+
+// Body
+$body-bg: $white;
+$body-color: rgba($white, 0.85);
+
+
+// Form
+$input-bg: transparent;
+$input-color: $body-color;
+$input-disabled-bg: transparent;
+$input-box-shadow: rgba($black, 0);
+$input-border-color: rgba($white, 0.2);
+$input-focus-border-color: rgba($white, 0.5);
+$form-group-margin-bottom: 2rem;
+$input-focus-box-shadow: 0 0 5px rgba($white, 0.15);
+$input-placeholder-color: rgba($white, 0.5);
+$input-border-radius: 0;
+$input-border-radius-lg: 0;
+$input-border-radius-sm: 0;
+$select-bg: url(../img/forms/select-caret.svg) no-repeat bottom 5px right 5px;
+
+
+// Form Validation
+$form-feedback-icon-valid: url(../img/forms/form-validation-valid.svg);
+$form-feedback-icon-invalid: url(../img/forms/form-validation-invalid.svg);
+$form-feedback-font-size: 0.9rem;
+
+
+// Custom Forms
+$custom-control-gutter: 0.75rem;
+$custom-control-indicator-size: 1.53847rem;
+$custom-control-indicator-border-color: rgba($white, 0.35);
+$custom-control-indicator-checked-border-color: $custom-control-indicator-border-color;
+$custom-control-indicator-checked-bg: rgba($white, 0.15);
+$custom-control-indicator-active-bg: rgba($white, 0.15);
+$custom-control-indicator-focus-bg: rgba($white, 0.15);
+$custom-control-indicator-checked-border-color: rgba($white, 0.5);
+$custom-control-indicator-focus-border-color: rgba($white, 0.5);
+$custom-control-indicator-active-border-color: rgba($white, 0.5);
+$custom-checkbox-indicator-icon-checked: url(../img/forms/checkbox-checked.svg);
+$custom-control-label-disabled-color: rgba($white, 0.4);
+$custom-select-background: transparent url(../img/forms/select-caret.svg) no-repeat bottom 5px right 5px;;
+$custom-checkbox-indicator-border-radius: 0;
+
+
+// Layout
+$content-title-heading-color: $white;
+
+
+// Header
+$header-height: 72px;
+$header-shadow: 0 0 13px rgba($black, 0.22);
+$header-z-index: 100;
+$header-bg: rgba($black, 0.3);
+$header-bg-scrolled: $bg-highlighted-darkest;
+
+
+// Dropdown
+$dropdown-bg: $bg-highlighted-darkest;
+$dropdown-border-width: 0;
+$dropdown-border-color: transparent;
+$dropdown-link-color: rgba($white, 0.85);
+$dropdown-link-hover-color: $white;
+$dropdown-link-active-color: $dropdown-link-hover-color;
+$dropdown-link-hover-bg: $bg-hover;
+$dropdown-link-active-bg: $dropdown-link-hover-bg;
+$dropdown-padding-y: 0.8rem;
+$dropdown-item-padding-x: 1.5rem;
+$dropdown-item-padding-y: 0.5rem;
+$dropdown-spacer: 0;
+$dropdown-divider-bg: rgba($white, 0.055);
+$dropdown-header-color: $white;
+$dropdown-menu-invert-bg: rgba($white, 0.95);
+$dropdown-item-invert-color: $black;
+$dropdown-item-invert-hover-bg: rgba($black, 0.1);
+$caret-spacing: 0.5rem;
+
+
+// Border Radius
+$border-radius: 2px;
+$border-radius-lg: 2px;
+$border-radius-sm: 2px;
+
+
+// List Group
+$list-group-bg: transparent;
+$list-group-border-width: 0;
+$list-group-hover-bg: $bg-hover;
+$list-group-item-padding-x: 2rem;
+$list-group-item-padding-y: 1rem;
+
+
+// Pregress Bar
+$progress-bg: rgba($white, 0.1);
+$progress-height: 3px;
+$progress-bar-bg: $white;
+
+
+// Card
+$card-bg: rgba($black, 0.2);
+$card-inner-border-radius: $border-radius;
+$card-border-color: transparent;
+$card-border-radius: $border-radius;
+$card-spacer-x: 2.2rem;
+$card-spacer-y: 2.1rem;
+$card-cap-bg: rgba($black, 0.075);
+$card-img-overlay-padding: 0;
+$card-shadow: 0 1px 5px rgba($black, 0.1);
+$card-columns-margin: 2.3rem;
+
+
+// Sidebars
+$sidebar-bg: rgba($black, 0.125);
+$sidebar-hidden-bg: $bg-highlighted-darkest;
+$sidebar-width: 250px;
+$sidebar-z-index: $header-z-index + 1;
+$navigation-link-color: rgba($white, 0.7);
+$navigation-link-active-color: $white;
+$navigation-link-hover-bg: rgba($white, 0.04);
+$navigation-link-active-bg: rgba($white, 0.06);
+
+
+// logo
+$logo-bg: rgba($black, 0.18);
+
+
+// Tabels
+$table-border-color: $border-light;
+$table-dark-bg: rgba($black, 0.2);
+$table-dark-border-color: rgba($white, 0.06);
+$table-accent-bg: $border-lightest;
+$table-hover-bg: $table-accent-bg;
+$table-cell-padding: 1rem 1.5rem;
+$table-cell-padding-sm: 0.75rem 1rem;
+$table-head-bg: $border-light;
+$table-head-color: $body-color;
+
+// Pagination
+$pagination-border-width: 0;
+$pagination-padding-y: 0;
+$pagination-padding-x: 0;
+$pagination-bg: $bg-highlighted-light;
+$pagination-hover-bg: rgba($white, 0.2);
+$pagination-color: $body-color;
+$pagination-hover-color: $pagination-color;
+$pagination-disabled-bg: $pagination-bg;
+$pagination-disabled-color: $pagination-color;
+$pagination-active-bg: $white;
+$pagination-active-color: $black;
+$pagination-focus-box-shadow: none;
+
+
+// Input Group
+$input-group-addon-border-color: $input-border-color;
+$input-group-addon-bg: transparent;
+
+
+// Code
+$pre-color: $color-inverse;
+$pre-bg: rgba($white, 0.8);
+$pre-border-color: $pre-bg;
+$code-bg: $bg-highlighted-light;
+$code-color: $yellow;
+
+
+// Alert
+$alert-padding-y: 1.5rem;
+$alert-padding-x: 2rem;
+$alert-link-font-weight: normal;
+$alert-border-width: 0;
+$alert-color-level: -10;
+$alert-bg-level: 1.5;
+
+// Close
+$close-font-weight: normal;
+$close-text-shadow: none;
+
+
+// Badges
+$badge-padding-y: 0.6em;
+$badge-padding-x: 0.75em;
+$badge-font-size: 95%;
+$badge-font-weight: 400;
+$badge-pill-padding-x: 1em;
+
+
+// Breadcrumbs
+$breadcrumb-bg: transparent;
+$breadcrumb-padding-x: 0.25rem;
+$breadcrumb-active-color: $white;
+$breadcrumb-divider-color: $text-muted;
+
+
+// Carosuel
+$carousel-control-prev-icon-bg: url(../img/carousel/prev.svg);
+$carousel-control-next-icon-bg: url(../img/carousel/next.svg);
+$carousel-control-icon-width: 40px;
+$carousel-control-opacity: 0.8;
+
+
+// Modal
+$modal-content-bg: $bg-highlighted-darkest;
+$modal-backdrop-bg: $black;
+$modal-backdrop-opacity: 0.2;
+$modal-content-box-shadow-xs: 0 5px 20px rgba(0,0,0,.3);
+$modal-content-box-shadow-sm-up: $modal-content-box-shadow-xs;
+$modal-content-border-width: 0;
+$modal-header-border-width: 0;
+$modal-footer-border-width: 0;
+$modal-header-padding: 25px 30px 0;
+$modal-inner-padding: 25px 30px;
+
+
+// Popovers
+$popover-box-shadow: 0 2px 30px rgba($black, 0.1);
+$popover-arrow-outer-color: transparent;
+$popover-body-padding-x: 1rem;
+$popover-body-padding-y: 1rem;
+$popover-header-padding-x: 1rem;
+$popover-header-padding-y: 1rem;
+$popover-header-bg: transparent;
+$popover-bg: $bg-highlighted-darkest;
+$popover-font-size: 0.9rem;
+
+
+// Nav
+$nav-link-disabled-color: $text-muted;
+$nav-tabs-border-width: 2px;
+$nav-tabs-border-radius: 0;
+$nav-tabs-border-color: $bg-highlighted-light;
+$nav-link-padding-y: 1rem;
+$nav-link-padding-x: 1.5rem;
+$nav-link-padding: 1rem 1.5rem;
+$nav-tabs-link-active-bg: transparent;
+$nav-tabs-link-active-color: $white;
+$nav-pills-link-active-bg: $bg-highlighted-light;
+$nav-pills-link-active-color: $white;
+
+// Tooltips
+$tooltip-padding-y: 0.7rem;
+$tooltip-padding-x:  1.1rem;
+$tooltip-bg: $bg-highlighted-darkest;
+$tooltip-arrow-color: $tooltip-bg;
+$tooltip-opacity: 1;
+
+
+// Backdrop
+$backdrop-z-index: 100;
+
+
+// Listview
+$listview-item-active-bg: rgba($black, 0.035);
+$listview-item-hover-bg: $bg-hover;
+$listview-item-striped-bg: rgba($white, 0.03);
+$listview-border-color: rgba($white, 0.05);
+
+
+// HR
+$hr-border-color: $border-light;
+
+
+// Breadcrumbs
+$breadcrumb-active-color: $white;
+
+
+// Jumbotron
+$jumbotron-bg: $bg-highlighted-light;
+
+
+// Toast
+$toast-font-size: 0.9rem;
+$toast-header-color: $black;
+$toast-padding-y: 0.5rem;
+$toast-border-width: 0;
+$toast-border-radius: $border-radius;

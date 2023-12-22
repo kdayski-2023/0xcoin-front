@@ -1,0 +1,26 @@
+.swal2-modal {
+  .swal2-content {
+    color: $text-muted;
+  }
+}
+.swal2-container.ca {
+  .swal2-title {
+    font-size: 1.25rem;
+    color: $headings-color;
+  }
+
+  .swal2-footer {
+    border-color: $bg-highlighted-light;
+  }
+}
+
+.swal2-actions {
+  .btn {
+    color: $white;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $bg-highlighted-light;
+    }
+  }
+}

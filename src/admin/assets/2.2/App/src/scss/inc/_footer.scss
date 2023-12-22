@@ -1,0 +1,31 @@
+.footer {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+}
+
+.footer__nav {
+  @include list-unstyled();
+
+  & > a {
+    padding: 0 1rem;
+    margin: 0 0.5rem;
+    color: $text-muted;
+    position: relative;
+
+    & + a {
+      &:before {
+        content: '';
+        @include size(4px, 4px);
+        border-radius: 50%;
+        position: absolute;
+        left: -11px;
+        top: 8px;
+        background-color: $text-muted;
+      }
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

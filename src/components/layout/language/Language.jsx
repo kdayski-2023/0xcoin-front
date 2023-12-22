@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import VideoPopup from "components/video/VideoPopup";
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import VideoPopup from '../../video/VideoPopup';
 
 const Language = () => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -85,8 +85,8 @@ const Language = () => {
                 <div
                   className={
                     activeIndex == 1
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="language-img">
@@ -97,8 +97,8 @@ const Language = () => {
                 <div
                   className={
                     activeIndex == 2
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="language-img">
@@ -109,8 +109,8 @@ const Language = () => {
                 <div
                   className={
                     activeIndex == 3
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="language-img">
@@ -121,8 +121,8 @@ const Language = () => {
                 <div
                   className={
                     activeIndex == 4
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="language-img">
@@ -133,8 +133,8 @@ const Language = () => {
                 <div
                   className={
                     activeIndex == 5
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="language-img">
@@ -145,8 +145,8 @@ const Language = () => {
                 <div
                   className={
                     activeIndex == 6
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="language-img">
@@ -157,8 +157,8 @@ const Language = () => {
                 <div
                   className={
                     activeIndex == 7
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="language-img">
@@ -169,8 +169,8 @@ const Language = () => {
                 <div
                   className={
                     activeIndex == 8
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="language-img">
@@ -183,7 +183,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(1)}>
                   <button
                     className={
-                      activeIndex == 1 ? "nav-link active" : "nav-link"
+                      activeIndex == 1 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/united-states02.png" alt="" />
@@ -193,7 +193,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(2)}>
                   <button
                     className={
-                      activeIndex == 2 ? "nav-link active" : "nav-link"
+                      activeIndex == 2 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/spain02.png" alt="" />
@@ -203,7 +203,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(3)}>
                   <button
                     className={
-                      activeIndex == 3 ? "nav-link active" : "nav-link"
+                      activeIndex == 3 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/german02.png" alt="" />
@@ -213,7 +213,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(4)}>
                   <button
                     className={
-                      activeIndex == 4 ? "nav-link active" : "nav-link"
+                      activeIndex == 4 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/france02.png" alt="" />
@@ -223,7 +223,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(5)}>
                   <button
                     className={
-                      activeIndex == 5 ? "nav-link active" : "nav-link"
+                      activeIndex == 5 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/portugal.png" alt="" />
@@ -233,7 +233,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(6)}>
                   <button
                     className={
-                      activeIndex == 6 ? "nav-link active" : "nav-link"
+                      activeIndex == 6 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/china.png" alt="" />
@@ -243,7 +243,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(7)}>
                   <button
                     className={
-                      activeIndex == 7 ? "nav-link active" : "nav-link"
+                      activeIndex == 7 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/mongolia.png" alt="" />
@@ -253,7 +253,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(8)}>
                   <button
                     className={
-                      activeIndex == 8 ? "nav-link active" : "nav-link"
+                      activeIndex == 8 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/georgia.png" alt="" />

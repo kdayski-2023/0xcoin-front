@@ -1,6 +1,6 @@
-import Layout from "components/layout/Layout";
-import { Link } from "react-router-dom";
-import Slider from "react-slick";
+import Layout from '../components/layout/Layout';
+import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
 const settings = {
   dots: false,
   infinite: true,
@@ -318,7 +318,7 @@ const BlogDetails = () => {
                         <div className="comments-text">
                           <div className="avatar-name">
                             <h6 className="name">
-                              by Benjamin /{" "}
+                              by Benjamin /{' '}
                               <span className="date">September 28, 2023</span>
                             </h6>
                           </div>
@@ -350,7 +350,7 @@ const BlogDetails = () => {
                             <div className="comments-text">
                               <div className="avatar-name">
                                 <h6 className="name">
-                                  by Thomas /{" "}
+                                  by Thomas /{' '}
                                   <span className="date">
                                     September 30, 2023
                                   </span>

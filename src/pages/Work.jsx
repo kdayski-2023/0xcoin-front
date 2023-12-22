@@ -1,4 +1,4 @@
-import Layout from "components/layout/Layout";
+import Layout from '../components/layout/Layout';
 
 const Work = () => {
   return (
@@ -7,7 +7,7 @@ const Work = () => {
       footerStyle={1}
       breadcrumbTitle={
         <>
-          {" "}
+          {' '}
           How it’s <span>Work</span>
         </>
       }
@@ -31,7 +31,7 @@ const Work = () => {
                     Dex.ai is an advanced AI system that leverages cutting-edge
                     technologies and the latest Google data to provide accurate
                     responses to every request. With its vast knowledge base and
-                    powerful algorithms,{" "}
+                    powerful algorithms,{' '}
                   </p>
                 </div>
               </div>

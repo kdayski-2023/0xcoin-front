@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="resources/vendors/zwicon/zwicon.min.css">
+        <link rel="stylesheet" href="resources/vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="resources/vendors/overlay-scrollbars/OverlayScrollbars.min.css">
+        <link rel="stylesheet" href="resources/vendors/fullcalendar/core/main.min.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="resources/css/app.min.css">
+    </head>
+
+    <body data-sa-theme="1">
+        <main class="main">
+            @@include('_includes/_page-loader.html')
+
+            @@include('_includes/_header/_header.html')
+
+            @@include('_includes/_sidebar.html', {
+                "link": "calendar"
+            })
+
+            @@include('_includes/_theme-switch.html')
+
+            <section class="content">
+                <div class="content__inner">
+                    <header class="content__title content__title--calendar">
+                        <h1><span id="calendar-title">Calendar</span> <small>FullCalendar is a highly customizable open source javaScript event calendar.</small></h1>
+
+                        <div class="actions actions--calendar">
+                            <a href="" data-toggle="tooltip" title="Previous" class="actions__item" data-calendar-view="prev"><i class="zwicon-arrow-square-left"></i></a>
+                            <a href="" data-toggle="tooltip" title="Today" class="actions__item" data-calendar-view="today"><i class="zwicon-arrow-square-down"></i></a>
+                            <a href="" data-toggle="tooltip" title="Next" class="actions__item" data-calendar-view="next"><i class="zwicon-arrow-square-right"></i></a>
+                        </div>
+                    </header>
+
+                    <div id="calendar" class="calendar card"></div>
+
+                    <!-- Add new event -->
+                    <div class="modal fade" id="event-new" data-backdrop="static" data-keyboard="false">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">New Event</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control event-new__title" placeholder="Event Title">
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-link event-new__add">Add Event</button>
+                                    <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Edit event -->
+                    <div class="modal fade" id="event-edit" data-backdrop="static" data-keyboard="false">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Edit Event</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="edit-event__form">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control event-edit__title" placeholder="Event Title">
+                                        </div>
+
+                                        <input type="hidden" class="edit-event__id">
+                                    </form>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button class="btn btn-link mr-auto text-red event-edit__delete">Delete</button>
+                                    <button class="btn btn-link event-edit__update">Update</button>
+                                    <button class="btn btn-link" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @@include('_includes/_footer.html')
+            </section>
+        </main>
+
+        @@include('_includes/_ie-warning.html')
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="resources/vendors/jquery/jquery.min.js"></script>
+        <script src="resources/vendors/popper.js/popper.min.js"></script>
+        <script src="resources/vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="resources/vendors/overlay-scrollbars/jquery.overlayScrollbars.min.js"></script>
+
+        <script src="resources/vendors/autosize/autosize.min.js"></script>
+        <script src="resources/vendors/fullcalendar/core/main.min.js"></script>
+        <script src="resources/vendors/fullcalendar/daygrid/main.min.js"></script>
+        <script src="resources/vendors/fullcalendar/interaction/main.min.js"></script>
+
+
+        <!-- App functions and actions -->
+        <script src="resources/js/app.min.js"></script>
+    </body>
+</html>

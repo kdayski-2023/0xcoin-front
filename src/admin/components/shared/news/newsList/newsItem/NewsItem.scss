@@ -1,0 +1,32 @@
+.news {
+    &__item {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__price {
+        position: absolute;
+        bottom: 40px;
+    }
+
+    &__tag { 
+        margin-left: 10px !important;
+        &:first-child {
+            margin-left: 0 !important;
+        }
+    }
+}
+
+.listview {
+    &__content {
+        padding-left: 15px;
+    }
+
+    &__item {
+        padding: 1.25rem 0.2rem;
+    }
+}
+
+.checkbox-char>label {
+    border-radius: 0%;
+}

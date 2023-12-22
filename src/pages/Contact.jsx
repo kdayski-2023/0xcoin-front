@@ -1,11 +1,17 @@
-import Layout from "components/layout/Layout";
+import Layout from '../components/layout/Layout';
 
 const Contact = () => {
   return (
     <Layout
       headerStyle={1}
       footerStyle={1}
-      breadcrumbTitle={ <> Get in <span>Touch</span> </> }>
+      breadcrumbTitle={
+        <>
+          {' '}
+          Get in <span>Touch</span>{' '}
+        </>
+      }
+    >
       <div>
         <section className="contact-area pb-140">
           <div className="container">

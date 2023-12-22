@@ -1,6 +1,6 @@
-import Layout from "components/layout/Layout";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import Layout from '../components/layout/Layout';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 const Job = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   const handleOnClick = (index) => {
@@ -10,7 +10,13 @@ const Job = () => {
     <Layout
       headerStyle={1}
       footerStyle={1}
-      breadcrumbTitle={ <> Featured <span>Jobs</span> </> }>
+      breadcrumbTitle={
+        <>
+          {' '}
+          Featured <span>Jobs</span>{' '}
+        </>
+      }
+    >
       <section className="job-area pb-150">
         <div className="container">
           <div className="row">
@@ -20,7 +26,7 @@ const Job = () => {
                   <li className="nav-item" onClick={() => handleOnClick(1)}>
                     <button
                       className={
-                        activeIndex == 1 ? "nav-link active" : "nav-link"
+                        activeIndex == 1 ? 'nav-link active' : 'nav-link'
                       }
                     >
                       View all
@@ -29,7 +35,7 @@ const Job = () => {
                   <li className="nav-item" onClick={() => handleOnClick(2)}>
                     <button
                       className={
-                        activeIndex == 2 ? "nav-link active" : "nav-link"
+                        activeIndex == 2 ? 'nav-link active' : 'nav-link'
                       }
                       aria-selected="false"
                     >
@@ -39,7 +45,7 @@ const Job = () => {
                   <li className="nav-item" onClick={() => handleOnClick(3)}>
                     <button
                       className={
-                        activeIndex == 3 ? "nav-link active" : "nav-link"
+                        activeIndex == 3 ? 'nav-link active' : 'nav-link'
                       }
                       aria-selected="false"
                     >
@@ -49,7 +55,7 @@ const Job = () => {
                   <li className="nav-item" onClick={() => handleOnClick(4)}>
                     <button
                       className={
-                        activeIndex == 4 ? "nav-link active" : "nav-link"
+                        activeIndex == 4 ? 'nav-link active' : 'nav-link'
                       }
                       aria-selected="false"
                     >
@@ -59,7 +65,7 @@ const Job = () => {
                   <li className="nav-item" onClick={() => handleOnClick(5)}>
                     <button
                       className={
-                        activeIndex == 5 ? "nav-link active" : "nav-link"
+                        activeIndex == 5 ? 'nav-link active' : 'nav-link'
                       }
                       aria-selected="false"
                     >
@@ -69,7 +75,7 @@ const Job = () => {
                   <li className="nav-item" onClick={() => handleOnClick(6)}>
                     <button
                       className={
-                        activeIndex == 6 ? "nav-link active" : "nav-link"
+                        activeIndex == 6 ? 'nav-link active' : 'nav-link'
                       }
                       aria-selected="false"
                     >
@@ -81,8 +87,8 @@ const Job = () => {
                   <div
                     className={
                       activeIndex == 1
-                        ? "tab-pane fade show active"
-                        : "tab-pane fade"
+                        ? 'tab-pane fade show active'
+                        : 'tab-pane fade'
                     }
                   >
                     <div className="job-item-wrap">
@@ -280,8 +286,8 @@ const Job = () => {
                   <div
                     className={
                       activeIndex == 2
-                        ? "tab-pane fade show active"
-                        : "tab-pane fade"
+                        ? 'tab-pane fade show active'
+                        : 'tab-pane fade'
                     }
                   >
                     <div className="job-item-wrap">
@@ -413,8 +419,8 @@ const Job = () => {
                   <div
                     className={
                       activeIndex == 3
-                        ? "tab-pane fade show active"
-                        : "tab-pane fade"
+                        ? 'tab-pane fade show active'
+                        : 'tab-pane fade'
                     }
                   >
                     <div className="job-item-wrap">
@@ -548,8 +554,8 @@ const Job = () => {
                   <div
                     className={
                       activeIndex == 4
-                        ? "tab-pane fade show active"
-                        : "tab-pane fade"
+                        ? 'tab-pane fade show active'
+                        : 'tab-pane fade'
                     }
                   >
                     <div className="job-item-wrap">
@@ -714,8 +720,8 @@ const Job = () => {
                   <div
                     className={
                       activeIndex == 5
-                        ? "tab-pane fade show active"
-                        : "tab-pane fade"
+                        ? 'tab-pane fade show active'
+                        : 'tab-pane fade'
                     }
                   >
                     <div className="job-item-wrap">
@@ -851,8 +857,8 @@ const Job = () => {
                   <div
                     className={
                       activeIndex == 6
-                        ? "tab-pane fade show active"
-                        : "tab-pane fade"
+                        ? 'tab-pane fade show active'
+                        : 'tab-pane fade'
                     }
                   >
                     <div className="job-item-wrap">

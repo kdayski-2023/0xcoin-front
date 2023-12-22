@@ -1,38 +1,38 @@
-import Layout from "components/layout/Layout";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import { Collapse } from "react-collapse";
+import Layout from '../components/layout/Layout';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Collapse } from 'react-collapse';
 
 const FAQ_ARR = [
   {
-    title: "Can AI content writing replace human writers?",
+    title: 'Can AI content writing replace human writers?',
     key: 1,
     content:
-      "AI content writing works by using machine learning algorithms to analyze vast amounts of data, including text, images, and videos, to generate unique and engaging content. The software learns from previous content and can mimic the style and tone of human writers.",
+      'AI content writing works by using machine learning algorithms to analyze vast amounts of data, including text, images, and videos, to generate unique and engaging content. The software learns from previous content and can mimic the style and tone of human writers.',
   },
   {
-    title: "How does AI content writing work?",
+    title: 'How does AI content writing work?',
     key: 2,
     content:
-      "AI content writing works by using machine learning algorithms to analyze vast amounts of data, including text, images, and videos, to generate unique and engaging content. The software learns from previous content and can mimic the style and tone of human writers.",
+      'AI content writing works by using machine learning algorithms to analyze vast amounts of data, including text, images, and videos, to generate unique and engaging content. The software learns from previous content and can mimic the style and tone of human writers.',
   },
   {
-    title: "What is AI content writing?",
+    title: 'What is AI content writing?',
     key: 3,
     content:
-      "AI content writing works by using machine learning algorithms to analyze vast amounts of data, including text, images, and videos, to generate unique and engaging content. The software learns from previous content and can mimic the style and tone of human writers.",
+      'AI content writing works by using machine learning algorithms to analyze vast amounts of data, including text, images, and videos, to generate unique and engaging content. The software learns from previous content and can mimic the style and tone of human writers.',
   },
   {
-    title: "What are the benefits of using AI content writing?",
+    title: 'What are the benefits of using AI content writing?',
     key: 4,
     content:
-      "AI content writing works by using machine learning algorithms to analyze vast amounts of data, including text, images, and videos, to generate unique and engaging content. The software learns from previous content and can mimic the style and tone of human writers.",
+      'AI content writing works by using machine learning algorithms to analyze vast amounts of data, including text, images, and videos, to generate unique and engaging content. The software learns from previous content and can mimic the style and tone of human writers.',
   },
   {
-    title: "Is AI content writing ethical?",
+    title: 'Is AI content writing ethical?',
     key: 5,
     content:
-      "AI content writing works by using machine learning algorithms to analyze vast amounts of data, including text, images, and videos, to generate unique and engaging content. The software learns from previous content and can mimic the style and tone of human writers.",
+      'AI content writing works by using machine learning algorithms to analyze vast amounts of data, including text, images, and videos, to generate unique and engaging content. The software learns from previous content and can mimic the style and tone of human writers.',
   },
 ];
 
@@ -104,7 +104,7 @@ export default function Help() {
                       <li className="nav-item" onClick={() => handleOnClick(1)}>
                         <button
                           className={
-                            activeIndex == 1 ? "nav-link active" : "nav-link"
+                            activeIndex == 1 ? 'nav-link active' : 'nav-link'
                           }
                         >
                           <img src="assets/img/icon/faq_icon01.svg" alt="" />
@@ -114,7 +114,7 @@ export default function Help() {
                       <li className="nav-item" onClick={() => handleOnClick(2)}>
                         <button
                           className={
-                            activeIndex == 2 ? "nav-link active" : "nav-link"
+                            activeIndex == 2 ? 'nav-link active' : 'nav-link'
                           }
                         >
                           <img src="assets/img/icon/faq_icon02.svg" alt="" />
@@ -124,7 +124,7 @@ export default function Help() {
                       <li className="nav-item" onClick={() => handleOnClick(3)}>
                         <button
                           className={
-                            activeIndex == 3 ? "nav-link active" : "nav-link"
+                            activeIndex == 3 ? 'nav-link active' : 'nav-link'
                           }
                         >
                           <img src="assets/img/icon/faq_icon03.svg" alt="" />
@@ -134,7 +134,7 @@ export default function Help() {
                       <li className="nav-item" onClick={() => handleOnClick(4)}>
                         <button
                           className={
-                            activeIndex == 4 ? "nav-link active" : "nav-link"
+                            activeIndex == 4 ? 'nav-link active' : 'nav-link'
                           }
                         >
                           <img src="assets/img/icon/faq_icon04.svg" alt="" />
@@ -146,8 +146,8 @@ export default function Help() {
                       <div
                         className={
                           activeIndex == 1
-                            ? "tab-pane fade show active"
-                            : "tab-pane fade"
+                            ? 'tab-pane fade show active'
+                            : 'tab-pane fade'
                         }
                       >
                         <div className="faq-wrap">
@@ -156,8 +156,8 @@ export default function Help() {
                               <div
                                 className={
                                   isActive.key === faq?.key
-                                    ? "accordion-item active"
-                                    : "accordion-item"
+                                    ? 'accordion-item active'
+                                    : 'accordion-item'
                                 }
                                 key={faq?.key}
                               >
@@ -165,8 +165,8 @@ export default function Help() {
                                   <button
                                     className={
                                       isActive.key === faq?.key
-                                        ? "accordion-button"
-                                        : "accordion-button collapsed"
+                                        ? 'accordion-button'
+                                        : 'accordion-button collapsed'
                                     }
                                     type="button"
                                     onClick={() => handleToggle(faq?.key)}
@@ -178,8 +178,8 @@ export default function Help() {
                                   <div
                                     className={
                                       isActive.key === faq?.key
-                                        ? "accordion-collapse collapse show"
-                                        : "accordion-collapse collapse"
+                                        ? 'accordion-collapse collapse show'
+                                        : 'accordion-collapse collapse'
                                     }
                                   >
                                     <div className="accordion-body">
@@ -195,8 +195,8 @@ export default function Help() {
                       <div
                         className={
                           activeIndex == 2
-                            ? "tab-pane fade show active"
-                            : "tab-pane fade"
+                            ? 'tab-pane fade show active'
+                            : 'tab-pane fade'
                         }
                       >
                         <div className="faq-wrap">
@@ -205,8 +205,8 @@ export default function Help() {
                               <div
                                 className={
                                   isActive.key === faq?.key
-                                    ? "accordion-item active"
-                                    : "accordion-item"
+                                    ? 'accordion-item active'
+                                    : 'accordion-item'
                                 }
                                 key={faq?.key}
                               >
@@ -214,8 +214,8 @@ export default function Help() {
                                   <button
                                     className={
                                       isActive.key === faq?.key
-                                        ? "accordion-button"
-                                        : "accordion-button collapsed"
+                                        ? 'accordion-button'
+                                        : 'accordion-button collapsed'
                                     }
                                     type="button"
                                     onClick={() => handleToggle(faq?.key)}
@@ -227,8 +227,8 @@ export default function Help() {
                                   <div
                                     className={
                                       isActive.key === faq?.key
-                                        ? "accordion-collapse collapse show"
-                                        : "accordion-collapse collapse"
+                                        ? 'accordion-collapse collapse show'
+                                        : 'accordion-collapse collapse'
                                     }
                                   >
                                     <div className="accordion-body">
@@ -244,8 +244,8 @@ export default function Help() {
                       <div
                         className={
                           activeIndex == 3
-                            ? "tab-pane fade show active"
-                            : "tab-pane fade"
+                            ? 'tab-pane fade show active'
+                            : 'tab-pane fade'
                         }
                       >
                         <div className="faq-wrap">
@@ -254,8 +254,8 @@ export default function Help() {
                               <div
                                 className={
                                   isActive.key === faq?.key
-                                    ? "accordion-item active"
-                                    : "accordion-item"
+                                    ? 'accordion-item active'
+                                    : 'accordion-item'
                                 }
                                 key={faq?.key}
                               >
@@ -263,8 +263,8 @@ export default function Help() {
                                   <button
                                     className={
                                       isActive.key === faq?.key
-                                        ? "accordion-button"
-                                        : "accordion-button collapsed"
+                                        ? 'accordion-button'
+                                        : 'accordion-button collapsed'
                                     }
                                     type="button"
                                     onClick={() => handleToggle(faq?.key)}
@@ -276,8 +276,8 @@ export default function Help() {
                                   <div
                                     className={
                                       isActive.key === faq?.key
-                                        ? "accordion-collapse collapse show"
-                                        : "accordion-collapse collapse"
+                                        ? 'accordion-collapse collapse show'
+                                        : 'accordion-collapse collapse'
                                     }
                                   >
                                     <div className="accordion-body">
@@ -293,8 +293,8 @@ export default function Help() {
                       <div
                         className={
                           activeIndex == 4
-                            ? "tab-pane fade show active"
-                            : "tab-pane fade"
+                            ? 'tab-pane fade show active'
+                            : 'tab-pane fade'
                         }
                       >
                         <div className="faq-wrap">
@@ -303,8 +303,8 @@ export default function Help() {
                               <div
                                 className={
                                   isActive.key === faq?.key
-                                    ? "accordion-item active"
-                                    : "accordion-item"
+                                    ? 'accordion-item active'
+                                    : 'accordion-item'
                                 }
                                 key={faq?.key}
                               >
@@ -312,8 +312,8 @@ export default function Help() {
                                   <button
                                     className={
                                       isActive.key === faq?.key
-                                        ? "accordion-button"
-                                        : "accordion-button collapsed"
+                                        ? 'accordion-button'
+                                        : 'accordion-button collapsed'
                                     }
                                     type="button"
                                     onClick={() => handleToggle(faq?.key)}
@@ -325,8 +325,8 @@ export default function Help() {
                                   <div
                                     className={
                                       isActive.key === faq?.key
-                                        ? "accordion-collapse collapse show"
-                                        : "accordion-collapse collapse"
+                                        ? 'accordion-collapse collapse show'
+                                        : 'accordion-collapse collapse'
                                     }
                                   >
                                     <div className="accordion-body">

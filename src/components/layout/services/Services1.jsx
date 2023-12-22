@@ -1,5 +1,5 @@
-import { useState } from "react";
-import VideoPopup from "components/video/VideoPopup";
+import { useState } from 'react';
+import VideoPopup from '../../video/VideoPopup';
 
 export default function Services1() {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -63,7 +63,7 @@ export default function Services1() {
                 <li className="nav-item" onClick={() => handleOnClick(1)}>
                   <button
                     className={
-                      activeIndex == 1 ? "nav-link active" : "nav-link"
+                      activeIndex == 1 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <svg
@@ -82,7 +82,7 @@ export default function Services1() {
                 <li className="nav-item" onClick={() => handleOnClick(2)}>
                   <button
                     className={
-                      activeIndex == 2 ? "nav-link active" : "nav-link"
+                      activeIndex == 2 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <svg
@@ -105,7 +105,7 @@ export default function Services1() {
                 <li className="nav-item" onClick={() => handleOnClick(3)}>
                   <button
                     className={
-                      activeIndex == 3 ? "nav-link active" : "nav-link"
+                      activeIndex == 3 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <svg
@@ -144,7 +144,7 @@ export default function Services1() {
                 <li className="nav-item" onClick={() => handleOnClick(4)}>
                   <button
                     className={
-                      activeIndex == 4 ? "nav-link active" : "nav-link"
+                      activeIndex == 4 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <svg
@@ -183,7 +183,7 @@ export default function Services1() {
                 <li className="nav-item" onClick={() => handleOnClick(5)}>
                   <button
                     className={
-                      activeIndex == 5 ? "nav-link active" : "nav-link"
+                      activeIndex == 5 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <svg
@@ -204,7 +204,7 @@ export default function Services1() {
                 <li className="nav-item" onClick={() => handleOnClick(6)}>
                   <button
                     className={
-                      activeIndex == 6 ? "nav-link active" : "nav-link"
+                      activeIndex == 6 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <svg
@@ -245,8 +245,8 @@ export default function Services1() {
                 <div
                   className={
                     activeIndex == 1
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="row justify-content-center">
@@ -309,8 +309,8 @@ export default function Services1() {
                 <div
                   className={
                     activeIndex == 2
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="row justify-content-center">
@@ -373,8 +373,8 @@ export default function Services1() {
                 <div
                   className={
                     activeIndex == 3
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="row justify-content-center">
@@ -437,8 +437,8 @@ export default function Services1() {
                 <div
                   className={
                     activeIndex == 4
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="row justify-content-center">
@@ -501,8 +501,8 @@ export default function Services1() {
                 <div
                   className={
                     activeIndex == 5
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="row justify-content-center">
@@ -565,8 +565,8 @@ export default function Services1() {
                 <div
                   className={
                     activeIndex == 6
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="row justify-content-center">

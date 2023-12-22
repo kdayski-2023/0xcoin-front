@@ -1,0 +1,26 @@
+.toast-header {
+  & > i {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+
+  & > small {
+    margin-left: auto;
+    padding: 0 0.5rem;
+    font-size: $toast-font-size;
+  }
+
+  [data-dismiss] {
+    margin-right: -1px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.toast-body {
+  color: $black;
+  font-size: $toast-font-size;
+}
