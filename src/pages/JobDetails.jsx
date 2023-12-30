@@ -157,7 +157,7 @@ const JobDetails = () => {
                 <form action="#" className="apply-form">
                   <h2 className="title">Apply for this job</h2>
                   <span>
-                    Dex.ai doesn’t accept unsolicited resumes from recruiters or
+                    0xCoin doesn’t accept unsolicited resumes from recruiters or
                     employment agencies.
                   </span>
                   <div className="row">

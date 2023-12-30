@@ -224,7 +224,7 @@ const BlogDetails = () => {
                         <h2 className="title">
                           <Link to="/blog-details">
                             The Future of Document Writing Introducing the
-                            Dex.ai
+                            0xCoin
                           </Link>
                         </h2>
                         <p>
@@ -246,7 +246,7 @@ const BlogDetails = () => {
                         <span className="date">January 25, 2023</span>
                         <h2 className="title">
                           <Link to="/blog-details">
-                            Unlock Your Writing Potential with Dex.ai Boost SEO
+                            Unlock Your Writing Potential with 0xCoin Boost SEO
                           </Link>
                         </h2>
                         <p>
@@ -268,11 +268,11 @@ const BlogDetails = () => {
                         <span className="date">June 17, 2023</span>
                         <h2 className="title">
                           <Link to="/blog-details">
-                            How to Use Dex.ai for Generating High SEO Ranking
+                            How to Use 0xCoin for Generating High SEO Ranking
                           </Link>
                         </h2>
                         <p>
-                          Discover how to use Dex.ai for generating engaging
+                          Discover how to use 0xCoin for generating engaging
                           content ideas quickly. Learn the best practices and
                           tips to maximize your SEO.
                         </p>
@@ -294,7 +294,7 @@ const BlogDetails = () => {
                           </Link>
                         </h2>
                         <p>
-                          Learn how to use Dex.ai and generate engaging content
+                          Learn how to use 0xCoin and generate engaging content
                           ideas quickly. Increase your SEO rankings and get more
                           readers.
                         </p>

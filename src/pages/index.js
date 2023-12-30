@@ -12,6 +12,7 @@ import Work from './Work';
 import Error from './Error';
 import Job from './Job';
 import JobDetails from './JobDetails';
+import Recover from './Recover/Recover';
 
 const routes = [
   { path: '/', component: <HomeOne /> },
@@ -27,6 +28,7 @@ const routes = [
   { path: '/contact', component: <Contact /> },
   { path: '/job', component: <Job /> },
   { path: '/job-details', component: <JobDetails /> },
+  { path: '/recover/:hash', component: <Recover /> },
   { path: '*', component: <Error /> },
 ];
 

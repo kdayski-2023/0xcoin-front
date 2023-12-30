@@ -1,5 +1,6 @@
 import { notifications } from '../../../shared/data/header.data';
 import SearchBar from '../../ui/searchBar/SearchBar';
+import Logo from '../../../assets/2.2/App/resources/img/logo.png';
 
 const Navigation = () => {
   return (
@@ -13,20 +14,22 @@ const Navigation = () => {
       </div>
 
       <div className="logo d-none d-sm-inline-flex">
-        <a href="index.html">Super Admin 2.0</a>
+        <a href="/">
+          <img src={Logo} alt={''} width={120} />
+        </a>
       </div>
 
       <SearchBar />
 
       <ul className="top-nav">
         <li className="d-xl-none">
-          <a href="" data-sa-action="search-open">
+          <a href="/" data-sa-action="search-open">
             <i className="zwicon-search"></i>
           </a>
         </li>
 
         <li className="dropdown top-nav__notifications">
-          <a href="" data-toggle="dropdown" className="top-nav__notify">
+          <a href="/" data-toggle="dropdown" className="top-nav__notify">
             <i className="zwicon-bell"></i>
           </a>
           <div className="dropdown-menu dropdown-menu-right dropdown-menu--block">
@@ -34,17 +37,19 @@ const Navigation = () => {
               Notifications
               <div className="actions">
                 <a
-                  href=""
+                  href="/"
                   className="actions__item zwicon-checkmark-square"
                   data-sa-action="notifications-clear"
-                ></a>
+                >
+                  /
+                </a>
               </div>
             </div>
 
             <div className="listview listview--hover">
               <div className="listview__scroll scrollbar">
                 {notifications.map((notification) => (
-                  <a href="" className="listview__item" key={notification.id}>
+                  <a href="/" className="listview__item" key={notification.id}>
                     <img
                       src={notification.source}
                       className="avatar-img"
@@ -65,15 +70,15 @@ const Navigation = () => {
         </li>
 
         <li className="dropdown d-none d-sm-inline-block">
-          <a href="" data-toggle="dropdown">
+          <a href="/" data-toggle="dropdown">
             <i className="zwicon-more-h"></i>
           </a>
 
           <div className="dropdown-menu dropdown-menu-right">
-            <a href="" className="dropdown-item">
+            <a href="/" className="dropdown-item">
               Logout
             </a>
-            <a href="" className="dropdown-item">
+            <a href="/" className="dropdown-item">
               Settings
             </a>
           </div>

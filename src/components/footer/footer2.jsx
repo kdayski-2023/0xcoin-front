@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Footer2 = () => {
   return (
@@ -169,8 +169,8 @@ const Footer2 = () => {
                       <Link to="/tel:0123456789" className="phone">
                         +(1) 123 656 7866
                       </Link>
-                      <Link to="/mailto:dex.aiinfotive@.com" className="email">
-                        dex.ai infotive@.com
+                      <Link to="/mailto:0xCoininfotive@.com" className="email">
+                        0xCoin infotive@.com
                       </Link>
                     </div>
                     <div className="footer-social-two">
@@ -209,7 +209,7 @@ const Footer2 = () => {
               <div className="col-lg-8">
                 <div className="copyright-text">
                   <p>
-                    Copyright © {new Date().getFullYear()} DEX.AI All rights
+                    Copyright © {new Date().getFullYear()} 0xCoin All rights
                     reserved.
                   </p>
                 </div>

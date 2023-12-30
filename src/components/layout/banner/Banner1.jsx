@@ -17,7 +17,7 @@ const Banner1 = () => {
                   tag="span"
                   options={{
                     wrapperClassName: 'ah-words-wrapper',
-                    strings: ['Answers', 'Solutions'],
+                    strings: ['News', 'Blockchain', 'Analysis'],
                     autoStart: true,
                     loop: true,
                     delay: 75,
@@ -26,7 +26,7 @@ const Banner1 = () => {
                 />
               </h2>
               <h2 className="title d-none wow fadeInUp" data-wow-delay=".2s">
-                Whatever You want to ask- DEX.AI has the <span>Answers,</span>{' '}
+                Whatever You want to ask- 0xCoin has the <span>Answers,</span>{' '}
                 <span>Solutions</span>
               </h2>
               {/* <p className="wow fadeInUp" data-wow-delay=".4s">
@@ -48,7 +48,7 @@ const Banner1 = () => {
                   className="gradient-btn gradient-btn-two wow fadeInRight"
                   data-wow-delay=".6s"
                 >
-                  how dex.ai work
+                  how 0xCoin work
                 </Link>
               </div>
             </div>

@@ -3,13 +3,18 @@ import { Route, Routes } from 'react-router-dom';
 import routes from './pages/index';
 import { useEffect, useState } from 'react';
 import Preloader from './components/preloader/Preloader';
-import { ADMIN_SCREEN, REGISTER_SCREEN } from './admin/configs/screens.config';
+import {
+  ADMIN_SCREEN,
+  FORGOT_PASSWORD_SCREEN,
+  REGISTER_SCREEN,
+} from './admin/configs/screens.config';
 import AOS from 'aos';
 
 import Layout from './admin/components/layout/Layout';
 import Main from './admin/components/screens/main/Main';
 import Register from './admin/components/screens/register/Register';
 import useSession from './hooks/useSession';
+import Forgot from './pages/Forgot/Forgot';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -36,6 +41,8 @@ function App() {
             />
           ))}
           {/* <Route path='*' element={<Page404 />} /> */}
+          <Route path={`${FORGOT_PASSWORD_SCREEN}`} element={<Forgot />} />
+          {/* <Route path={`${LOGIN_SCREEN}`} element={<Login />} /> */}
           <Route path={`${REGISTER_SCREEN}`} element={<Register />} />
           {sessionToken && (
             <Route path={`${ADMIN_SCREEN}`} element={<Layout />}>

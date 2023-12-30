@@ -1,17 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const BlogPagination = () => {
   return (
-    <div class="blog-pev-next-wrap">
-      <ul class="list-wrap">
+    <div className="blog-pev-next-wrap">
+      <ul className="list-wrap">
         <li>
           <Link to="/blog">
-            <i class="far fa-arrow-left"></i>Previous
+            <i className="far fa-arrow-left"></i>Previous
           </Link>
         </li>
-        <li class="next-post">
+        <li className="next-post">
           <Link to="/blog">
-            <i class="far fa-arrow-right"></i>Next
+            <i className="far fa-arrow-right"></i>Next
           </Link>
         </li>
       </ul>

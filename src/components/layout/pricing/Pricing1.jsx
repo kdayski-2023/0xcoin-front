@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Pricing1 = () => {
   const [isToggled, setToggled] = useState(false);
@@ -26,8 +26,8 @@ const Pricing1 = () => {
               <span
                 className={
                   isToggled
-                    ? "pricing-tab-switcher active"
-                    : " pricing-tab-switcher"
+                    ? 'pricing-tab-switcher active'
+                    : ' pricing-tab-switcher'
                 }
               />
               <span className="tab-btn annual_tab_title">Yearly</span>
@@ -58,7 +58,7 @@ const Pricing1 = () => {
                     <div className="icon">
                       <img src="/assets/img/icon/pricing_icon.svg" alt="" />
                     </div>
-                    <div className="content">
+                    <div className="content" style={{ padding: '0' }}>
                       <h4 className="title">Basic</h4>
                       <span>03 Services</span>
                     </div>
@@ -130,14 +130,14 @@ const Pricing1 = () => {
                     <div className="icon">
                       <img src="/assets/img/icon/pricing_icon.svg" alt="" />
                     </div>
-                    <div className="content">
+                    <div className="content" style={{ padding: '0' }}>
                       <h4 className="title">Standard</h4>
                       <span>05 Services</span>
                     </div>
                   </div>
                   <div className="pricing-price">
                     <h2 className="title monthly_price">
-                      ${isToggled ? "299" : "39"}
+                      ${isToggled ? '299' : '39'}
                     </h2>
                   </div>
                 </div>
@@ -186,14 +186,14 @@ const Pricing1 = () => {
                     <div className="icon">
                       <img src="/assets/img/icon/pricing_icon.svg" alt="" />
                     </div>
-                    <div className="content">
+                    <div className="content" style={{ padding: '0' }}>
                       <h4 className="title">Enterprise</h4>
                       <span>07 Services</span>
                     </div>
                   </div>
                   <div className="pricing-price">
                     <h2 className="title monthly_price">
-                      ${isToggled ? "699" : "99"}
+                      ${isToggled ? '699' : '99'}
                     </h2>
                   </div>
                 </div>

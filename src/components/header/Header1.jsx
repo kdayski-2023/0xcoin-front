@@ -2,6 +2,7 @@ import LanguageDropdown from './LanguageDropdown';
 import { Link, useLocation } from 'react-router-dom';
 import MenuMobile from './MenuMobile';
 import { useCallback, useEffect, useState } from 'react';
+import Logo from '../../admin/assets/2.2/App/resources/img/logo.png';
 
 const Header1 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
   const { pathname } = useLocation();
@@ -76,7 +77,7 @@ const Header1 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                 <nav className="menu-nav">
                   <div className="logo">
                     <Link to="/">
-                      <img src="/assets/img/logo/logo.png" alt="Logo" />
+                      <img src={Logo} alt="Logo" width={120} />
                     </Link>
                   </div>
                   <div className="navbar-wrap main-menu d-none d-lg-flex">
@@ -285,7 +286,7 @@ const Header1 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                   </div>
                   <div className="nav-logo" onClick={handleMobileMenu}>
                     <Link to="/">
-                      <img src="/assets/img/logo/logo.png" alt="Logo" />
+                      <img src={Logo} alt="Logo" width={120} />
                     </Link>
                   </div>
                   <div className="menu-outer">

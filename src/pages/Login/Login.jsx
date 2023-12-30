@@ -4,7 +4,10 @@ import DataBg from '../../components/layout/DataBg';
 import useFormik from './hooks/useFormik';
 import useLogin from '../../hooks/useLogin';
 import { useNavigate } from 'react-router-dom';
-import { ADMIN_SCREEN } from '../../admin/configs/screens.config';
+import {
+  ADMIN_SCREEN,
+  FORGOT_PASSWORD_SCREEN,
+} from '../../admin/configs/screens.config';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -17,9 +20,15 @@ export default function Login() {
   };
 
   const handleSubmit = (e) => {
-    console.log('submit');
+    if (!loading) {
+      e.preventDefault();
+      formik.handleSubmit();
+    }
+  };
+
+  const handlePassrowdReset = (e) => {
     e.preventDefault();
-    formik.handleSubmit();
+    navigate(FORGOT_PASSWORD_SCREEN);
   };
 
   useEffect(() => {
@@ -28,6 +37,10 @@ export default function Login() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sessionToken]);
+
+  useEffect(() => {
+    if (error) alert(error);
+  }, [error]);
 
   return (
     <>
@@ -81,7 +94,9 @@ export default function Login() {
                         />
                         <label htmlFor="checkbox">Remember for 30 days</label>
                       </div>
-                      <button type="reset">Forgot Password</button>
+                      <button onClick={handlePassrowdReset}>
+                        Forgot Password
+                      </button>
                     </div>
                     <button
                       type="submit"
@@ -107,8 +122,7 @@ export default function Login() {
                   <div className="login-right-content-inner">
                     <img src="assets/img/images/login_img.png" alt="" />
                     <h4 className="title">
-                      Revolutionize your writing: Try{' '}
-                      <span>AI writer today</span> and watch your content soar
+                      Try <span>0xCoin today</span>
                     </h4>
                   </div>
                 </div>

@@ -9,10 +9,7 @@ const Main = () => {
   return (
     <section className="content">
       <Header className="content__title">
-        <h1>
-          Dashboard{' '}
-          <small>Welcome to the unique SuperAdmin web app experience!</small>
-        </h1>
+        <h1>Dashboard</h1>
       </Header>
       <ChartPreviews />
       <div className="row">

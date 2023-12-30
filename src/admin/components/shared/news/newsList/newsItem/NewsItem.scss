@@ -1,32 +1,40 @@
 .news {
-    &__item {
-        display: flex;
-        align-items: flex-start;
-    }
+  &__item {
+    display: flex;
+    align-items: flex-start;
+  }
 
-    &__price {
-        position: absolute;
-        bottom: 40px;
+  &__tag {
+    margin-left: 10px !important;
+    &:first-child {
+      margin-left: 0 !important;
     }
-
-    &__tag { 
-        margin-left: 10px !important;
-        &:first-child {
-            margin-left: 0 !important;
-        }
-    }
+  }
 }
 
 .listview {
-    &__content {
-        padding-left: 15px;
-    }
+  &__content {
+    padding-left: 15px;
+  }
 
-    &__item {
-        padding: 1.25rem 0.2rem;
-    }
+  &__item {
+    padding: 1.25rem 0.2rem;
+  }
 }
 
-.checkbox-char>label {
-    border-radius: 0%;
+.label {
+  border-radius: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  margin: 10px 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

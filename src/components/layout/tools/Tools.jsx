@@ -1,15 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Tools() {
   return (
-    <section class="tools-area pb-135">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-title text-center mb-80">
+    <section className="tools-area pb-135">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="section-title text-center mb-80">
               <h2
-                class="title title-animation wow fadeInUp"
+                className="title title-animation wow fadeInUp"
                 data-wow-delay=".2s"
               >
                 60+ Powerful <span>Copywriting</span> Tools
@@ -17,10 +17,10 @@ function Tools() {
             </div>
           </div>
         </div>
-        <div class="row justify-content-center row-cols-1 row-cols-xl-5 row-cols-lg-3 row-cols-md-3 row-cols-sm-2">
-          <div class="col">
-            <div class="tools-item">
-              <div class="tools-shape">
+        <div className="row justify-content-center row-cols-1 row-cols-xl-5 row-cols-lg-3 row-cols-md-3 row-cols-sm-2">
+          <div className="col">
+            <div className="tools-item">
+              <div className="tools-shape">
                 <svg
                   viewBox="0 0 242 142"
                   fill="none"
@@ -32,14 +32,14 @@ function Tools() {
                   <g opacity="0.1">
                     <mask id="tools_1" fill="currentcolor">
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M0.000152349 96C0.000152323 82 7.50015 73 26.223 76.38C43.8227 79.5573 73.5001 62.5 65.0001 34C58.0933 10.8417 68.4855 0.0152226 90.4537 0H212C228.569 0 242 13.4315 242 30V112C242 128.569 228.569 142 212 142H30C13.4315 142 0 128.569 0 112V30C0 29.9678 5.07887e-05 29.9356 0.00015229 29.9034L0.000152349 96Z"
                       />
                     </mask>
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M0.000152349 96C0.000152323 82 7.50015 73 26.223 76.38C43.8227 79.5573 73.5001 62.5 65.0001 34C58.0933 10.8417 68.4855 0.0152226 90.4537 0H212C228.569 0 242 13.4315 242 30V112C242 128.569 228.569 142 212 142H30C13.4315 142 0 128.569 0 112V30C0 29.9678 5.07887e-05 29.9356 0.00015229 29.9034L0.000152349 96Z"
                       fill="currentcolor"
                     />
@@ -51,22 +51,22 @@ function Tools() {
                   </g>
                 </svg>
               </div>
-              <div class="tools-icon">
-                <i class="far fa-thumbs-up"></i>
+              <div className="tools-icon">
+                <i className="far fa-thumbs-up"></i>
               </div>
-              <div class="tools-content">
-                <h4 class="title">
-                  <Link to="login.html">Social media</Link>
+              <div className="tools-content">
+                <h4 className="title">
+                  <Link to="/">Social media</Link>
                 </h4>
-                <Link to="login.html" class="link-btn">
-                  Select & Try<i class="far fa-arrow-right"></i>
+                <Link to="/" className="link-btn">
+                  Select & Try<i className="far fa-arrow-right"></i>
                 </Link>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="tools-item">
-              <div class="tools-shape">
+          <div className="col">
+            <div className="tools-item">
+              <div className="tools-shape">
                 <svg
                   viewBox="0 0 242 142"
                   fill="none"
@@ -78,14 +78,14 @@ function Tools() {
                   <g opacity="0.1">
                     <mask id="tools_2" fill="currentcolor">
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M0.000152349 96C0.000152323 82 7.50015 73 26.223 76.38C43.8227 79.5573 73.5001 62.5 65.0001 34C58.0933 10.8417 68.4855 0.0152226 90.4537 0H212C228.569 0 242 13.4315 242 30V112C242 128.569 228.569 142 212 142H30C13.4315 142 0 128.569 0 112V30C0 29.9678 5.07887e-05 29.9356 0.00015229 29.9034L0.000152349 96Z"
                       />
                     </mask>
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M0.000152349 96C0.000152323 82 7.50015 73 26.223 76.38C43.8227 79.5573 73.5001 62.5 65.0001 34C58.0933 10.8417 68.4855 0.0152226 90.4537 0H212C228.569 0 242 13.4315 242 30V112C242 128.569 228.569 142 212 142H30C13.4315 142 0 128.569 0 112V30C0 29.9678 5.07887e-05 29.9356 0.00015229 29.9034L0.000152349 96Z"
                       fill="currentcolor"
                     />
@@ -97,22 +97,22 @@ function Tools() {
                   </g>
                 </svg>
               </div>
-              <div class="tools-icon">
-                <i class="fal fa-swatchbook"></i>
+              <div className="tools-icon">
+                <i className="fal fa-swatchbook"></i>
               </div>
-              <div class="tools-content">
-                <h4 class="title">
-                  <Link to="login.html">Design</Link>
+              <div className="tools-content">
+                <h4 className="title">
+                  <Link to="/">Design</Link>
                 </h4>
-                <Link to="login.html" class="link-btn">
-                  Select & Try<i class="far fa-arrow-right"></i>
+                <Link to="/" className="link-btn">
+                  Select & Try<i className="far fa-arrow-right"></i>
                 </Link>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="tools-item">
-              <div class="tools-shape">
+          <div className="col">
+            <div className="tools-item">
+              <div className="tools-shape">
                 <svg
                   viewBox="0 0 242 142"
                   fill="none"
@@ -124,14 +124,14 @@ function Tools() {
                   <g opacity="0.1">
                     <mask id="tools_3" fill="currentcolor">
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M0.000152349 96C0.000152323 82 7.50015 73 26.223 76.38C43.8227 79.5573 73.5001 62.5 65.0001 34C58.0933 10.8417 68.4855 0.0152226 90.4537 0H212C228.569 0 242 13.4315 242 30V112C242 128.569 228.569 142 212 142H30C13.4315 142 0 128.569 0 112V30C0 29.9678 5.07887e-05 29.9356 0.00015229 29.9034L0.000152349 96Z"
                       />
                     </mask>
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M0.000152349 96C0.000152323 82 7.50015 73 26.223 76.38C43.8227 79.5573 73.5001 62.5 65.0001 34C58.0933 10.8417 68.4855 0.0152226 90.4537 0H212C228.569 0 242 13.4315 242 30V112C242 128.569 228.569 142 212 142H30C13.4315 142 0 128.569 0 112V30C0 29.9678 5.07887e-05 29.9356 0.00015229 29.9034L0.000152349 96Z"
                       fill="currentcolor"
                     />
@@ -143,22 +143,22 @@ function Tools() {
                   </g>
                 </svg>
               </div>
-              <div class="tools-icon">
-                <i class="fal fa-code"></i>
+              <div className="tools-icon">
+                <i className="fal fa-code"></i>
               </div>
-              <div class="tools-content">
-                <h4 class="title">
-                  <Link to="login.html">Coding</Link>
+              <div className="tools-content">
+                <h4 className="title">
+                  <Link to="/">Coding</Link>
                 </h4>
-                <Link to="login.html" class="link-btn">
-                  Select & Try<i class="far fa-arrow-right"></i>
+                <Link to="/" className="link-btn">
+                  Select & Try<i className="far fa-arrow-right"></i>
                 </Link>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="tools-item">
-              <div class="tools-shape">
+          <div className="col">
+            <div className="tools-item">
+              <div className="tools-shape">
                 <svg
                   viewBox="0 0 242 142"
                   fill="none"
@@ -170,14 +170,14 @@ function Tools() {
                   <g opacity="0.1">
                     <mask id="tools_4" fill="currentcolor">
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M0.000152349 96C0.000152323 82 7.50015 73 26.223 76.38C43.8227 79.5573 73.5001 62.5 65.0001 34C58.0933 10.8417 68.4855 0.0152226 90.4537 0H212C228.569 0 242 13.4315 242 30V112C242 128.569 228.569 142 212 142H30C13.4315 142 0 128.569 0 112V30C0 29.9678 5.07887e-05 29.9356 0.00015229 29.9034L0.000152349 96Z"
                       />
                     </mask>
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M0.000152349 96C0.000152323 82 7.50015 73 26.223 76.38C43.8227 79.5573 73.5001 62.5 65.0001 34C58.0933 10.8417 68.4855 0.0152226 90.4537 0H212C228.569 0 242 13.4315 242 30V112C242 128.569 228.569 142 212 142H30C13.4315 142 0 128.569 0 112V30C0 29.9678 5.07887e-05 29.9356 0.00015229 29.9034L0.000152349 96Z"
                       fill="currentcolor"
                     />
@@ -189,22 +189,22 @@ function Tools() {
                   </g>
                 </svg>
               </div>
-              <div class="tools-icon">
-                <i class="fal fa-bullhorn"></i>
+              <div className="tools-icon">
+                <i className="fal fa-bullhorn"></i>
               </div>
-              <div class="tools-content">
-                <h4 class="title">
-                  <Link to="login.html">Marketing</Link>
+              <div className="tools-content">
+                <h4 className="title">
+                  <Link to="/">Marketing</Link>
                 </h4>
-                <Link to="login.html" class="link-btn">
-                  Select & Try<i class="far fa-arrow-right"></i>
+                <Link to="/" className="link-btn">
+                  Select & Try<i className="far fa-arrow-right"></i>
                 </Link>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="tools-item">
-              <div class="tools-shape">
+          <div className="col">
+            <div className="tools-item">
+              <div className="tools-shape">
                 <svg
                   viewBox="0 0 242 142"
                   fill="none"
@@ -216,14 +216,14 @@ function Tools() {
                   <g opacity="0.1">
                     <mask id="tools_5" fill="currentcolor">
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M0.000152349 96C0.000152323 82 7.50015 73 26.223 76.38C43.8227 79.5573 73.5001 62.5 65.0001 34C58.0933 10.8417 68.4855 0.0152226 90.4537 0H212C228.569 0 242 13.4315 242 30V112C242 128.569 228.569 142 212 142H30C13.4315 142 0 128.569 0 112V30C0 29.9678 5.07887e-05 29.9356 0.00015229 29.9034L0.000152349 96Z"
                       />
                     </mask>
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M0.000152349 96C0.000152323 82 7.50015 73 26.223 76.38C43.8227 79.5573 73.5001 62.5 65.0001 34C58.0933 10.8417 68.4855 0.0152226 90.4537 0H212C228.569 0 242 13.4315 242 30V112C242 128.569 228.569 142 212 142H30C13.4315 142 0 128.569 0 112V30C0 29.9678 5.07887e-05 29.9356 0.00015229 29.9034L0.000152349 96Z"
                       fill="currentcolor"
                     />
@@ -235,22 +235,22 @@ function Tools() {
                   </g>
                 </svg>
               </div>
-              <div class="tools-icon">
-                <i class="fal fa-search-plus"></i>
+              <div className="tools-icon">
+                <i className="fal fa-search-plus"></i>
               </div>
-              <div class="tools-content">
-                <h4 class="title">
-                  <Link to="login.html">SEO</Link>
+              <div className="tools-content">
+                <h4 className="title">
+                  <Link to="/">SEO</Link>
                 </h4>
-                <Link to="login.html" class="link-btn">
-                  Select & Try<i class="far fa-arrow-right"></i>
+                <Link to="/" className="link-btn">
+                  Select & Try<i className="far fa-arrow-right"></i>
                 </Link>
               </div>
             </div>
           </div>
         </div>
-        <div class="more-btn text-center mt-30">
-          <Link to="login.html" class="gradient-btn gradient-btn-two btn-two">
+        <div className="more-btn text-center mt-30">
+          <Link to="/" className="gradient-btn gradient-btn-two btn-two">
             more tools & try for free
           </Link>
         </div>

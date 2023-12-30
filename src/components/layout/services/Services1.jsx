@@ -17,7 +17,7 @@ export default function Services1() {
                 <span>
                   With&nbsp;
                   <strong>
-                    DEX.AI
+                    0xCoin
                     <svg
                       viewBox="0 0 345 23"
                       fill="none"

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Footer3 = () => {
   return (
@@ -152,7 +152,7 @@ const Footer3 = () => {
               <div className="col-lg-6">
                 <div className="copyright-text">
                   <p>
-                    Copyright © {new Date().getFullYear()} DEX.AI All rights
+                    Copyright © {new Date().getFullYear()} 0xCoin All rights
                     reserved.
                   </p>
                 </div>

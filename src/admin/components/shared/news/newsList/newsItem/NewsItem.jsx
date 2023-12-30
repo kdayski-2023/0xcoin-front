@@ -8,14 +8,27 @@ const NewsItem = ({ news }) => {
     <li className="listview__item">
       <div className="checkbox-char news__item">
         <input type="checkbox" id="char" />
-        <label htmlFor="char">
-          {news.isGrowing === true ? (
-            <FontAwesomeIcon icon={faArrowUp} style={{ color: '#46e203' }} />
-          ) : (
-            <FontAwesomeIcon icon={faArrowDown} style={{ color: '#ff0040' }} />
-          )}
-        </label>
-        <span className="news__price">{news.price}$</span>
+
+        <div className="img">
+          <img src={news.img} alt="" width={100} />
+          <div className="price">
+            <label htmlFor="char" className="label">
+              {news.isGrowing === true ? (
+                <FontAwesomeIcon
+                  icon={faArrowUp}
+                  style={{ color: '#46e203' }}
+                />
+              ) : (
+                <FontAwesomeIcon
+                  icon={faArrowDown}
+                  style={{ color: '#ff0040' }}
+                />
+              )}
+            </label>
+            <span className="news__price">{news.price}$</span>
+          </div>
+        </div>
+
         <div className="listview__content">
           <p>{news.date}</p>
           <div className="listview__heading">{news.title}</div>

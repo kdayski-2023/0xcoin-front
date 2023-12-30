@@ -383,8 +383,8 @@ export default function Help() {
                             <img src="assets/img/icon/help_icon02.svg" alt="" />
                           </div>
                           <div className="content">
-                            <Link to="mailto:dex.aiinfotive@.com">
-                              dex.ai infotive@.com
+                            <Link to="mailto:0xCoininfotive@.com">
+                              0xCoin infotive@.com
                             </Link>
                             <p>The best way to get answer faster.</p>
                           </div>

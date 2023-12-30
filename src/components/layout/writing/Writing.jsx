@@ -11,14 +11,14 @@ const Writing = () => {
                 className="title title-animation wow fadeInUp"
                 data-wow-delay=".2s"
               >
-                Start writing <span>10x faster</span> with AI
+                Start trading <span>10x smarter</span> with AI
               </h2>
             </div>
           </div>
         </div>
         <div className="row justify-content-center">
           <div className="col-xl-4 col-lg-6 col-md-6 col-sm-9">
-            <div className="writing-item">
+            <div className="writing-item" style={{ minHeight: '300px' }}>
               <div className="writing-shape">
                 <svg
                   viewBox="0 0 417 207"
@@ -46,20 +46,24 @@ const Writing = () => {
                 <i className="far fa-brain" />
               </div>
               <div className="writing-content">
-                <h4 className="title">The GPT-3.5 language</h4>
+                <h4 className="title">AI analysis</h4>
                 <p>
-                  Unlike anything you've experienced - unique and unimaginable
-                  capabilities.
+                  Innovative and one of a kind: our service instantly analyzes
+                  the crypto market with unsurpassed accuracy.
                 </p>
-                <Link to="/work" className="link-btn">
-                  Try Gpt-3.5 language
+                <Link
+                  to="/work"
+                  className="link-btn"
+                  style={{ position: 'absolute', bottom: '35px' }}
+                >
+                  AI analysis
                   <i className="far fa-arrow-right" />
                 </Link>
               </div>
             </div>
           </div>
           <div className="col-xl-4 col-lg-6 col-md-6 col-sm-9">
-            <div className="writing-item">
+            <div className="writing-item" style={{ minHeight: '300px' }}>
               <div className="writing-shape">
                 <svg
                   viewBox="0 0 417 207"
@@ -87,20 +91,21 @@ const Writing = () => {
                 <i className="far fa-chart-line" />
               </div>
               <div className="writing-content">
-                <h4 className="title">Grow with the use of AI</h4>
-                <p>
-                  Unlike anything you've experienced - unique and unimaginable
-                  capabilities.
-                </p>
-                <Link to="/work" className="link-btn">
-                  Try use of AI
+                <h4 className="title">Technical analysis</h4>
+                <p>Candle-based volume and price analysis</p>
+                <Link
+                  to="/work"
+                  className="link-btn"
+                  style={{ position: 'absolute', bottom: '35px' }}
+                >
+                  Technical analysis
                   <i className="far fa-arrow-right" />
                 </Link>
               </div>
             </div>
           </div>
           <div className="col-xl-4 col-lg-6 col-md-6 col-sm-9">
-            <div className="writing-item">
+            <div className="writing-item" style={{ minHeight: '300px' }}>
               <div className="writing-shape">
                 <svg
                   viewBox="0 0 417 207"
@@ -128,20 +133,25 @@ const Writing = () => {
                 <i className="fal fa-lightbulb-on" />
               </div>
               <div className="writing-content">
-                <h4 className="title">Optimized for conversions</h4>
+                <h4 className="title">News</h4>
                 <p>
-                  Unlike anything you've experienced - unique and unimaginable
-                  capabilities.
+                  We parse and analyze the leading news from the world of
+                  cryptocurrencies to provide you with the most up-to-date
+                  information.
                 </p>
-                <Link to="/work" className="link-btn">
-                  Try conversions
+                <Link
+                  to="/work"
+                  className="link-btn"
+                  style={{ position: 'absolute', bottom: '35px' }}
+                >
+                  News
                   <i className="far fa-arrow-right" />
                 </Link>
               </div>
             </div>
           </div>
           <div className="col-xl-4 col-lg-6 col-md-6 col-sm-9">
-            <div className="writing-item">
+            <div className="writing-item" style={{ minHeight: '300px' }}>
               <div className="writing-shape">
                 <svg
                   viewBox="0 0 417 207"
@@ -169,20 +179,21 @@ const Writing = () => {
                 <i className="fal fa-globe" />
               </div>
               <div className="writing-content">
-                <h4 className="title">Supports 26 languages</h4>
-                <p>
-                  Unlike anything you've experienced - unique and unimaginable
-                  capabilities.
-                </p>
-                <Link to="/work" className="link-btn">
-                  Try supports languages
+                <h4 className="title">Blockchain</h4>
+                <p>Capital movement analysis and insider wallet monitoring</p>
+                <Link
+                  to="/work"
+                  className="link-btn"
+                  style={{ position: 'absolute', bottom: '35px' }}
+                >
+                  Blockchain
                   <i className="far fa-arrow-right" />
                 </Link>
               </div>
             </div>
           </div>
           <div className="col-xl-4 col-lg-6 col-md-6 col-sm-9">
-            <div className="writing-item">
+            <div className="writing-item" style={{ minHeight: '300px' }}>
               <div className="writing-shape">
                 <svg
                   viewBox="0 0 417 207"
@@ -210,20 +221,24 @@ const Writing = () => {
                 <i className="fal fa-user-friends" />
               </div>
               <div className="writing-content">
-                <h4 className="title">Streamline collaboration</h4>
+                <h4 className="title">Asset portfolio</h4>
                 <p>
-                  Unlike anything you've experienced - unique and unimaginable
-                  capabilities.
+                  On guard of your crypto portfolio: our service provides
+                  unsurpassed AI analytics and real-time forecasts.
                 </p>
-                <Link to="/work" className="link-btn">
-                  Try streamline
+                <Link
+                  to="/work"
+                  className="link-btn"
+                  style={{ position: 'absolute', bottom: '35px' }}
+                >
+                  Asset portfolio
                   <i className="far fa-arrow-right" />
                 </Link>
               </div>
             </div>
           </div>
           <div className="col-xl-4 col-lg-6 col-md-6 col-sm-9">
-            <div className="writing-item">
+            <div className="writing-item" style={{ minHeight: '300px' }}>
               <div className="writing-shape">
                 <svg
                   viewBox="0 0 417 207"
@@ -256,7 +271,11 @@ const Writing = () => {
                   Unlike anything you've experienced - unique and unimaginable
                   capabilities.
                 </p>
-                <Link to="/work" className="link-btn">
+                <Link
+                  to="/work"
+                  className="link-btn"
+                  style={{ position: 'absolute', bottom: '35px' }}
+                >
                   Try powerful settings
                   <i className="far fa-arrow-right" />
                 </Link>

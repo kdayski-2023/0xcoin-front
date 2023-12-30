@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import MenuMobile from "./MenuMobile";
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import MenuMobile from './MenuMobile';
+import Logo from '../../admin/assets/2.2/App/resources/img/logo.png';
 
 const Header4 = () => {
   const [isMobileMenu, setMobileMenu] = useState(false);
   const handleMobileMenu = () => {
     setMobileMenu(!isMobileMenu);
     !isMobileMenu
-      ? document.body.classList.add("mobile-menu-visible")
-      : document.body.classList.remove("mobile-menu-visible");
+      ? document.body.classList.add('mobile-menu-visible')
+      : document.body.classList.remove('mobile-menu-visible');
   };
   return (
     <header>
@@ -26,7 +27,7 @@ const Header4 = () => {
                 <nav className="menu-nav">
                   <div className="logo">
                     <Link to="/">
-                      <img src="assets/img/logo/logo.png" alt="Logo" />
+                      <img src={Logo} alt="Logo" width={120} />
                     </Link>
                   </div>
                   <div className="navbar-wrap main-menu d-none"></div>
@@ -40,7 +41,7 @@ const Header4 = () => {
                   </div>
                   <div className="nav-logo" onClick={handleMobileMenu}>
                     <Link to="/">
-                      <img src="assets/img/logo/logo.png" alt="Logo" />
+                      <img src={Logo} alt="Logo" width={120} />
                     </Link>
                   </div>
                   <div className="menu-outer">

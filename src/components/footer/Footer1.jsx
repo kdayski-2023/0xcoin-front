@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import Slider from "react-slick";
+import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
 const settings = {
   dots: false,
   infinite: true,
@@ -170,11 +170,11 @@ const Footer1 = () => {
                     <Link to="tel:0123456789" className="phone">
                       +(1) 123 656 7866
                     </Link>
-                    <Link to="mailto:dex.aiinfotive@.com" className="email">
-                      dex.ai infotive@.com
+                    <Link to="mailto:0xCoininfotive@.com" className="email">
+                      0xCoin infotive@.com
                     </Link>
-                    <Link to="mailto:dex.aiinfotive@.com" className="email">
-                      webdexai.com
+                    <Link to="mailto:0xCoininfotive@.com" className="email">
+                      weboxcoin.com
                     </Link>
                   </div>
                   <div className="footer-social">
@@ -221,7 +221,7 @@ const Footer1 = () => {
               <div className="col-lg-8">
                 <div className="copyright-text">
                   <p>
-                    Copyright © {new Date().getFullYear()} DEX.AI All rights
+                    Copyright © {new Date().getFullYear()} 0xCoin All rights
                     reserved.
                   </p>
                 </div>

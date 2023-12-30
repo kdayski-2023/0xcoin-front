@@ -19,7 +19,7 @@ const Language = () => {
                   <span>
                     With&nbsp;
                     <strong>
-                      DEX.AI
+                      0xCoin
                       <svg
                         viewBox="0 0 345 23"
                         fill="none"
@@ -57,7 +57,7 @@ const Language = () => {
                 </h2>
               </div>
               <p>
-                DEX.AI voices are digital clones of the voices of real people.
+                0xCoin voices are digital clones of the voices of real people.
                 You no longer need to record your voice.
               </p>
               <ul className="list-wrap">

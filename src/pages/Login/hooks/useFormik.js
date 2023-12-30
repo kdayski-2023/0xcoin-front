@@ -4,7 +4,7 @@ import LoginService from '../../../services/login.service';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email address').required('Required'),
-  password: Yup.string().min(5, '5 chars min').required('Required'),
+  password: Yup.string().required('Required'),
 });
 
 const useLoginFormik = () => {

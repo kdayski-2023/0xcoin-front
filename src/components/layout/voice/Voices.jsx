@@ -17,7 +17,7 @@ const Voices = () => {
               data-wow-delay=".2s"
             >
               <h2 className="title">
-                Check Out Voiceovers Created <span>using DEX.AI</span>
+                Check Out Voiceovers Created <span>using 0xCoin</span>
               </h2>
             </div>
           </div>

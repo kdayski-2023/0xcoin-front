@@ -1,4 +1,4 @@
-import Slider from "react-slick";
+import Slider from 'react-slick';
 const settings = {
   dots: false,
   infinite: true,
@@ -8,7 +8,7 @@ const settings = {
   slidesToShow: 3,
   slidesToScroll: 1,
   centerMode: true,
-  centerPadding: "0",
+  centerPadding: '0',
   responsive: [
     {
       breakpoint: 1400,
@@ -16,7 +16,7 @@ const settings = {
         slidesToShow: 2,
         slidesToScroll: 1,
         infinite: true,
-        centerPadding: "0",
+        centerPadding: '0',
       },
     },
     {
@@ -25,7 +25,7 @@ const settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        centerPadding: "170px",
+        centerPadding: '170px',
       },
     },
     {
@@ -33,7 +33,7 @@ const settings = {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        centerPadding: "40px",
+        centerPadding: '40px',
       },
     },
     {
@@ -42,7 +42,7 @@ const settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        centerPadding: "20px",
+        centerPadding: '20px',
       },
     },
     {
@@ -51,7 +51,7 @@ const settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        centerPadding: "0px",
+        centerPadding: '0px',
       },
     },
   ],
@@ -105,7 +105,7 @@ const Testimonial2 = () => {
                       </defs>
                     </svg>
                   </strong>
-                  DEX.AI
+                  0xCoin
                 </span>
               </h2>
             </div>
@@ -183,8 +183,8 @@ const Testimonial2 = () => {
                 </div>
                 <div className="testimonial-content-two">
                   <p>
-                    We're using DEX.AI to create explainer videos. It's just
-                    easier, faster, and more cost-effective to use DEX.AI than
+                    We're using 0xCoin to create explainer videos. It's just
+                    easier, faster, and more cost-effective to use 0xCoin than
                     to record an actual person doing the explanation.
                   </p>
                   <div className="rating">
@@ -312,7 +312,7 @@ const Testimonial2 = () => {
                 <div className="testimonial-content-two">
                   <p>
                     We have built a training academy for our SaaS product with
-                    DEX.AI Amazing platform! I was able to create a
+                    0xCoin Amazing platform! I was able to create a
                     professional-quality video in just a few minutes AI We
                     managed to produce.
                   </p>

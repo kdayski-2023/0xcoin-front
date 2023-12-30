@@ -26,9 +26,9 @@ const Work = () => {
                 </div>
                 <div className="work-content">
                   <span>Step 1</span>
-                  <h2 className="title">Dex.ai Chat - Your AI Companion</h2>
+                  <h2 className="title">0xCoin Chat - Your AI Companion</h2>
                   <p>
-                    Dex.ai is an advanced AI system that leverages cutting-edge
+                    0xCoin is an advanced AI system that leverages cutting-edge
                     technologies and the latest Google data to provide accurate
                     responses to every request. With its vast knowledge base and
                     powerful algorithms,{' '}

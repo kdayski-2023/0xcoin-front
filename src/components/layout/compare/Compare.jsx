@@ -75,7 +75,7 @@ const Compare = () => {
                 <img src="/assets/img/images/compare_img02.jpg" alt="" />
               </div>
               <div className="compare-content">
-                <h3 className="title">DEX.AI video creation</h3>
+                <h3 className="title">0xCoin video creation</h3>
                 <div className="compare-list">
                   <ul className="list-wrap">
                     <li>Affordable video production starting at $30/month</li>

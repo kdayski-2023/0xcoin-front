@@ -1,15 +1,17 @@
-import TradingViewWidget, { Themes } from "react-tradingview-widget";
+import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
+
+import React from 'react';
+
 const Chart = () => {
-    return (
-        <div style={{ height: 500 }}>
-            <TradingViewWidget
-                symbol="NASDAQ:AAPL"
-                theme={Themes.DARK}
-                locale="en"
-                autosize
-            />
-        </div>
-    );
-}
+  return (
+    <div style={{ height: 500 }}>
+      <AdvancedRealTimeChart
+       symbol="BTCUSDC"
+       theme={'dark'}
+       locale="en"
+       autosize></AdvancedRealTimeChart>
+    </div>
+  );
+};
 
 export default Chart;

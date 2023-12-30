@@ -9,7 +9,7 @@ export default function About() {
       footerStyle={1}
       breadcrumbTitle={
         <>
-          About <span>Dex.ai</span>
+          About <span>0xCoin</span>
         </>
       }
     >
@@ -30,7 +30,7 @@ export default function About() {
                   </h2>
                   <div className="content-bottom">
                     <p>
-                      At Dex.ai , we use artificial intelligence to generate
+                      At 0xCoin , we use artificial intelligence to generate
                       high-quality content at scale. Our platform analyzes vast
                       amounts of data using natural language processing and
                       machine learning algorithms to create accurate, compelling

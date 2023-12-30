@@ -1,12 +1,34 @@
 const ChartPreview = ({ chartPreview }) => {
   return (
-    <li className="col-sm-6 col-md-3">
+    <li className="col-sm-6 col-md-6">
       <div className="quick-stats__item">
         <div className="quick-stats__info">
           <h2>{chartPreview.title}</h2>
-          <small>{chartPreview.subTitle}</small>
+          <small
+            style={{
+              whiteSpace: 'pre-wrap',
+              textOverflow: 'unset',
+              lineHeight: '16px',
+            }}
+          >
+            {chartPreview.subTitle}
+          </small>
+          <small
+            style={{
+              whiteSpace: 'pre-wrap',
+              textOverflow: 'unset',
+              lineHeight: '16px',
+              color: 'white',
+            }}
+          >
+            {chartPreview.description}
+          </small>
         </div>
-        <svg className="peity" height="36" width="65">
+        <svg
+          style={{ marginLeft: 'auto', paddingLeft: '0' }}
+          height="36"
+          width="65"
+        >
           <rect
             data-value="5"
             fill="rgba(255,255,255,0.85)"
