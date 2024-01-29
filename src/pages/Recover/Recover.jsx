@@ -5,6 +5,8 @@ import useFormik from './hooks/useFormik';
 import { useNavigate, useParams } from 'react-router-dom';
 import { LOGIN_SCREEN } from '../../admin/configs/screens.config';
 import useRecover from '../../hooks/useRecover';
+import MessageDialogService from '../../services/message-dialog.service';
+
 
 export default function Recover() {
   const { hash } = useParams();
@@ -25,7 +27,10 @@ export default function Recover() {
   }, [success]);
 
   useEffect(() => {
-    if (error) alert(error);
+    // if (error) alert(error);
+    if (error) {
+      MessageDialogService.showError(error);
+    }
   }, [error]);
 
   useEffect(() => {

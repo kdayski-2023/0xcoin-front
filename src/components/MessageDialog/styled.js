@@ -16,14 +16,13 @@ export const MessageDialogBlur = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(115deg, #1c102f 0%, #2b1c4d 52.09%, #1c102f 100%);
   backdrop-filter: blur(28px);
 `;
-
+// background: linear-gradient(115deg, #1c102f 0%, #2b1c4d 52.09%, #1c102f 100%);
 export const MessageDialogCardWrapper = styled.div`
   z-index: 1;
   width: 900px;
-
+  background-color: var(--tg-black-two);
   @media (max-width: 992px) {
     padding: 24px;
     width: 100%;
@@ -81,6 +80,12 @@ export const CardFooter = styled.div`
 
   button {
     width: 50%;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--tg-heading-font-color);
+    background: var(--tg-primary-color);
   }
 
   @media (max-width: 576px) {

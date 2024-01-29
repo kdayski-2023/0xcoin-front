@@ -6,6 +6,7 @@ class RecoverService {
     loading: false,
     error: null,
     recoverLink: null,
+    success: false,
   };
 
   state = this.initialState;
@@ -59,6 +60,8 @@ class RecoverService {
     this.state = {
       ...this.state,
       loading: true,
+      error: null,
+      success: false,
     };
     this.state$.next(this.state);
 

@@ -1,4 +1,4 @@
-import LanguageDropdown from './LanguageDropdown';
+// import LanguageDropdown from './LanguageDropdown';
 import { Link, useLocation } from 'react-router-dom';
 import MenuMobile from './MenuMobile';
 import { useCallback, useEffect, useState } from 'react';
@@ -56,6 +56,7 @@ const Header1 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
     (param = '') => {
       setIsActive(param);
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [isActive]
   );
 

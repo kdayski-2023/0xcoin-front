@@ -3,9 +3,10 @@ import Header4 from '../../components/header/Header4';
 import DataBg from '../../components/layout/DataBg';
 import useFormik from './hooks/useFormik';
 import useRecover from '../../hooks/useRecover';
+import MessageDialogService from '../../services/message-dialog.service';
 
 export default function Forgot() {
-  const { loading, error } = useRecover();
+  const { loading, error, recoverLink } = useRecover();
   const formik = useFormik();
 
   const handleSubmit = (e) => {
@@ -16,7 +17,15 @@ export default function Forgot() {
   };
 
   useEffect(() => {
-    if (error) alert(error);
+    if (recoverLink) {
+      MessageDialogService.showSuccess('Recovery link is sent to email');
+    }
+  }, [recoverLink]);
+
+  useEffect(() => {
+    if (error) {
+      MessageDialogService.showError(error);
+    }
   }, [error]);
 
   return (

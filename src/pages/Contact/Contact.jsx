@@ -1,6 +1,56 @@
-import Layout from '../components/layout/Layout';
+import { useEffect } from 'react';
+import Layout from '../../components/layout/Layout';
+import MessageDialogServiceInstance from '../../services/message-dialog.service';
+import useFormik from './hooks/useFormik';
+import useContact from '../../hooks/useContact';
 
 const Contact = () => {
+  const { loading, error, success } = useContact();
+  const formik = useFormik();
+
+  useEffect(() => {
+    if (success) {
+      MessageDialogServiceInstance.showSuccess(
+        'Your question was sent to support'
+      );
+    }
+  }, [success]);
+
+  useEffect(() => {
+    if (error) {
+      MessageDialogServiceInstance.showError(error);
+    }
+  }, [error]);
+
+  const handleChange = async (e, field) => {
+    await formik.setFieldValue(field, e.target.value, false);
+  };
+
+  const handleSubmit = async (e) => {
+    if (!loading) {
+      e.preventDefault();
+      await formik.validateForm();
+      const isValid = formik.isValid;
+      if (isValid) formik.handleSubmit();
+    }
+  };
+
+  const ErrorComponent = ({ msg }) => {
+    return (
+      <span
+        style={{
+          color: 'red',
+          fontSize: '12px',
+          marginTop: '5px',
+          display: 'block',
+          position: 'absolute',
+        }}
+      >
+        {msg}
+      </span>
+    );
+  };
+
   return (
     <Layout
       headerStyle={1}
@@ -102,37 +152,54 @@ const Contact = () => {
                     </div>
                     <div className="col-lg-7">
                       <div className="contact-form">
-                        <form action="#">
+                        <form action="#" onSubmit={handleSubmit}>
                           <div className="form-grp">
                             <input
                               type="text"
                               id="name"
                               placeholder="Your Name"
-                              required
+                              value={formik.values.name}
+                              onChange={(e) => handleChange(e, 'name')}
                             />
+                            {formik.errors.name && (
+                              <ErrorComponent msg={formik.errors.name} />
+                            )}
                           </div>
                           <div className="form-grp">
                             <input
                               type="email"
                               id="email"
                               placeholder="Your email*"
-                              required
+                              value={formik.values.email}
+                              onChange={(e) => handleChange(e, 'email')}
                             />
+                            {formik.errors.email && (
+                              <ErrorComponent msg={formik.errors.email} />
+                            )}
                           </div>
                           <div className="form-grp">
                             <input
                               type="text"
                               id="phone"
                               placeholder="Phone"
-                              required
+                              value={formik.values.phone}
+                              onChange={(e) => handleChange(e, 'phone')}
                             />
+                            {formik.errors.phone && (
+                              <ErrorComponent msg={formik.errors.phone} />
+                            )}
                           </div>
                           <div className="form-grp">
                             <textarea
                               name="message"
                               id="message"
                               placeholder="Please describe what you need*"
+                              value={formik.values.description}
+                              onChange={(e) => handleChange(e, 'description')}
                             />
+                            {formik.errors.description && (
+                              <ErrorComponent msg={formik.errors.description} />
+                            )}
                           </div>
                           <button className="btn" type="submit">
                             submit here
@@ -153,6 +220,7 @@ const Contact = () => {
         {/* contact-map */}
         <div className="contact-map">
           <iframe
+            title="sample"
             src="https://geo-devrel-javascript-samples.web.app/samples/style-array/app/dist/"
             allowFullScreen
             loading="lazy"

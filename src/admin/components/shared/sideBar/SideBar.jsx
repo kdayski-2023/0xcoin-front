@@ -2,8 +2,8 @@ import User from '../../ui/user/User';
 
 const SideBar = () => {
   return (
-    <aside className="sidebar">
-      <div className="scrollbar">
+    <aside className="admin-sidebar">
+      <div className="admin-scrollbar">
         <User />
       </div>
     </aside>

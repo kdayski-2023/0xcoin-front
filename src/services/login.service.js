@@ -23,6 +23,7 @@ class LoginService {
     this.state = {
       ...this.state,
       loading: true,
+      error: null,
     };
     this.state$.next(this.state);
 

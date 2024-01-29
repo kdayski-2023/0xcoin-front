@@ -1,53 +1,54 @@
-import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect, useCallback } from "react";
-import { Collapse } from "react-collapse";
+import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect, useCallback } from 'react';
+import { Collapse } from 'react-collapse';
 
 function MenuMobile({ handleCloseMenu }) {
   // active menu current
   const { pathname } = useLocation();
-  const [current, setCurrent] = useState("home1");
+  const [current, setCurrent] = useState('home1');
 
   const [toggle, setToggle] = useState({
-    key: "",
+    key: '',
     status: false,
   });
 
   useEffect(() => {
     if (pathname) {
       let activePath = pathname.slice(1, pathname.length);
-      setCurrent(activePath ? activePath : "home1");
+      setCurrent(activePath ? activePath : 'home1');
     }
   }, [pathname]);
 
   const handleCurrent = useCallback(
-    (param = "") => {
+    (param = '') => {
       setCurrent(param);
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [current]
   );
 
   const checkActive = (param) => {
-    if (param === "pages") {
+    if (param === 'pages') {
       switch (current) {
-        case "pages":
-        case "work":
-        case "faq":
-        case "job-details":
-        case "help":
-        case "login":
-        case "404":
-        case "job": {
+        case 'pages':
+        case 'work':
+        case 'faq':
+        case 'job-details':
+        case 'help':
+        case 'login':
+        case '404':
+        case 'job': {
           return true;
         }
         default:
           return false;
       }
-    } else if (param === "home") {
+    } else if (param === 'home') {
       switch (current) {
-        case "home":
-        case "home1":
-        case "index-2":
-        case "index-3": {
+        case 'home':
+        case 'home1':
+        case 'index-2':
+        case 'index-3': {
           return true;
         }
         default:
@@ -55,9 +56,9 @@ function MenuMobile({ handleCloseMenu }) {
       }
     } else {
       switch (current) {
-        case "news":
-        case "blog":
-        case "blog-details": {
+        case 'news':
+        case 'blog':
+        case 'blog-details': {
           return true;
         }
         default:
@@ -84,30 +85,30 @@ function MenuMobile({ handleCloseMenu }) {
     <ul className="navigation">
       <li
         className={`${
-          checkActive("home") ? "active" : ""
+          checkActive('home') ? 'active' : ''
         } menu-item-has-children tg-mega-menu-has-children`}
       >
         <h5
           onClick={() => {
-            handleToggle("home");
+            handleToggle('home');
           }}
         >
           Home
         </h5>
-        <Collapse isOpened={toggle.key === "home"}>
+        <Collapse isOpened={toggle.key === 'home'}>
           <div
             className="tg-mega-menu-wrap black-bg"
-            style={{ display: `${toggle.key === "home" ? "block" : "none"}` }}
+            style={{ display: `${toggle.key === 'home' ? 'block' : 'none'}` }}
           >
             <div className="row row-cols-1 row-cols-lg-4 row-cols-xl-4">
               <div className="col">
                 <div
                   className={`${
-                    current === "home1" ? "active" : ""
+                    current === 'home1' ? 'active' : ''
                   } mega-menu-item`}
                   onClick={(e) => {
                     e.stopPropagation();
-                    handleCurrent("home1");
+                    handleCurrent('home1');
                     handleCloseMenu();
                   }}
                 >
@@ -126,11 +127,11 @@ function MenuMobile({ handleCloseMenu }) {
               <div className="col">
                 <div
                   className={`${
-                    current === "index-2" ? "active" : ""
+                    current === 'index-2' ? 'active' : ''
                   } mega-menu-item`}
                   onClick={(e) => {
                     e.stopPropagation();
-                    handleCurrent("index-2");
+                    handleCurrent('index-2');
                     handleCloseMenu();
                   }}
                 >
@@ -149,11 +150,11 @@ function MenuMobile({ handleCloseMenu }) {
               <div className="col">
                 <div
                   className={`${
-                    current === "index-3" ? "active" : ""
+                    current === 'index-3' ? 'active' : ''
                   } mega-menu-item`}
                   onClick={(e) => {
                     e.stopPropagation();
-                    handleCurrent("index-3");
+                    handleCurrent('index-3');
                     handleCloseMenu();
                   }}
                 >
@@ -186,7 +187,7 @@ function MenuMobile({ handleCloseMenu }) {
         <div
           className="dropdown-btn"
           onClick={() => {
-            handleToggle("home");
+            handleToggle('home');
           }}
         >
           <span className="fas fa-angle-down" />
@@ -194,7 +195,7 @@ function MenuMobile({ handleCloseMenu }) {
       </li>
       <li
         className={`${
-          current === "about" ? "active" : ""
+          current === 'about' ? 'active' : ''
         } menu-item-has-children tg-mega-menu-has-children`}
         onClick={handleCloseMenu}
       >
@@ -202,58 +203,58 @@ function MenuMobile({ handleCloseMenu }) {
       </li>
       <li
         className={`${
-          checkActive("pages") ? "active" : ""
+          checkActive('pages') ? 'active' : ''
         } menu-item-has-children`}
       >
         <h5
           onClick={() => {
-            handleToggle("pages");
+            handleToggle('pages');
           }}
         >
           Pages
         </h5>
-        <Collapse isOpened={toggle.key === "pages"}>
+        <Collapse isOpened={toggle.key === 'pages'}>
           <ul
             className="sub-menu"
             style={{
-              display: `${toggle.key === "pages" ? "block" : "none"}`,
+              display: `${toggle.key === 'pages' ? 'block' : 'none'}`,
             }}
           >
             <li
-              className={`${current === "work" ? "active" : ""} menusub-link`}
+              className={`${current === 'work' ? 'active' : ''} menusub-link`}
               onClick={(e) => {
                 e.stopPropagation();
-                handleCurrent("work");
+                handleCurrent('work');
                 handleCloseMenu();
               }}
             >
               <Link to="/work">How It Work</Link>
             </li>
             <li
-              className={`${current === "faq" ? "active" : ""} menusub-link`}
+              className={`${current === 'faq' ? 'active' : ''} menusub-link`}
               onClick={(e) => {
                 e.stopPropagation();
-                handleCurrent("faq");
+                handleCurrent('faq');
                 handleCloseMenu();
               }}
             >
               <Link to="/faq">Faq Page</Link>
             </li>
             <li
-              className={`${current === "help" ? "active" : ""} menusub-link`}
+              className={`${current === 'help' ? 'active' : ''} menusub-link`}
               onClick={(e) => {
                 e.stopPropagation();
-                handleCurrent("help");
+                handleCurrent('help');
                 handleCloseMenu();
               }}
             >
               <Link to="/help">Help Center</Link>
             </li>
             <li
-              className={`${current === "job" ? "active" : ""} menusub-link`}
+              className={`${current === 'job' ? 'active' : ''} menusub-link`}
               onClick={(e) => {
                 e.stopPropagation();
-                handleCurrent("job");
+                handleCurrent('job');
                 handleCloseMenu();
               }}
             >
@@ -261,31 +262,31 @@ function MenuMobile({ handleCloseMenu }) {
             </li>
             <li
               className={`${
-                current === "job-details" ? "active" : ""
+                current === 'job-details' ? 'active' : ''
               } menusub-link`}
               onClick={(e) => {
                 e.stopPropagation();
-                handleCurrent("job-details");
+                handleCurrent('job-details');
                 handleCloseMenu();
               }}
             >
               <Link to="/job-details">Job Details</Link>
             </li>
             <li
-              className={`${current === "login" ? "active" : ""} menusub-link`}
+              className={`${current === 'login' ? 'active' : ''} menusub-link`}
               onClick={(e) => {
                 e.stopPropagation();
-                handleCurrent("login");
+                handleCurrent('login');
                 handleCloseMenu();
               }}
             >
               <Link to="/login">Login Page</Link>
             </li>
             <li
-              className={`${current === "404" ? "active" : ""} menusub-link`}
+              className={`${current === '404' ? 'active' : ''} menusub-link`}
               onClick={(e) => {
                 e.stopPropagation();
-                handleCurrent("404");
+                handleCurrent('404');
                 handleCloseMenu();
               }}
             >
@@ -297,7 +298,7 @@ function MenuMobile({ handleCloseMenu }) {
         <div
           className="dropdown-btn"
           onClick={() => {
-            handleToggle("pages");
+            handleToggle('pages');
           }}
         >
           <span className="fas fa-angle-down" />
@@ -305,28 +306,28 @@ function MenuMobile({ handleCloseMenu }) {
       </li>
       <li
         className={`${
-          checkActive("news") ? "active" : ""
+          checkActive('news') ? 'active' : ''
         } menu-item-has-children`}
       >
         <h5
           onClick={() => {
-            handleToggle("news");
+            handleToggle('news');
           }}
         >
           News
         </h5>
-        <Collapse isOpened={toggle.key === "news"}>
+        <Collapse isOpened={toggle.key === 'news'}>
           <ul
             className="sub-menu"
             style={{
-              display: `${toggle.key === "news" ? "block" : "none"}`,
+              display: `${toggle.key === 'news' ? 'block' : 'none'}`,
             }}
           >
             <li
-              className={`${current === "blog" ? "active" : ""} menusub-link`}
+              className={`${current === 'blog' ? 'active' : ''} menusub-link`}
               onClick={(e) => {
                 e.stopPropagation();
-                handleCurrent("blog");
+                handleCurrent('blog');
                 handleCloseMenu();
               }}
             >
@@ -334,11 +335,11 @@ function MenuMobile({ handleCloseMenu }) {
             </li>
             <li
               className={`${
-                current === "blog-details" ? "active" : ""
+                current === 'blog-details' ? 'active' : ''
               } menusub-link`}
               onClick={(e) => {
                 e.stopPropagation();
-                handleCurrent("blog-details");
+                handleCurrent('blog-details');
                 handleCloseMenu();
               }}
             >
@@ -350,7 +351,7 @@ function MenuMobile({ handleCloseMenu }) {
         <div
           className="dropdown-btn"
           onClick={() => {
-            handleToggle("news");
+            handleToggle('news');
           }}
         >
           <span className="fas fa-angle-down" />
@@ -358,7 +359,7 @@ function MenuMobile({ handleCloseMenu }) {
       </li>
       <li
         className={`${
-          current === "contact" ? "active" : ""
+          current === 'contact' ? 'active' : ''
         } menu-item-has-children tg-mega-menu-has-children`}
         onClick={handleCloseMenu}
       >

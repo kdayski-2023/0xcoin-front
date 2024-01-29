@@ -6,13 +6,15 @@ import { Outlet } from 'react-router-dom';
 import Header from '../shared/header/Header';
 import Navigation from '../shared/navigation/Navigation';
 import SideBar from '../shared/sideBar/SideBar';
-import MessageDialog from '../../../components/MessageDialog/MessageDialog';
+import MessageDialog from '../shared/messageDialog/MessageDialog';
+import ChatWidget from '../../../components/layout/chat/ChatWidget';
 
 const Layout = () => {
   return (
-    <main className="main">
+    <main className="admin-main">
       <MessageDialog />
-      <Header className="header">
+      <ChatWidget />
+      <Header className="admin-header">
         <Navigation />
       </Header>
       <SideBar />

@@ -1,4 +1,4 @@
-.news {
+.admin-news {
   &__item {
     display: flex;
     align-items: flex-start;
@@ -12,7 +12,7 @@
   }
 }
 
-.listview {
+.admin-listview {
   &__content {
     padding-left: 15px;
   }
@@ -22,7 +22,7 @@
   }
 }
 
-.label {
+label.admin-label {
   border-radius: 0%;
   display: flex;
   align-items: center;
@@ -33,7 +33,7 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
-.price {
+.admin-price {
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import TabLeft from "./TabLeft";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import TabLeft from './TabLeft';
 
 const UseCases = () => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -34,7 +34,7 @@ const UseCases = () => {
                 <li className="nav-item" onClick={() => handleOnClick(1)}>
                   <button
                     className={
-                      activeIndex == 1 ? "nav-link active" : "nav-link"
+                      activeIndex === 1 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     Website
@@ -43,7 +43,7 @@ const UseCases = () => {
                 <li className="nav-item" onClick={() => handleOnClick(2)}>
                   <button
                     className={
-                      activeIndex == 2 ? "nav-link active" : "nav-link"
+                      activeIndex === 2 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     Social Media
@@ -52,7 +52,7 @@ const UseCases = () => {
                 <li className="nav-item" onClick={() => handleOnClick(3)}>
                   <button
                     className={
-                      activeIndex == 3 ? "nav-link active" : "nav-link"
+                      activeIndex === 3 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     Emails
@@ -61,7 +61,7 @@ const UseCases = () => {
                 <li className="nav-item" onClick={() => handleOnClick(4)}>
                   <button
                     className={
-                      activeIndex == 4 ? "nav-link active" : "nav-link"
+                      activeIndex === 4 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     Code
@@ -70,7 +70,7 @@ const UseCases = () => {
                 <li className="nav-item" onClick={() => handleOnClick(5)}>
                   <button
                     className={
-                      activeIndex == 5 ? "nav-link active" : "nav-link"
+                      activeIndex === 5 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     Art
@@ -80,9 +80,9 @@ const UseCases = () => {
               <div className="tab-content" id="myTabContent">
                 <div
                   className={
-                    activeIndex == 1
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                    activeIndex === 1
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="cases-details-wrap">
@@ -131,9 +131,9 @@ const UseCases = () => {
                 </div>
                 <div
                   className={
-                    activeIndex == 2
-                      ? "tab-pane fade show active"
-                      : "tab-pane fade"
+                    activeIndex === 2
+                      ? 'tab-pane fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="cases-details-wrap">
@@ -184,9 +184,9 @@ const UseCases = () => {
                 </div>
                 <div
                   className={
-                    activeIndex == 3
-                      ? "tab-pane  fade show active"
-                      : "tab-pane fade"
+                    activeIndex === 3
+                      ? 'tab-pane  fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="cases-details-wrap">
@@ -237,9 +237,9 @@ const UseCases = () => {
                 </div>
                 <div
                   className={
-                    activeIndex == 4
-                      ? "tab-pane  fade show active"
-                      : "tab-pane fade"
+                    activeIndex === 4
+                      ? 'tab-pane  fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="cases-details-wrap">
@@ -290,9 +290,9 @@ const UseCases = () => {
                 </div>
                 <div
                   className={
-                    activeIndex == 5
-                      ? "tab-pane  fade show active"
-                      : "tab-pane fade"
+                    activeIndex === 5
+                      ? 'tab-pane  fade show active'
+                      : 'tab-pane fade'
                   }
                 >
                   <div className="cases-details-wrap">

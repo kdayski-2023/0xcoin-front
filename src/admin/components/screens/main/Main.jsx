@@ -1,4 +1,3 @@
-import { subscription } from '../../../shared/data/subscription.data';
 import ChartPreviews from '../../shared/chartPreviews/ChartPreviews';
 import Header from '../../shared/header/Header';
 import News from '../../shared/news/News';
@@ -7,17 +6,17 @@ import Chart from '../../shared/chart/Chart';
 
 const Main = () => {
   return (
-    <section className="content">
-      <Header className="content__title">
+    <section className="admin-content">
+      <Header className="admin-content__title">
         <h1>Dashboard</h1>
       </Header>
       <ChartPreviews />
-      <div className="row">
-        <div className="col-lg-6">
+      <div className="admin-row">
+        <div className="admin-col-lg-6">
           <News />
         </div>
-        <div className="col-lg-6">
-          <Subscription subscription={subscription} />
+        <div className="admin-col-lg-6">
+          <Subscription />
           <Chart />
         </div>
       </div>

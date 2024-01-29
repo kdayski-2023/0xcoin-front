@@ -84,7 +84,7 @@ const Language = () => {
               <div className="tab-content" id="myTabContentThree">
                 <div
                   className={
-                    activeIndex == 1
+                    activeIndex === 1
                       ? 'tab-pane fade show active'
                       : 'tab-pane fade'
                   }
@@ -96,7 +96,7 @@ const Language = () => {
                 </div>
                 <div
                   className={
-                    activeIndex == 2
+                    activeIndex === 2
                       ? 'tab-pane fade show active'
                       : 'tab-pane fade'
                   }
@@ -108,7 +108,7 @@ const Language = () => {
                 </div>
                 <div
                   className={
-                    activeIndex == 3
+                    activeIndex === 3
                       ? 'tab-pane fade show active'
                       : 'tab-pane fade'
                   }
@@ -120,7 +120,7 @@ const Language = () => {
                 </div>
                 <div
                   className={
-                    activeIndex == 4
+                    activeIndex === 4
                       ? 'tab-pane fade show active'
                       : 'tab-pane fade'
                   }
@@ -132,7 +132,7 @@ const Language = () => {
                 </div>
                 <div
                   className={
-                    activeIndex == 5
+                    activeIndex === 5
                       ? 'tab-pane fade show active'
                       : 'tab-pane fade'
                   }
@@ -144,7 +144,7 @@ const Language = () => {
                 </div>
                 <div
                   className={
-                    activeIndex == 6
+                    activeIndex === 6
                       ? 'tab-pane fade show active'
                       : 'tab-pane fade'
                   }
@@ -156,7 +156,7 @@ const Language = () => {
                 </div>
                 <div
                   className={
-                    activeIndex == 7
+                    activeIndex === 7
                       ? 'tab-pane fade show active'
                       : 'tab-pane fade'
                   }
@@ -168,7 +168,7 @@ const Language = () => {
                 </div>
                 <div
                   className={
-                    activeIndex == 8
+                    activeIndex === 8
                       ? 'tab-pane fade show active'
                       : 'tab-pane fade'
                   }
@@ -183,7 +183,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(1)}>
                   <button
                     className={
-                      activeIndex == 1 ? 'nav-link active' : 'nav-link'
+                      activeIndex === 1 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/united-states02.png" alt="" />
@@ -193,7 +193,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(2)}>
                   <button
                     className={
-                      activeIndex == 2 ? 'nav-link active' : 'nav-link'
+                      activeIndex === 2 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/spain02.png" alt="" />
@@ -203,7 +203,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(3)}>
                   <button
                     className={
-                      activeIndex == 3 ? 'nav-link active' : 'nav-link'
+                      activeIndex === 3 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/german02.png" alt="" />
@@ -213,7 +213,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(4)}>
                   <button
                     className={
-                      activeIndex == 4 ? 'nav-link active' : 'nav-link'
+                      activeIndex === 4 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/france02.png" alt="" />
@@ -223,7 +223,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(5)}>
                   <button
                     className={
-                      activeIndex == 5 ? 'nav-link active' : 'nav-link'
+                      activeIndex === 5 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/portugal.png" alt="" />
@@ -233,7 +233,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(6)}>
                   <button
                     className={
-                      activeIndex == 6 ? 'nav-link active' : 'nav-link'
+                      activeIndex === 6 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/china.png" alt="" />
@@ -243,7 +243,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(7)}>
                   <button
                     className={
-                      activeIndex == 7 ? 'nav-link active' : 'nav-link'
+                      activeIndex === 7 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/mongolia.png" alt="" />
@@ -253,7 +253,7 @@ const Language = () => {
                 <li className="nav-item" onClick={() => handleOnClick(8)}>
                   <button
                     className={
-                      activeIndex == 8 ? 'nav-link active' : 'nav-link'
+                      activeIndex === 8 ? 'nav-link active' : 'nav-link'
                     }
                   >
                     <img src="/assets/img/icon/georgia.png" alt="" />

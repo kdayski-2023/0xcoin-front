@@ -12,6 +12,8 @@ const MessageDialog = () => {
     show: false,
   });
 
+  // const [error, setError] = useState('');
+
   useEffect(() => {
     const state$ = MessageDialogService.state$.subscribe((state) => {
       setDialog(state);
@@ -34,6 +36,23 @@ const MessageDialog = () => {
     };
   }, [dialog]);
 
+  function parseJsonFromResponse(responseString) {
+    if(responseString && typeof responseString === 'string') {
+      const jsonStartIndex = responseString.indexOf('{');
+    
+      if (jsonStartIndex !== -1) {
+        const jsonString = responseString.slice(jsonStartIndex);
+        const jsonObject = JSON.parse(jsonString);
+        return jsonObject.error;
+      }else {
+        return 'Error' 
+      }
+    } 
+    return 'Error'
+    
+    
+  }
+
   return (
     <>
       <MessageDialogWrapper show={dialog.show}>
@@ -54,14 +73,14 @@ const MessageDialog = () => {
                 />
               ) : (
                 <p size="large" className="m-0">
-                  {dialog.message}
+                  {dialog.message ? parseJsonFromResponse(dialog.message) : 'Error'}
                 </p>
               )}
             </CardBody>
             <CardFooter>
               {dialog.type !== 'permanent' && (
-                <button onClick={() => MessageDialogService.hide()}>
-                  <p lh={'100%'}>Close</p>
+                <button className="sine-btn" type="submit" onClick={() => MessageDialogService.hide()}>
+                  <p style={{margin: "8px 0 8px 0"}} lh={'100%'}>Close</p>
                 </button>
               )}
             </CardFooter>

@@ -5,37 +5,39 @@ import './NewsItem.scss';
 
 const NewsItem = ({ news }) => {
   return (
-    <li className="listview__item">
-      <div className="checkbox-char news__item">
+    <li className="admin-listview__item">
+      <div className="admin-checkbox-char admin-news__item">
         <input type="checkbox" id="char" />
 
-        <div className="img">
+        <div className="admin-img">
           <img src={news.img} alt="" width={100} />
-          <div className="price">
-            <label htmlFor="char" className="label">
-              {news.isGrowing === true ? (
+          <div className="admin-price">
+            <label htmlFor="char" className="admin-label">
+              {news.isGrowing === true && (
                 <FontAwesomeIcon
                   icon={faArrowUp}
                   style={{ color: '#46e203' }}
                 />
-              ) : (
+              )}
+              {news.isGrowing === false && (
                 <FontAwesomeIcon
                   icon={faArrowDown}
                   style={{ color: '#ff0040' }}
                 />
               )}
+              {news.isGrowing === undefined && <span>~</span>}
             </label>
-            <span className="news__price">{news.price}$</span>
+            <span className="admin-news__price">{news.price}$</span>
           </div>
         </div>
 
-        <div className="listview__content">
+        <div className="admin-listview__content">
           <p>{news.date}</p>
-          <div className="listview__heading">{news.title}</div>
+          <div className="admin-listview__heading">{news.title}</div>
           <p>{news.source}</p>
-          <div className="listview__attrs">
+          <div className="admin-listview__attrs">
             {news.tags.map((news) => (
-              <span key={news.id} className="news__tag">
+              <span key={news.id} className="admin-news__tag">
                 {news.tag}
               </span>
             ))}

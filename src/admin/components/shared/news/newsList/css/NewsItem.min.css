@@ -1,4 +1,4 @@
-.news__item {
+.admin-news__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,24 +6,24 @@
       -ms-flex-align: start;
           align-items: flex-start;
 }
-.news__price {
+.admin-news__price {
   position: absolute;
   bottom: 40px;
 }
-.news__tag {
+.admin-news__tag {
   margin-left: 10px !important;
 }
-.news__tag:first-child {
+.admin-news__tag:first-child {
   margin-left: 0 !important;
 }
 
-.listview__content {
+.admin-listview__content {
   padding-left: 15px;
 }
-.listview__item {
+.admin-listview__item {
   padding: 1.25rem 0.2rem;
 }
 
-.checkbox-char > label {
+.admin-checkbox-char > label {
   border-radius: 0%;
 }/*# sourceMappingURL=NewsItem.min.css.map */

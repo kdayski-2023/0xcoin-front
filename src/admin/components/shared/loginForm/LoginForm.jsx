@@ -20,8 +20,8 @@ const LoginForm = () => {
 
   return (
     <FormikProvider value={formik}>
-      <form onSubmit={formik.handleSubmit} className="login">
-        <div className="login__block active" id="l-login">
+      <form onSubmit={formik.handleSubmit} className="admin-login">
+        <div className="admin-login__block admin-active" id="l-login">
           <LoginFormHeader />
           <LoginFormBody
             values={formik.values}

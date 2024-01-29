@@ -1,17 +1,37 @@
-.subscription {
-    .card-body {
-        display: flex;
-        justify-content: space-between;
-    }
+.admin-subscription {
+  .card-body {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    &__period {
-        text-align: center;
-        color: #fff;
-        font-size: 25px;
-    }
+  &__period {
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+  }
 
-    &__descr {
-        margin-top: 71px;
-        margin-bottom: 0;
+  &__descr {
+    margin-top: 71px;
+    margin-bottom: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      margin-bottom: 0;
     }
+  }
+}
+
+.pricing-area-three {
+  padding: 0;
+  .section-title-three .title {
+    font-size: 30px;
+  }
+  .pricing-tab {
+    margin-bottom: 20px;
+  }
 }

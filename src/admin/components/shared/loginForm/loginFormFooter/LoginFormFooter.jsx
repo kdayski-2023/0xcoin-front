@@ -6,9 +6,9 @@ const LoginFormFooter = memo(({ isSubmitting }) => {
     <Button
       type="submit"
       disabled={isSubmitting}
-      className="btn btn-theme btn--icon"
+      className="admin-btn admin-btn-theme admin-btn--icon"
     >
-      <i className="zwicon-checkmark"></i>
+      <i className="admin-zwicon-checkmark"></i>
     </Button>
   );
 });

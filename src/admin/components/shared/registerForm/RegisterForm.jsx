@@ -8,10 +8,14 @@ import { ADMIN_SCREEN } from '../../../configs/screens.config';
 import RegisterService from '../../../../services/register.service';
 import useRegister from '../../../../hooks/useRegister';
 import { useEffect } from 'react';
+import SubscriptionServiceInstance from '../../../../services/subscription.service';
 
 const RegisterForm = () => {
   const navigate = useNavigate();
-  const { error, loading, sessionToken } = useRegister();
+  const {
+    // error, loading,
+    sessionToken,
+  } = useRegister();
 
   const formik = useFormik({
     initialValues: initialValuesRegister,
@@ -28,15 +32,17 @@ const RegisterForm = () => {
 
   useEffect(() => {
     if (sessionToken) {
-      navigate(ADMIN_SCREEN);
+      SubscriptionServiceInstance.subscribe({ duration: 1 }).then(() =>
+        navigate(ADMIN_SCREEN)
+      );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sessionToken]);
 
   return (
     <FormikProvider value={formik}>
-      <form onSubmit={formik.handleSubmit} className="login">
-        <div className="login__block active" id="l-register">
+      <form onSubmit={formik.handleSubmit} className="admin-login admin-login__background">
+        <div className="admin-login__block admin-active" id="l-register">
           <RegisterFormHeader />
           <RegisterFormBody
             values={formik.values}

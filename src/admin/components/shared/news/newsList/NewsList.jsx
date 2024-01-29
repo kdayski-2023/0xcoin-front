@@ -1,10 +1,12 @@
+import useNews from '../../../../../hooks/useNews';
 import NewsItem from './newsItem/NewsItem';
 
-const NewsList = ({ news }) => {
+const NewsList = () => {
+  const { news } = useNews();
   return (
-    <ul className="listview">
-      {news.map((news) => (
-        <NewsItem key={news.id} news={news} />
+    <ul className="admin-listview">
+      {news.map((news, idx) => (
+        <NewsItem key={idx} news={news} />
       ))}
     </ul>
   );

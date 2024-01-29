@@ -4,7 +4,7 @@ import HomeThree from './HomeThree';
 import About from './About';
 import Blog from './Blog';
 import BlogDetails from './BlogDetails';
-import Contact from './Contact';
+import Contact from './Contact/Contact';
 import Faq from './Faq';
 import Help from './Help';
 import Login from './Login/Login';
@@ -13,6 +13,7 @@ import Error from './Error';
 import Job from './Job';
 import JobDetails from './JobDetails';
 import Recover from './Recover/Recover';
+import Register from './Register/Register';
 
 const routes = [
   { path: '/', component: <HomeOne /> },
@@ -24,6 +25,7 @@ const routes = [
   { path: '/faq', component: <Faq /> },
   { path: '/help', component: <Help /> },
   { path: '/login', component: <Login /> },
+  { path: '/register', component: <Register /> },
   { path: '/work', component: <Work /> },
   { path: '/contact', component: <Contact /> },
   { path: '/job', component: <Job /> },

@@ -104,7 +104,7 @@ export default function Help() {
                       <li className="nav-item" onClick={() => handleOnClick(1)}>
                         <button
                           className={
-                            activeIndex == 1 ? 'nav-link active' : 'nav-link'
+                            activeIndex === 1 ? 'nav-link active' : 'nav-link'
                           }
                         >
                           <img src="assets/img/icon/faq_icon01.svg" alt="" />
@@ -114,7 +114,7 @@ export default function Help() {
                       <li className="nav-item" onClick={() => handleOnClick(2)}>
                         <button
                           className={
-                            activeIndex == 2 ? 'nav-link active' : 'nav-link'
+                            activeIndex === 2 ? 'nav-link active' : 'nav-link'
                           }
                         >
                           <img src="assets/img/icon/faq_icon02.svg" alt="" />
@@ -124,7 +124,7 @@ export default function Help() {
                       <li className="nav-item" onClick={() => handleOnClick(3)}>
                         <button
                           className={
-                            activeIndex == 3 ? 'nav-link active' : 'nav-link'
+                            activeIndex === 3 ? 'nav-link active' : 'nav-link'
                           }
                         >
                           <img src="assets/img/icon/faq_icon03.svg" alt="" />
@@ -134,7 +134,7 @@ export default function Help() {
                       <li className="nav-item" onClick={() => handleOnClick(4)}>
                         <button
                           className={
-                            activeIndex == 4 ? 'nav-link active' : 'nav-link'
+                            activeIndex === 4 ? 'nav-link active' : 'nav-link'
                           }
                         >
                           <img src="assets/img/icon/faq_icon04.svg" alt="" />
@@ -145,7 +145,7 @@ export default function Help() {
                     <div className="tab-content" id="myTabContent">
                       <div
                         className={
-                          activeIndex == 1
+                          activeIndex === 1
                             ? 'tab-pane fade show active'
                             : 'tab-pane fade'
                         }
@@ -194,7 +194,7 @@ export default function Help() {
                       </div>
                       <div
                         className={
-                          activeIndex == 2
+                          activeIndex === 2
                             ? 'tab-pane fade show active'
                             : 'tab-pane fade'
                         }
@@ -243,7 +243,7 @@ export default function Help() {
                       </div>
                       <div
                         className={
-                          activeIndex == 3
+                          activeIndex === 3
                             ? 'tab-pane fade show active'
                             : 'tab-pane fade'
                         }
@@ -292,7 +292,7 @@ export default function Help() {
                       </div>
                       <div
                         className={
-                          activeIndex == 4
+                          activeIndex === 4
                             ? 'tab-pane fade show active'
                             : 'tab-pane fade'
                         }

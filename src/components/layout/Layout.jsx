@@ -8,7 +8,8 @@ import Footer2 from '../footer/footer2';
 import Header3 from '../header/Header3';
 import Footer3 from '../footer/Footer3';
 import Breadcrumb from './Breadcrumb';
-import MessageDialog from '../MessageDialog/MessageDialog';
+// import ChatWidget from './chat/ChatWidget';
+// import MessageDialog from '../MessageDialog/MessageDialog';
 
 const Layout = ({
   headerStyle,
@@ -41,10 +42,11 @@ const Layout = ({
       live: false,
     });
     window.wow.init();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
-      <MessageDialog />
+      {/* <MessageDialog /> */}
       {!headerStyle && (
         <Header1
           scroll={scroll}

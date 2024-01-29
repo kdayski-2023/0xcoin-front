@@ -3,7 +3,7 @@ import { chartPreviewsAttributes } from "./chartPreviewsAttributes.data";
 
 const ChartPreviews = () => {
     return (
-        <ul className="row quick-stats">
+        <ul className="admin-row admin-quick-stats">
             {chartPreviewsAttributes.map(chartPreview => (
                 <ChartPreview key={chartPreview.id} chartPreview={chartPreview} />
             ))}

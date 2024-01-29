@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Pricing3 = () => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -39,14 +39,14 @@ const Pricing3 = () => {
             <ul className="nav nav-tabs" id="myTabTwo" role="tablist">
               <li className="nav-item" onClick={() => handleOnClick(1)}>
                 <button
-                  className={activeIndex == 1 ? "nav-link active" : "nav-link"}
+                  className={activeIndex === 1 ? 'nav-link active' : 'nav-link'}
                 >
                   Billed monthly
                 </button>
               </li>
               <li className="nav-item" onClick={() => handleOnClick(2)}>
                 <button
-                  className={activeIndex == 2 ? "nav-link active" : "nav-link"}
+                  className={activeIndex === 2 ? 'nav-link active' : 'nav-link'}
                 >
                   Billed yearly <span>30%</span>
                 </button>
@@ -56,7 +56,9 @@ const Pricing3 = () => {
           <div className="tab-content" id="myTabContentTwo">
             <div
               className={
-                activeIndex == 1 ? "tab-pane fade show active" : "tab-pane fade"
+                activeIndex === 1
+                  ? 'tab-pane fade show active'
+                  : 'tab-pane fade'
               }
             >
               <div className="row justify-content-center">
@@ -242,7 +244,9 @@ const Pricing3 = () => {
             </div>
             <div
               className={
-                activeIndex == 2 ? "tab-pane fade show active" : "tab-pane fade"
+                activeIndex === 2
+                  ? 'tab-pane fade show active'
+                  : 'tab-pane fade'
               }
             >
               <div className="row justify-content-center">

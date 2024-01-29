@@ -1,139 +1,151 @@
-import { useState } from "react";
-import Select from "react-select";
+import { useState } from 'react';
+import Select from 'react-select';
 
 const countries = [
   {
-    value: "us",
-    label: "English (American)",
-    image: "assets/img/images/flag01.png",
+    value: 'us',
+    label: 'English (American)',
+    image: 'assets/img/images/flag01.png',
   },
   {
-    value: "uk",
-    label: "English (British)",
-    image: "/assets/img/images/s_voice_img02.png",
+    value: 'uk',
+    label: 'English (British)',
+    image: '/assets/img/images/s_voice_img02.png',
   },
   {
-    value: "bd",
-    label: "Bengali (Bangladesh)",
-    image: "assets/img/images/flag03.png",
+    value: 'bd',
+    label: 'Bengali (Bangladesh)',
+    image: 'assets/img/images/flag03.png',
   },
   {
-    value: "ca",
-    label: "English (Canada)",
-    image: "assets/img/images/flag04.png",
+    value: 'ca',
+    label: 'English (Canada)',
+    image: 'assets/img/images/flag04.png',
   },
   {
-    value: "za",
-    label: "Zulu (South Africa)",
-    image: "assets/img/images/flag05.png",
+    value: 'za',
+    label: 'Zulu (South Africa)',
+    image: 'assets/img/images/flag05.png',
   },
   {
-    value: "in",
-    label: "Hindi (India)",
-    image: "assets/img/images/flag06.png",
+    value: 'in',
+    label: 'Hindi (India)',
+    image: 'assets/img/images/flag06.png',
   },
 ];
 const voices = [
   {
-    value: "v1",
-    label: "Amber (HD)",
-    image: "assets/img/images/s_voice_img01.png",
+    value: 'v1',
+    label: 'Amber (HD)',
+    image: 'assets/img/images/s_voice_img01.png',
   },
   {
-    value: "v2",
-    label: "Brandon (HD)",
-    image: "/assets/img/images/s_voice_img02.png",
+    value: 'v2',
+    label: 'Brandon (HD)',
+    image: '/assets/img/images/s_voice_img02.png',
   },
   {
-    value: "v3",
-    label: "Tony (HD)",
-    image: "assets/img/images/s_voice_img03.png",
+    value: 'v3',
+    label: 'Tony (HD)',
+    image: 'assets/img/images/s_voice_img03.png',
   },
   {
-    value: "v4",
-    label: "Michael (HD)",
-    image: "assets/img/images/s_voice_img04.png",
+    value: 'v4',
+    label: 'Michael (HD)',
+    image: 'assets/img/images/s_voice_img04.png',
   },
   {
-    value: "v5",
-    label: "Sara (HD)",
-    image: "assets/img/images/s_voice_img05.png",
+    value: 'v5',
+    label: 'Sara (HD)',
+    image: 'assets/img/images/s_voice_img05.png',
   },
   {
-    value: "v6",
-    label: "Prabhat (HD)",
-    image: "assets/img/images/s_voice_img06.png",
+    value: 'v6',
+    label: 'Prabhat (HD)',
+    image: 'assets/img/images/s_voice_img06.png',
   },
 ];
 const punctuation = [
   {
-    value: "v1",
-    label: "Punctuation: Auto",
+    value: 'v1',
+    label: 'Punctuation: Auto',
   },
   {
-    value: "v2",
-    label: "Punctuation: Off",
+    value: 'v2',
+    label: 'Punctuation: Off',
   },
   {
-    value: "v3",
-    label: "Punctuation: On",
+    value: 'v3',
+    label: 'Punctuation: On',
   },
 ];
 const filter = [
   {
-    value: "v1",
-    label: "Profanity Filter: On",
+    value: 'v1',
+    label: 'Profanity Filter: On',
   },
   {
-    value: "v2",
-    label: "Profanity Filter: Off",
+    value: 'v2',
+    label: 'Profanity Filter: Off',
   },
 ];
 const Speech = () => {
   const [isToggled, setToggled] = useState(false);
   const toggleTrueFalse = () => setToggled(!isToggled);
 
-  const [selectCountry, setSelectCountry] = useState();
-  const [selectVoice, setSelectVoice] = useState();
-  const [selectPunctuation, setSelectPunctuation] = useState();
-  const [selectFilter, setSelectFilter] = useState();
+  const [
+    selectCountry,
+    //  setSelectCountry
+  ] = useState();
+  const [
+    selectVoice,
+    // setSelectVoice
+  ] = useState();
+  const [
+    selectPunctuation,
+    // setSelectPunctuation
+  ] = useState();
+  const [
+    selectFilter,
+    //  setSelectFilter
+  ] = useState();
   // const handleSelectCountry = (selected) => {
   // };
 
   const colourStyles = {
     control: (styles) => ({
       ...styles,
-      backgroundColor: "transparent",
-      borderColor: "#393A3D",
-      borderRadius: "5px",
-      height: "50px",
-      boxShadow: "none",
-      ":hover": {
-        borderColor: "#393A3D",
+      backgroundColor: 'transparent',
+      borderColor: '#393A3D',
+      borderRadius: '5px',
+      height: '50px',
+      boxShadow: 'none',
+      ':hover': {
+        borderColor: '#393A3D',
       },
     }),
     option: (styles) => ({
       ...styles,
-      backgroundColor: "transparent",
-      transition: "all 0.3s ease-out 0s",
-      ":hover": {
-        backgroundColor: "#00C39A !important",
+      backgroundColor: 'transparent',
+      transition: 'all 0.3s ease-out 0s',
+      ':hover': {
+        backgroundColor: '#00C39A !important',
       },
-      ":active": {
-        backgroundColor: "#00C39A !important",
+      ':active': {
+        backgroundColor: '#00C39A !important',
       },
-      padding: "6px 10px",
-      color: "f0f0f0",
+      padding: '6px 10px',
+      color: 'f0f0f0',
     }),
 
     menu: (base) => ({
       ...base,
-      padding: "0px 4px",
-      borderRadius: "5px",
-      width: "100%",
-      border: "1px solid #393A3D",
-      backgroundColor: "#222325",
-      boxShadow: "none",
+      padding: '0px 4px',
+      borderRadius: '5px',
+      width: '100%',
+      border: '1px solid #393A3D',
+      backgroundColor: '#222325',
+      boxShadow: 'none',
     }),
   };
 
@@ -157,7 +169,7 @@ const Speech = () => {
                         styles={colourStyles}
                         formatOptionLabel={(country) => (
                           <div className="react-select-option">
-                            <img src={country.image} alt="country-image" />
+                            <img src={country.image} alt="country" />
                             <p>{country.label}</p>
                           </div>
                         )}
@@ -204,7 +216,7 @@ const Speech = () => {
                 </button>
                 <div
                   className="hidden-btn-wrap"
-                  style={{ display: `${isToggled ? "block" : "none"}` }}
+                  style={{ display: `${isToggled ? 'block' : 'none'}` }}
                 >
                   <div className="hidden-btn-inner">
                     <button>
@@ -286,7 +298,7 @@ const Speech = () => {
                         styles={colourStyles}
                         formatOptionLabel={(country) => (
                           <div className="react-select-option">
-                            <img src={country.image} alt="country-image" />
+                            <img src={country.image} alt="country" />
                             <p>{country.label}</p>
                           </div>
                         )}
@@ -296,7 +308,7 @@ const Speech = () => {
                 </div>
                 <div className="form-content">
                   <span>
-                    Voicer Transcribe free use is limited to 5 minutes. You can{" "}
+                    Voicer Transcribe free use is limited to 5 minutes. You can{' '}
                     <br /> purchase packages for more use and to transcribe
                     longer files.
                   </span>

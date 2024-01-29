@@ -1,8 +1,8 @@
 const ChartPreview = ({ chartPreview }) => {
   return (
-    <li className="col-sm-6 col-md-6">
-      <div className="quick-stats__item">
-        <div className="quick-stats__info">
+    <li className="admin-col-sm-6 col-md-6">
+      <div className="admin-quick-stats__item">
+        <div className="admin-quick-stats__info">
           <h2>{chartPreview.title}</h2>
           <small
             style={{
@@ -25,9 +25,9 @@ const ChartPreview = ({ chartPreview }) => {
           </small>
         </div>
         <svg
-          style={{ marginLeft: 'auto', paddingLeft: '0' }}
+          style={{ marginLeft: 'auto', paddingLeft: '0',flexShrink: '0' }}
           height="36"
-          width="65"
+          width="50"
         >
           <rect
             data-value="5"

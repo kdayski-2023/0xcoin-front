@@ -15,6 +15,7 @@ import Main from './admin/components/screens/main/Main';
 import Register from './admin/components/screens/register/Register';
 import useSession from './hooks/useSession';
 import Forgot from './pages/Forgot/Forgot';
+import MessageDialog from './components/MessageDialog/MessageDialog';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <>
+    <MessageDialog />
       {!loading ? (
         <Routes>
           {routes.map((data, index) => (
@@ -43,7 +45,7 @@ function App() {
           {/* <Route path='*' element={<Page404 />} /> */}
           <Route path={`${FORGOT_PASSWORD_SCREEN}`} element={<Forgot />} />
           {/* <Route path={`${LOGIN_SCREEN}`} element={<Login />} /> */}
-          <Route path={`${REGISTER_SCREEN}`} element={<Register />} />
+          {/* <Route path={`${REGISTER_SCREEN}`} element={<Register />} /> */}
           {sessionToken && (
             <Route path={`${ADMIN_SCREEN}`} element={<Layout />}>
               <Route index element={<Main />} />
