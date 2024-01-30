@@ -8,6 +8,8 @@ import Footer2 from '../footer/footer2';
 import Header3 from '../header/Header3';
 import Footer3 from '../footer/Footer3';
 import Breadcrumb from './Breadcrumb';
+import Header4 from '../header/Header4';
+import LoginRightContent from './login/LoginRightContent';
 // import ChatWidget from './chat/ChatWidget';
 // import MessageDialog from '../MessageDialog/MessageDialog';
 
@@ -18,6 +20,7 @@ const Layout = ({
   breadcrumbTitle,
   children,
   mainCls,
+  login,
 }) => {
   const [scroll, setScroll] = useState(0);
 
@@ -44,6 +47,32 @@ const Layout = ({
     window.wow.init();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  if (login) {
+    return (
+      <>
+        <DataBg />
+        <Header4 />
+        <main className="main-content">
+          <div
+            className="noise-bg"
+            data-background="/assets/img/bg/noise_bg.png"
+          />
+          <div
+            className="main-shape"
+            data-background="/assets/img/images/main_shape.png"
+          />
+          <section className="login-area">
+            <div className="container">
+              <div className="row justify-content-center">
+                {children}
+                <LoginRightContent />
+              </div>
+            </div>
+          </section>
+        </main>
+      </>
+    );
+  }
   return (
     <>
       {/* <MessageDialog /> */}

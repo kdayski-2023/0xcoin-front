@@ -3,6 +3,12 @@ import Layout from '../../components/layout/Layout';
 import MessageDialogServiceInstance from '../../services/message-dialog.service';
 import useFormik from './hooks/useFormik';
 import useContact from '../../hooks/useContact';
+import MVoiceImg1 from '../../assets/img/images/m_voice_img01.png';
+import MVoiceImg2 from '../../assets/img/images/m_voice_img02.png';
+import MVoiceImg3 from '../../assets/img/images/m_voice_img03.png';
+import MVoiceImg4 from '../../assets/img/images/m_voice_img04.png';
+import MVoiceImg5 from '../../assets/img/images/m_voice_img05.png';
+import ContactShape from '../../assets/img/images/contact_shape.png';
 
 const Contact = () => {
   const { loading, error, success } = useContact();
@@ -117,34 +123,19 @@ const Contact = () => {
                       <div className="responds-wrap">
                         <ul className="list-wrap">
                           <li>
-                            <img
-                              src="assets/img/images/m_voice_img01.png"
-                              alt=""
-                            />
+                            <img src={MVoiceImg1} alt="" />
                           </li>
                           <li>
-                            <img
-                              src="assets/img/images/m_voice_img02.png"
-                              alt=""
-                            />
+                            <img src={MVoiceImg2} alt="" />
                           </li>
                           <li>
-                            <img
-                              src="assets/img/images/m_voice_img03.png"
-                              alt=""
-                            />
+                            <img src={MVoiceImg3} alt="" />
                           </li>
                           <li>
-                            <img
-                              src="assets/img/images/m_voice_img04.png"
-                              alt=""
-                            />
+                            <img src={MVoiceImg4} alt="" />
                           </li>
                           <li>
-                            <img
-                              src="assets/img/images/m_voice_img05.png"
-                              alt=""
-                            />
+                            <img src={MVoiceImg5} alt="" />
                           </li>
                         </ul>
                         <p>Responds in 4-8 hours</p>
@@ -209,7 +200,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="contact-shape">
-                    <img src="assets/img/images/contact_shape.png" alt="" />
+                    <img src={ContactShape} alt="" />
                   </div>
                 </div>
               </div>
