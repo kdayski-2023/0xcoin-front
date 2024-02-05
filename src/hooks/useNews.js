@@ -6,7 +6,7 @@ const NEW_ITEM_EVENT = 'newItem';
 const ERROR = 'error';
 const SOCKET_SERVER_URL = process.env.REACT_APP_SOCKET_URL;
 
-const useNews = () => {
+const useNews = (currency) => {
   const sessionToken = localStorage.getItem('token');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -34,42 +34,49 @@ const useNews = () => {
   }, []);
 
   useEffect(() => {
-    NewsServiceInstance.getData();
-  }, []);
+    if (currency) {
+      NewsServiceInstance.getData(currency);
+    }
+  }, [currency]);
 
   useEffect(() => {
-    const socketConnected = socketRef.current && socketRef.current.connected;
-    if (!socketConnected) {
-      socketRef.current = socketIOClient(SOCKET_SERVER_URL, {
-        query: { sessionToken },
-      });
-    }
+    if (currency) {
+      const socketConnected = socketRef.current && socketRef.current.connected;
+      if (!socketConnected) {
+        socketRef.current = socketIOClient(SOCKET_SERVER_URL, {
+          query: { sessionToken, currency },
+        });
+      }
 
-    if (socketConnected) {
-      socketRef.current.on('connect', () => {
-        console.log('socket connected');
-      });
+      if (socketConnected) {
+        socketRef.current.on('connect', () => {
+          console.log('socket connected');
+        });
 
-      socketRef.current.on(NEW_ITEM_EVENT, (newItems) => {
-        NewsServiceInstance.appendNews(newItems);
-        setNewItem(newItems[newItems.length - 1]);
-      });
+        socketRef.current.on(NEW_ITEM_EVENT, (newItems) => {
+          const validCurrencyNews = newItems.filter((item) =>
+            item.tags.some((tag) => tag.tag === currency)
+          );
+          NewsServiceInstance.appendNews(validCurrencyNews);
+          setNewItem(validCurrencyNews[validCurrencyNews.length - 1]);
+        });
 
-      socketRef.current.on('connect_error', (err) => {
-        console.log(`connect_error due to ${err.message}`);
-      });
+        socketRef.current.on('connect_error', (err) => {
+          console.log(`connect_error due to ${err.message}`);
+        });
 
-      socketRef.current.on(ERROR, (error) => {
-        console.log(error);
-        setLocalError(error);
-      });
+        socketRef.current.on(ERROR, (error) => {
+          console.log(error);
+          setLocalError(error);
+        });
 
-      return () => {
-        socketRef.current.disconnect();
-      };
+        return () => {
+          socketRef.current.disconnect();
+        };
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [socketRef.current]);
+  }, [socketRef.current, currency]);
 
   return {
     news,

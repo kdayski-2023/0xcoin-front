@@ -1,7 +1,19 @@
-import React from "react";
-import "./preloader.css";
+import AOS from 'aos';
+import React, { useEffect, useState } from 'react';
+import './preloader.css';
 
-const Preloader = ()=> {
+const Preloader = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   return (
     <div id="preloader">
       <div className="spinner">
@@ -13,5 +25,5 @@ const Preloader = ()=> {
       </div>
     </div>
   );
-}
-export default Preloader
+};
+export default Preloader;

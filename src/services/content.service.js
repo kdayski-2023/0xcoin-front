@@ -1,11 +1,11 @@
 import { Subject, from, take } from 'rxjs';
 import { GET } from '../api/fetch-api';
 
-class NewsService {
+class ContentService {
   initialState = {
     loading: false,
     error: null,
-    news: [],
+    content: [],
   };
 
   state = this.initialState;
@@ -15,19 +15,7 @@ class NewsService {
     this.apiUrl = process.env.REACT_APP_API_URL;
   }
 
-  async appendNews(news) {
-    if (this.state.loading) {
-      return;
-    }
-    this.state = {
-      ...this.state,
-      news: [...this.state.news, ...news],
-    };
-
-    this.state$.next(this.state);
-  }
-
-  async getData(currency) {
+  async getContent() {
     if (this.state.loading) {
       return;
     }
@@ -39,9 +27,7 @@ class NewsService {
     };
     this.state$.next(this.state);
 
-    const data$ = from(GET(`${this.apiUrl}/admin/news`, { currency })).pipe(
-      take(1)
-    );
+    const data$ = from(GET(`${this.apiUrl}/content`)).pipe(take(1));
 
     data$.subscribe({
       next: (result) => {
@@ -49,7 +35,7 @@ class NewsService {
           ...this.state,
           error: null,
           loading: false,
-          news: result.data.news,
+          content: result.data.data,
         };
 
         this.state$.next(this.state);
@@ -65,5 +51,5 @@ class NewsService {
   }
 }
 
-const NewsServiceInstance = new NewsService();
-export default NewsServiceInstance;
+const ContentServiceInstance = new ContentService();
+export default ContentServiceInstance;
