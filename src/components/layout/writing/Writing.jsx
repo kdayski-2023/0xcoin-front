@@ -1,18 +1,41 @@
 import { Link } from 'react-router-dom';
+import { CONTENT_ID } from 'utils/content';
+import useContent from 'hooks/useContent';
+import { useEffect, useState } from 'react';
 
 const Writing = () => {
+  const [headerWritingBefore, setHeaderWritingBefore] = useState(null);
+  const [headerWritingSpan, setHeaderWritingSpan] = useState(null);
+  const [headerWritingAfter, setHeaderWritingAfter] = useState(null);
+  const { content, error, loading } = useContent();
+
+  useEffect(() => {
+    const item = content.find((item) => item.content_id === CONTENT_ID.HEADER_WRITING__BEFORE);
+    setHeaderWritingBefore(item);
+    const item2 = content.find((item) => item.content_id === CONTENT_ID.HEADER_WRITING__SPAN);
+    setHeaderWritingSpan(item2);
+    const item3 = content.find((item) => item.content_id === CONTENT_ID.HEADER_WRITING__AFTER);
+    setHeaderWritingAfter(item3);
+  }, [content]); 
+
   return (
     <section className="writing-area pb-130 pt-130">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
             <div className="section-title text-center mb-80">
-              <h2
-                className="title title-animation wow fadeInUp"
-                data-wow-delay=".2s"
-              >
-                Start trading <span>10x smarter</span> with AI
-              </h2>
+            <h2
+              className="title title-animation wow fadeInUp"
+              data-wow-delay=".2s"
+            >
+              {headerWritingBefore && headerWritingSpan && headerWritingAfter && (
+              <>
+                {headerWritingBefore.content}
+                <span>{headerWritingSpan.content}</span>
+                {headerWritingAfter.content}
+              </>
+              )}
+            </h2>
             </div>
           </div>
         </div>

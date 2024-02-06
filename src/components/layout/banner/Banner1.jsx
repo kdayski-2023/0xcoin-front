@@ -5,13 +5,13 @@ import Typewriter from 'typewriter-effect';
 import { CONTENT_ID } from 'utils/content';
 
 const Banner1 = () => {
-  const [header, setHeader] = useState(null);
+  const [headerBanner, setHeaderBanner] = useState(null);
   const { content, error, loading } = useContent();
 
   useEffect(() => {
-    const item = content.find((item) => item.content_id === CONTENT_ID.HEADER);
-    setHeader(item);
-  }, [content]);
+    const item = content.find((item) => item.content_id === CONTENT_ID.HEADER_BANNER);
+    setHeaderBanner(item);
+  }, [content]); 
 
   return (
     <section className="banner-area">
@@ -23,7 +23,7 @@ const Banner1 = () => {
                 className="title ah-headline wow fadeInUp"
                 data-wow-delay=".2s"
               >
-                {header && <div id={header.content_id}>{header.content}</div>}
+                {headerBanner && <div id={headerBanner.content_id}>{headerBanner.content}</div>}
                 <Typewriter
                   tag="span"
                   options={{
