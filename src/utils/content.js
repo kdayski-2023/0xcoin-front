@@ -3,5 +3,7 @@ export const CONTENT_ID = {
   HEADER_WRITING__BEFORE: 'header_writing__before',
   HEADER_WRITING__SPAN: 'header_writing__span',
   HEADER_WRITING__AFTER: 'header_writing__after',
-  PRICING: 'pricing1'
+  PRICING: 'pricing1',
+  FREE_TRIAL_BUTTON: 'free_trial_button',
+  HOW_IT: 'how_it',
 };

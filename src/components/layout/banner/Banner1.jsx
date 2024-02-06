@@ -1,17 +1,10 @@
 import useContent from 'hooks/useContent';
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 import { CONTENT_ID } from 'utils/content';
 
 const Banner1 = () => {
-  const [headerBanner, setHeaderBanner] = useState(null);
-  const { content, error, loading } = useContent();
-
-  useEffect(() => {
-    const item = content.find((item) => item.content_id === CONTENT_ID.HEADER_BANNER);
-    setHeaderBanner(item);
-  }, [content]); 
+  const { content } = useContent();
 
   return (
     <section className="banner-area">
@@ -23,7 +16,10 @@ const Banner1 = () => {
                 className="title ah-headline wow fadeInUp"
                 data-wow-delay=".2s"
               >
-                {headerBanner && <div id={headerBanner.content_id}>{headerBanner.content}</div>}
+                <div id={CONTENT_ID.HEADER_BANNER}>
+                  {content[CONTENT_ID.HEADER_BANNER] ||
+                    'Your Personal trade Ai assistent'}
+                </div>
                 <Typewriter
                   tag="span"
                   options={{

@@ -1,19 +1,9 @@
 import { Link } from 'react-router-dom';
-import React, { useState,useEffect } from 'react';
-import { CONTENT_ID } from 'utils/content';
-import useContent from 'hooks/useContent';
+import React, { useState } from 'react';
 
 const Pricing1 = () => {
   const [isToggled, setToggled] = useState(false);
   const toggleTrueFalse = () => setToggled(!isToggled);
-  const [pricing, setPricing] = useState(null);
-
-  const { content, error, loading } = useContent();
-
-  useEffect(() => {
-    const item = content.find((item) => item.content_id === CONTENT_ID.PRICING);
-    setPricing(item);
-  }, [content]); 
 
   return (
     <section className="pricing-area pb-105">
@@ -79,7 +69,17 @@ const Pricing1 = () => {
                     <h2 className="title annual_price">Free</h2>
                   </div>
                 </div>
-                {pricing && <div dangerouslySetInnerHTML={{__html: pricing.content}} id={pricing.content_id}/>}
+                <div class="pricing-list">
+                  <ul class="list-wrap">
+                    <li>15 000 words/month</li>
+                    <li>Write in 10 languages</li>
+                    <li>Image generation (40/month)</li>
+                    <li class="delete">25+ languages</li>
+                    <li class="delete">Unlimited projects</li>
+                    <li class="delete">Unlimited Marvel Chat</li>
+                    <li class="delete">New experimental features</li>
+                  </ul>
+                </div>
                 <div className="pricing-btn">
                   <Link to="/login" className="btn btn-two">
                     choose plan
