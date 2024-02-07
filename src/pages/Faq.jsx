@@ -1,6 +1,8 @@
 import Layout from '../components/layout/Layout';
 import { useState } from 'react';
 import { Collapse } from 'react-collapse';
+import { CONTENT_ID } from 'utils/content';
+import useContent from 'hooks/useContent';
 
 const FAQ_ARR = [
   {
@@ -48,6 +50,8 @@ const FAQ_ARR = [
 ];
 
 export default function Faq() {
+  const { content } = useContent();
+
   const [isActive, setIsActive] = useState({
     status: false,
     key: 1,
@@ -71,9 +75,12 @@ export default function Faq() {
         headerStyle={1}
         footerStyle={1}
         breadcrumbTitle={
-          <>
-            Ask <span>Question</span>
-          </>
+          <div
+            dangerouslySetInnerHTML={{
+              __html:
+                content[CONTENT_ID.HEADER_FAQ] || 'Ask <span>Question</span>',
+            }}
+          />
         }
       >
         <section className="faq-area pb-150">
@@ -101,7 +108,8 @@ export default function Faq() {
                             type="button"
                             onClick={() => handleToggle(faq?.key)}
                           >
-                            {faq?.title}
+                            {content[`accordion${faq?.key}_header_faq`] ||
+                              faq?.title}
                           </button>
                         </h2>
                         <Collapse isOpened={isActive.key === faq?.key}>
@@ -113,7 +121,10 @@ export default function Faq() {
                             }
                           >
                             <div className="accordion-body">
-                              <p>{faq?.content}</p>
+                              <p>
+                                {content[`accordion${faq?.key}_content_faq`] ||
+                                  faq?.content}
+                              </p>
                             </div>
                           </div>
                         </Collapse>

@@ -1,4 +1,8 @@
+import { CONTENT_ID } from 'utils/content';
+import useContent from 'hooks/useContent';
+
 const Roadmap = () => {
+  const { content } = useContent();
   return (
     <section className="roadmap-area pt-140 pb-130">
       <div className="container">
@@ -8,9 +12,12 @@ const Roadmap = () => {
               <h2
                 className="title title-animation wow fadeInUp"
                 data-wow-delay=".2s"
-              >
-                How it <span>works</span>
-              </h2>
+                dangerouslySetInnerHTML={{
+                  __html:
+                    content[CONTENT_ID.HEADER_ROADMAP] ||
+                    'How it <span>works</span>',
+                }}
+              />
             </div>
           </div>
         </div>
@@ -35,11 +42,21 @@ const Roadmap = () => {
                       className="roadmap-content wow fadeInRight"
                       data-wow-delay=".2s"
                     >
-                      <h4 className="title">Selecting an AI tool</h4>
-                      <p>
-                        Choose from a variety of AI tools to write social media
-                        ads, hero sections, blog posts...
-                      </p>
+                      <h4
+                        className="title"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            content[CONTENT_ID.TITLE1_ROADMAP] ||
+                            'Selecting an AI tool',
+                        }}
+                      />
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            content[CONTENT_ID.CONTENT1_ROADMAP] ||
+                            'Choose from a variety of AI tools to write social media ads, hero sections, blog posts...',
+                        }}
+                      />
                     </div>
                   </div>
                 </li>
@@ -56,11 +73,21 @@ const Roadmap = () => {
                       className="roadmap-content wow fadeInLeft"
                       data-wow-delay=".2s"
                     >
-                      <h4 className="title">Write your keywords</h4>
-                      <p>
-                        Explain to the AI ​​what you want to write. The more
-                        details, the better output.
-                      </p>
+                      <h4
+                        className="title"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            content[CONTENT_ID.TITLE2_ROADMAP] ||
+                            'Write your keywords',
+                        }}
+                      />
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            content[CONTENT_ID.CONTENT2_ROADMAP] ||
+                            'Explain to the AI ​​what you want to write. The more details, the better output.',
+                        }}
+                      />
                     </div>
                   </div>
                 </li>
@@ -77,11 +104,21 @@ const Roadmap = () => {
                       className="roadmap-content wow fadeInRight"
                       data-wow-delay=".2s"
                     >
-                      <h4 className="title">Let's the AI do its magic</h4>
-                      <p>
-                        Our highly trained AI understands your details and
-                        generate unique and human-like content in seconds.
-                      </p>
+                      <h4
+                        className="title"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            content[CONTENT_ID.TITLE3_ROADMAP] ||
+                            "Let's the AI do its magic",
+                        }}
+                      />
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            content[CONTENT_ID.CONTENT3_ROADMAP] ||
+                            'Our highly trained AI understands your details and generate unique and human-like content in seconds.',
+                        }}
+                      />
                     </div>
                   </div>
                 </li>

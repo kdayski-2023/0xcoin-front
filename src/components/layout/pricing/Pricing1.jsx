@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
+import { CONTENT_ID } from 'utils/content';
+import useContent from 'hooks/useContent';
 
 const Pricing1 = () => {
   const [isToggled, setToggled] = useState(false);
   const toggleTrueFalse = () => setToggled(!isToggled);
+  const { content } = useContent();
 
   return (
     <section className="pricing-area pb-105">
@@ -14,16 +17,24 @@ const Pricing1 = () => {
               <h2
                 className="title title-animation wow fadeInUp"
                 data-wow-delay=".2s"
-              >
-                Money well <span>invested</span>
-              </h2>
+                dangerouslySetInnerHTML={{
+                  __html:
+                    content[CONTENT_ID.HEADER_PRICING] ||
+                    'Money well <span>invested</span>',
+                }}
+              />
             </div>
           </div>
         </div>
         <div className="pricing-item-wrap">
           <div className="pricing-billing-duration text-center">
             <div className="pricing-tab" onClick={toggleTrueFalse}>
-              <span className="tab-btn monthly_tab_title">Monthly</span>
+              <span
+                className="tab-btn monthly_tab_title"
+                dangerouslySetInnerHTML={{
+                  __html: content[CONTENT_ID.PERIOD1_PRICING] || 'Monthly',
+                }}
+              />
               <span
                 className={
                   isToggled
@@ -31,7 +42,12 @@ const Pricing1 = () => {
                     : ' pricing-tab-switcher'
                 }
               />
-              <span className="tab-btn annual_tab_title">Yearly</span>
+              <span
+                className="tab-btn annual_tab_title"
+                dangerouslySetInnerHTML={{
+                  __html: content[CONTENT_ID.PERIOD2_PRICING] || 'Yearly',
+                }}
+              />
             </div>
           </div>
           <div className="row justify-content-center">
@@ -61,7 +77,13 @@ const Pricing1 = () => {
                     </div>
                     <div className="content" style={{ padding: '0' }}>
                       <h4 className="title">Basic</h4>
-                      <span>03 Services</span>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            content[CONTENT_ID.SERVICES1_PRICING] ||
+                            '03 Services',
+                        }}
+                      />
                     </div>
                   </div>
                   <div className="pricing-price">
@@ -71,13 +93,61 @@ const Pricing1 = () => {
                 </div>
                 <div class="pricing-list">
                   <ul class="list-wrap">
-                    <li>15 000 words/month</li>
-                    <li>Write in 10 languages</li>
-                    <li>Image generation (40/month)</li>
-                    <li class="delete">25+ languages</li>
-                    <li class="delete">Unlimited projects</li>
-                    <li class="delete">Unlimited Marvel Chat</li>
-                    <li class="delete">New experimental features</li>
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES1_PRICING__LI1] ||
+                          '<li>15 000 words/month</li>',
+                      }}
+                    />
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES1_PRICING__LI2] ||
+                          '<li>Write in 10 languages</li>',
+                      }}
+                    />
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES1_PRICING__LI3] ||
+                          '<li>Image generation (40/month)</li>',
+                      }}
+                    />
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES1_PRICING__LI4] ||
+                          '<li class="delete">25+ languages</li>',
+                      }}
+                    />
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES1_PRICING__LI5] ||
+                          '<li class="delete">Unlimited projects</li>',
+                      }}
+                    />
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES1_PRICING__LI6] ||
+                          '<li class="delete">Unlimited Marvel Chat</li>',
+                      }}
+                    />
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES1_PRICING__LI7] ||
+                          '<li class="delete">New experimental features</li>',
+                      }}
+                    />
                   </ul>
                 </div>
                 <div className="pricing-btn">
@@ -92,7 +162,13 @@ const Pricing1 = () => {
                 className="pricing-item active wow fadeInUp"
                 data-wow-delay=".5s"
               >
-                <span className="popular">Most popular</span>
+                <span
+                  className="popular"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      content[CONTENT_ID.POPULAR_PRICING] || 'Most popular',
+                  }}
+                />
                 <div className="pricing-shape">
                   <svg
                     viewBox="0 0 410 616"
@@ -133,7 +209,13 @@ const Pricing1 = () => {
                     </div>
                     <div className="content" style={{ padding: '0' }}>
                       <h4 className="title">Standard</h4>
-                      <span>05 Services</span>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            content[CONTENT_ID.SERVICES2_PRICING] ||
+                            '05 Services',
+                        }}
+                      />
                     </div>
                   </div>
                   <div className="pricing-price">
@@ -144,13 +226,61 @@ const Pricing1 = () => {
                 </div>
                 <div className="pricing-list">
                   <ul className="list-wrap">
-                    <li>15 000 words/month</li>
-                    <li>Write in 10 languages</li>
-                    <li>Image generation (40/month)</li>
-                    <li>25+ languages</li>
-                    <li>Unlimited projects</li>
-                    <li className="delete">Unlimited Marvel Chat</li>
-                    <li className="delete">New experimental features</li>
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES2_PRICING__LI1] ||
+                          '<li>15 000 words/month</li>',
+                      }}
+                    />
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES2_PRICING__LI2] ||
+                          '<li>Write in 10 languages</li>',
+                      }}
+                    />
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES2_PRICING__LI3] ||
+                          '<li>Image generation (40/month)</li>',
+                      }}
+                    />
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES2_PRICING__LI4] ||
+                          '<li>25+ languages</li>',
+                      }}
+                    />
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES2_PRICING__LI5] ||
+                          '<li>Unlimited projects</li>',
+                      }}
+                    />
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES2_PRICING__LI6] ||
+                          '<li class="delete">Unlimited Marvel Chat</li>',
+                      }}
+                    />
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES2_PRICING__LI7] ||
+                          '<li class="delete">New experimental features</li>',
+                      }}
+                    />
                   </ul>
                 </div>
                 <div className="pricing-btn">
@@ -200,13 +330,61 @@ const Pricing1 = () => {
                 </div>
                 <div className="pricing-list">
                   <ul className="list-wrap">
-                    <li>15 000 words/month</li>
-                    <li>Write in 10 languages</li>
-                    <li>Image generation (40/month)</li>
-                    <li>25+ languages</li>
-                    <li>Unlimited projects</li>
-                    <li>Unlimited Marvel Chat</li>
-                    <li>New experimental features</li>
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES3_PRICING__LI1] ||
+                          '<li>15 000 words/month</li>',
+                      }}
+                    />
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES3_PRICING__LI2] ||
+                          '<li>Write in 10 languages</li>',
+                      }}
+                    />
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES3_PRICING__LI3] ||
+                          '<li>Image generation (40/month)</li>',
+                      }}
+                    />
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES3_PRICING__LI4] ||
+                          '<li>25+ languages</li>',
+                      }}
+                    />
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES3_PRICING__LI5] ||
+                          '<li>Unlimited projects</li>',
+                      }}
+                    />
+                    <div
+                      style={{ marginBottom: '17px' }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES3_PRICING__LI6] ||
+                          '<li>Unlimited Marvel Chat</li>',
+                      }}
+                    />
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          content[CONTENT_ID.SERVICES3_PRICING__LI7] ||
+                          '<li>New experimental features</li>',
+                      }}
+                    />
                   </ul>
                 </div>
                 <div className="pricing-btn">
