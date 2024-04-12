@@ -7,11 +7,9 @@ import Button from '../../ui/button/Button';
 import './Main.scss';
 import CurrencyServiceInstance from 'services/currency.service';
 import useNews from 'hooks/useNews';
-// import useCurrency from 'hooks/useCurrency';
 
 const Main = () => {
   const { loading } = useNews();
-  // const { currency } = useCurrency();
 
   const handleClick = (value) => {
     CurrencyServiceInstance.setCurrency(value);
