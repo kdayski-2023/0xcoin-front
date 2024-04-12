@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CONTENT_ID } from 'utils/content';
+import useContent from 'hooks/useContent';
 
 function Tools() {
+  const { content } = useContent();
+
   return (
     <section className="tools-area pb-135">
       <div className="container">
@@ -11,9 +15,12 @@ function Tools() {
               <h2
                 className="title title-animation wow fadeInUp"
                 data-wow-delay=".2s"
-              >
-                60+ Powerful <span>Copywriting</span> Tools
-              </h2>
+                dangerouslySetInnerHTML={{
+                  __html:
+                    content[CONTENT_ID.HEADER_TOOLS] ||
+                    '60+ Powerful <span>Copywriting</span> Tools',
+                }}
+              />
             </div>
           </div>
         </div>
@@ -56,10 +63,17 @@ function Tools() {
               </div>
               <div className="tools-content">
                 <h4 className="title">
-                  <Link to="/">Social media</Link>
+                  <Link
+                    to="/"
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        content[CONTENT_ID.CARD1_LINK1_TOOLS] || 'Social media',
+                    }}
+                  />
                 </h4>
                 <Link to="/" className="link-btn">
-                  Select & Try<i className="far fa-arrow-right"></i>
+                  {content[CONTENT_ID.CARD1_LINK1_TOOLS] || 'Select & Try'}
+                  <i className="far fa-arrow-right"></i>
                 </Link>
               </div>
             </div>
@@ -102,10 +116,16 @@ function Tools() {
               </div>
               <div className="tools-content">
                 <h4 className="title">
-                  <Link to="/">Design</Link>
+                  <Link
+                    to="/"
+                    dangerouslySetInnerHTML={{
+                      __html: content[CONTENT_ID.CARD2_LINK1_TOOLS] || 'Design',
+                    }}
+                  />
                 </h4>
                 <Link to="/" className="link-btn">
-                  Select & Try<i className="far fa-arrow-right"></i>
+                  {content[CONTENT_ID.CARD2_LINK2_TOOLS] || 'Select & Try'}
+                  <i className="far fa-arrow-right"></i>
                 </Link>
               </div>
             </div>
@@ -148,10 +168,16 @@ function Tools() {
               </div>
               <div className="tools-content">
                 <h4 className="title">
-                  <Link to="/">Coding</Link>
+                  <Link
+                    to="/"
+                    dangerouslySetInnerHTML={{
+                      __html: content[CONTENT_ID.CARD3_LINK1_TOOLS] || 'Coding',
+                    }}
+                  />
                 </h4>
                 <Link to="/" className="link-btn">
-                  Select & Try<i className="far fa-arrow-right"></i>
+                  {content[CONTENT_ID.CARD3_LINK2_TOOLS] || 'Select & Try'}
+                  <i className="far fa-arrow-right"></i>
                 </Link>
               </div>
             </div>
@@ -194,10 +220,17 @@ function Tools() {
               </div>
               <div className="tools-content">
                 <h4 className="title">
-                  <Link to="/">Marketing</Link>
+                  <Link
+                    to="/"
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        content[CONTENT_ID.CARD4_LINK1_TOOLS] || 'Marketing',
+                    }}
+                  />
                 </h4>
                 <Link to="/" className="link-btn">
-                  Select & Try<i className="far fa-arrow-right"></i>
+                  {content[CONTENT_ID.CARD4_LINK2_TOOLS] || 'Select & Try'}
+                  <i className="far fa-arrow-right"></i>
                 </Link>
               </div>
             </div>
@@ -240,10 +273,16 @@ function Tools() {
               </div>
               <div className="tools-content">
                 <h4 className="title">
-                  <Link to="/">SEO</Link>
+                  <Link
+                    to="/"
+                    dangerouslySetInnerHTML={{
+                      __html: content[CONTENT_ID.CARD5_LINK1_TOOLS] || 'SEO',
+                    }}
+                  />
                 </h4>
                 <Link to="/" className="link-btn">
-                  Select & Try<i className="far fa-arrow-right"></i>
+                  {content[CONTENT_ID.CARD5_LINK2_TOOLS] || 'Select & Try'}
+                  <i className="far fa-arrow-right"></i>
                 </Link>
               </div>
             </div>

@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
+import { CONTENT_ID } from 'utils/content';
+import useContent from 'hooks/useContent';
 
 const Writing = () => {
+  const { content } = useContent();
+
   return (
     <section className="writing-area pb-130 pt-130">
       <div className="container">
@@ -10,9 +14,12 @@ const Writing = () => {
               <h2
                 className="title title-animation wow fadeInUp"
                 data-wow-delay=".2s"
-              >
-                Start trading <span>10x smarter</span> with AI
-              </h2>
+                dangerouslySetInnerHTML={{
+                  __html:
+                    content[CONTENT_ID.HEADER_WRITING] ||
+                    'Start trading <span>10x smarter</span> with AI',
+                }}
+              />
             </div>
           </div>
         </div>
@@ -46,17 +53,27 @@ const Writing = () => {
                 <i className="far fa-brain" />
               </div>
               <div className="writing-content">
-                <h4 className="title">AI analysis</h4>
-                <p>
-                  Innovative and one of a kind: our service instantly analyzes
-                  the crypto market with unsurpassed accuracy.
-                </p>
+                <h4
+                  className="title"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      content[CONTENT_ID.CARD1_TITLE_WRITING] || 'AI analysis',
+                  }}
+                />
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      content[CONTENT_ID.CARD1_CONTENT_WRITING] ||
+                      'Innovative and one of a kind: our service instantly analyzes the crypto market with unsurpassed accuracy.',
+                  }}
+                />
+
                 <Link
                   to="/work"
                   className="link-btn"
                   style={{ position: 'absolute', bottom: '35px' }}
                 >
-                  AI analysis
+                  {content[CONTENT_ID.CARD1_FOOTER_WRITING] || 'AI analysis'}
                   <i className="far fa-arrow-right" />
                 </Link>
               </div>
@@ -91,14 +108,28 @@ const Writing = () => {
                 <i className="far fa-chart-line" />
               </div>
               <div className="writing-content">
-                <h4 className="title">Technical analysis</h4>
-                <p>Candle-based volume and price analysis</p>
+                <h4
+                  className="title"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      content[CONTENT_ID.CARD2_TITLE_WRITING] ||
+                      'Technical analysis',
+                  }}
+                />
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      content[CONTENT_ID.CARD2_CONTENT_WRITING] ||
+                      'Candle-based volume and price analysis',
+                  }}
+                />
                 <Link
                   to="/work"
                   className="link-btn"
                   style={{ position: 'absolute', bottom: '35px' }}
                 >
-                  Technical analysis
+                  {content[CONTENT_ID.CARD2_FOOTER_WRITING] ||
+                    'Technical analysis'}
                   <i className="far fa-arrow-right" />
                 </Link>
               </div>
@@ -133,18 +164,26 @@ const Writing = () => {
                 <i className="fal fa-lightbulb-on" />
               </div>
               <div className="writing-content">
-                <h4 className="title">News</h4>
-                <p>
-                  We parse and analyze the leading news from the world of
-                  cryptocurrencies to provide you with the most up-to-date
-                  information.
-                </p>
+                <h4
+                  className="title"
+                  dangerouslySetInnerHTML={{
+                    __html: content[CONTENT_ID.CARD3_TITLE_WRITING] || 'News',
+                  }}
+                />
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      content[CONTENT_ID.CARD3_CONTENT_WRITING] ||
+                      'We parse and analyze the leading news from the world of cryptocurrencies to provide you with the most up-to-date information.',
+                  }}
+                />
+
                 <Link
                   to="/work"
                   className="link-btn"
                   style={{ position: 'absolute', bottom: '35px' }}
                 >
-                  News
+                  {content[CONTENT_ID.CARD3_FOOTER_WRITING] || 'News'}
                   <i className="far fa-arrow-right" />
                 </Link>
               </div>
@@ -179,14 +218,27 @@ const Writing = () => {
                 <i className="fal fa-globe" />
               </div>
               <div className="writing-content">
-                <h4 className="title">Blockchain</h4>
-                <p>Capital movement analysis and insider wallet monitoring</p>
+                <h4
+                  className="title"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      content[CONTENT_ID.CARD4_TITLE_WRITING] || 'Blockchain',
+                  }}
+                />
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      content[CONTENT_ID.CARD4_CONTENT_WRITING] ||
+                      'Capital movement analysis and insider wallet monitoring',
+                  }}
+                />
                 <Link
                   to="/work"
                   className="link-btn"
                   style={{ position: 'absolute', bottom: '35px' }}
                 >
-                  Blockchain
+                  {content[CONTENT_ID.CARD4_FOOTER_WRITING] || 'Blockchain'}
+
                   <i className="far fa-arrow-right" />
                 </Link>
               </div>
@@ -221,17 +273,28 @@ const Writing = () => {
                 <i className="fal fa-user-friends" />
               </div>
               <div className="writing-content">
-                <h4 className="title">Asset portfolio</h4>
-                <p>
-                  On guard of your crypto portfolio: our service provides
-                  unsurpassed AI analytics and real-time forecasts.
-                </p>
+                <h4
+                  className="title"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      content[CONTENT_ID.CARD5_TITLE_WRITING] ||
+                      'Asset portfolio',
+                  }}
+                />
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      content[CONTENT_ID.CARD5_CONTENT_WRITING] ||
+                      'On guard of your crypto portfolio: our service provides unsurpassed AI analytics and real-time forecasts.',
+                  }}
+                />
                 <Link
                   to="/work"
                   className="link-btn"
                   style={{ position: 'absolute', bottom: '35px' }}
                 >
-                  Asset portfolio
+                  {content[CONTENT_ID.CARD5_FOOTER_WRITING] ||
+                    'Asset portfolio'}
                   <i className="far fa-arrow-right" />
                 </Link>
               </div>
@@ -266,17 +329,28 @@ const Writing = () => {
                 <i className="far fa-cog" />
               </div>
               <div className="writing-content">
-                <h4 className="title">Powerful settings</h4>
-                <p>
-                  Unlike anything you've experienced - unique and unimaginable
-                  capabilities.
-                </p>
+                <h4
+                  className="title"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      content[CONTENT_ID.CARD6_TITLE_WRITING] ||
+                      'Powerful settings',
+                  }}
+                />
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      content[CONTENT_ID.CARD6_CONTENT_WRITING] ||
+                      "Unlike anything you've experienced - unique and unimaginable capabilities.",
+                  }}
+                />
                 <Link
                   to="/work"
                   className="link-btn"
                   style={{ position: 'absolute', bottom: '35px' }}
                 >
-                  Try powerful settings
+                  {content[CONTENT_ID.CARD6_FOOTER_WRITING] ||
+                    'Try powerful settings'}
                   <i className="far fa-arrow-right" />
                 </Link>
               </div>

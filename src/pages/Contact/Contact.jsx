@@ -9,10 +9,13 @@ import MVoiceImg3 from '../../assets/img/images/m_voice_img03.png';
 import MVoiceImg4 from '../../assets/img/images/m_voice_img04.png';
 import MVoiceImg5 from '../../assets/img/images/m_voice_img05.png';
 import ContactShape from '../../assets/img/images/contact_shape.png';
+import { CONTENT_ID } from 'utils/content';
+import useContent from 'hooks/useContent';
 
 const Contact = () => {
   const { loading, error, success } = useContact();
   const formik = useFormik();
+  const { content } = useContent();
 
   useEffect(() => {
     if (success) {
@@ -62,10 +65,12 @@ const Contact = () => {
       headerStyle={1}
       footerStyle={1}
       breadcrumbTitle={
-        <>
-          {' '}
-          Get in <span>Touch</span>{' '}
-        </>
+        <div
+          dangerouslySetInnerHTML={{
+            __html:
+              content[CONTENT_ID.HEADER_CONTACT] || 'Get in <span>Touch</span>',
+          }}
+        />
       }
     >
       <div>
@@ -79,10 +84,21 @@ const Contact = () => {
                       <i className="fas fa-map-marker-alt" />
                     </div>
                     <div className="content">
-                      <h2 className="title">Visit Us Daily</h2>
-                      <p>
-                        1791 Yorkshire Circle KittyNY <br /> 10002,USA
-                      </p>
+                      <h2
+                        className="title"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            content[CONTENT_ID.CARD1_TITLE_CONTACT] ||
+                            'Visit Us Daily',
+                        }}
+                      />
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            content[CONTENT_ID.CARD1_TEXT_CONTACT] ||
+                            '1791 Yorkshire Circle KittyNY <br /> 10002,USA',
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -92,9 +108,21 @@ const Contact = () => {
                       <i className="fas fa-phone-volume" />
                     </div>
                     <div className="content">
-                      <h2 className="title">Contact Us</h2>
-                      <span>+ 1 008-345-6789</span>
-                      <span>+1 800-789-4561</span>
+                      <h2
+                        className="title"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            content[CONTENT_ID.CARD2_TITLE_CONTACT] ||
+                            'Contact Us',
+                        }}
+                      />
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            content[CONTENT_ID.CARD2_TEXT_CONTACT] ||
+                            '<span>+ 1 008-345-6789</span><span>+1 800-789-4561</span>',
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -104,9 +132,21 @@ const Contact = () => {
                       <i className="fas fa-envelope" />
                     </div>
                     <div className="content">
-                      <h2 className="title">Email Us</h2>
-                      <span>Sotcoxinfo@example.com</span>
-                      <span>Webyourinfo@gmail.com</span>
+                      <h2
+                        className="title"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            content[CONTENT_ID.CARD3_TITLE_CONTACT] ||
+                            'Email Us',
+                        }}
+                      />
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            content[CONTENT_ID.CARD3_TEXT_CONTACT] ||
+                            '<span>Sotcoxinfo@example.com</span> <span>Webyourinfo@gmail.com</span>',
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -115,9 +155,14 @@ const Contact = () => {
             <div className="row">
               <div className="col-lg-12">
                 <div className="contact-form-wrap">
-                  <h2 className="title">
-                    Do you have <span>question contact us</span>
-                  </h2>
+                  <h2
+                    className="title"
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        content[CONTENT_ID.FORM_HEADER_CONTANCT] ||
+                        'Do you have <span>question contact us</span>',
+                    }}
+                  />
                   <div className="row">
                     <div className="col-lg-5">
                       <div className="responds-wrap">
@@ -138,7 +183,13 @@ const Contact = () => {
                             <img src={MVoiceImg5} alt="" />
                           </li>
                         </ul>
-                        <p>Responds in 4-8 hours</p>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              content[CONTENT_ID.FORM_CONTACTS_CONTANCT] ||
+                              'Responds in 4-8 hours',
+                          }}
+                        />
                       </div>
                     </div>
                     <div className="col-lg-7">
