@@ -14,6 +14,10 @@ const Preloader = () => {
     }, 1000);
   }, []);
 
+  if (!loading) {
+    return null;
+  }
+
   return (
     <div id="preloader">
       <div className="spinner">

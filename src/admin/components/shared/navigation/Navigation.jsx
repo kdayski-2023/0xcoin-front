@@ -26,40 +26,75 @@ const Navigation = () => {
 
       <ul className="admin-top-nav">
         <li className="admin-d-xl-none">
-          <a href="#" data-sa-action="admin-search-open">
+          <button
+            type="button"
+            style={{
+              background: 'none',
+              border: 'none',
+              padding: 0,
+              cursor: 'pointer',
+              color: 'inherit',
+            }}
+            data-sa-action="admin-search-open"
+          >
             <i className="admin-zwicon-search"></i>
-          </a>
+          </button>
         </li>
 
         <li className="admin-dropdown admin-top-nav__notifications">
-          <a
-            href="#"
+          <button
+            type="button"
             data-toggle="admin-dropdown"
             className="admin-top-nav__notify"
+            style={{
+              background: 'none',
+              border: 'none',
+              padding: 0,
+              cursor: 'pointer',
+              color: 'inherit',
+            }}
           >
             <i className="admin-zwicon-bell"></i>
-          </a>
+          </button>
           <div className="admin-dropdown-menu admin-dropdown-menu-right admin-dropdown-menu--block">
             <div className="admin-dropdown-header">
               Notifications
               <div className="admin-actions">
-                <a
-                  href="#"
+                <button
+                  type="button"
                   className="admin-actions__item admin-zwicon-checkmark-square"
                   data-sa-action="admin-notifications-clear"
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    padding: 0,
+                    cursor: 'pointer',
+                    color: 'inherit',
+                  }}
                 >
                   /
-                </a>
+                </button>
               </div>
             </div>
 
             <div className="admin-listview admin-listview--hover">
               <div className="admin-listview__scroll admin-scrollbar">
                 {notifications.map((notification) => (
-                  <a
-                    href="#"
+                  <button
+                    type="button"
                     className="admin-listview__item"
                     key={notification.id}
+                    style={{
+                      display: 'block',
+                      width: '100%',
+                      textAlign: 'left',
+                      background: 'none',
+                      border: 'none',
+                      padding: 0,
+                      cursor: 'pointer',
+                      color: 'inherit',
+                      font: 'inherit',
+                    }}
                   >
                     <img
                       src={notification.source}
@@ -73,7 +108,7 @@ const Navigation = () => {
                       </div>
                       <p>{notification.paragraph}</p>
                     </div>
-                  </a>
+                  </button>
                 ))}
               </div>
             </div>
@@ -81,17 +116,53 @@ const Navigation = () => {
         </li>
 
         <li className="admin-dropdown admin-d-none admin-d-sm-inline-block">
-          <a href="#" data-toggle="admin-dropdown">
+          <button
+            type="button"
+            data-toggle="admin-dropdown"
+            style={{
+              background: 'none',
+              border: 'none',
+              padding: 0,
+              cursor: 'pointer',
+              color: 'inherit',
+            }}
+          >
             <i className="admin-zwicon-more-h"></i>
-          </a>
+          </button>
 
           <div className="admin-dropdown-menu admin-dropdown-menu-right">
-            <a href="#" className="admin-dropdown-item">
+            <button
+              type="button"
+              className="admin-dropdown-item"
+              style={{
+                display: 'block',
+                width: '100%',
+                textAlign: 'left',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                color: 'inherit',
+                font: 'inherit',
+              }}
+            >
               Logout
-            </a>
-            <a href="#" className="admin-dropdown-item">
+            </button>
+            <button
+              type="button"
+              className="admin-dropdown-item"
+              style={{
+                display: 'block',
+                width: '100%',
+                textAlign: 'left',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                color: 'inherit',
+                font: 'inherit',
+              }}
+            >
               Settings
-            </a>
+            </button>
           </div>
         </li>
       </ul>

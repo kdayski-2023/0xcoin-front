@@ -79,7 +79,7 @@ const useNews = () => {
         socketRef.current.disconnect();
       }
     };
-  }, [currency]);
+  }, [currency, sessionToken]);
 
   return {
     news,

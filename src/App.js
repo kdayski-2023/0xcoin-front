@@ -1,22 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
 
 import routes from './pages/index';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Preloader from './components/preloader/Preloader';
 import {
   ADMIN_SCREEN,
   FORGOT_PASSWORD_SCREEN,
-  REGISTER_SCREEN,
 } from './admin/configs/screens.config';
 
 import Layout from './admin/components/layout/Layout';
 import Main from './admin/components/screens/main/Main';
-import Register from './admin/components/screens/register/Register';
 import useSession from './hooks/useSession';
 import Forgot from './pages/Forgot/Forgot';
 import MessageDialog from './components/MessageDialog/MessageDialog';
 import ContentServiceInstance from 'services/content.service';
-import useContent from 'hooks/useContent';
 
 function App() {
   const { sessionToken } = useSession();
