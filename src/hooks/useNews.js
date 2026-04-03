@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import socketIOClient from 'socket.io-client';
+import { isApiMockEnabled } from '../config/apiMock.config';
 import NewsServiceInstance from '../services/news.service';
 import useCurrency from './useCurrency';
 
@@ -42,6 +43,10 @@ const useNews = () => {
   }, [currency]);
 
   useEffect(() => {
+    if (isApiMockEnabled() || !SOCKET_SERVER_URL) {
+      return undefined;
+    }
+
     const initSocket = () => {
       if (socketRef.current) {
         socketRef.current.disconnect();

@@ -8,6 +8,11 @@ import {
 } from '../../admin/configs/screens.config';
 import MessageDialogService from '../../services/message-dialog.service';
 import Layout from '../../components/layout/Layout';
+import {
+  isApiMockEnabled,
+  MOCK_ADMIN_EMAIL,
+  MOCK_ADMIN_PASSWORD,
+} from '../../config/apiMock.config';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -50,6 +55,20 @@ export default function Login() {
         <div className="login-content">
           <h3 className="title">Login to your account</h3>
           <span>👋 Welcome back! Please enter your details.</span>
+          {isApiMockEnabled() && (
+            <p
+              style={{
+                marginTop: 12,
+                fontSize: 13,
+                opacity: 0.85,
+                lineHeight: 1.5,
+              }}
+            >
+              Режим без бэкенда: вход в админку —{' '}
+              <strong>{MOCK_ADMIN_EMAIL}</strong> /{' '}
+              <strong>{MOCK_ADMIN_PASSWORD}</strong>
+            </p>
+          )}
           <form action="#">
             <div className="form-grp">
               <label htmlFor="email">Your Email</label>
