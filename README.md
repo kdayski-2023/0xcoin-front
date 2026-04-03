@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# 0xCoin — фронтенд
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Веб-приложение на **React 18** (Create React App) для криптопроекта **0xCoin**: публичный маркетинговый сайт, авторизация пользователей, интеграция с кошельками и админ-раздел при активной сессии.
 
-## Available Scripts
+## Возможности
 
-In the project directory, you can run:
+- **Публичные страницы**: несколько вариантов главной (`/`, `/index-2`, `/index-3`), о проекте, блог, FAQ, помощь, вакансии, контакты.
+- **Учётные записи**: вход (`/login`), регистрация (`/register`), восстановление по ссылке (`/recover/:hash`), сброс пароля (`/forgot-password`).
+- **Web3**: подключение кошелька (MetaMask SDK, WalletConnect), работа с **Web3.js**; пример операций с ERC-20 (например, депозит USDC в сети Polygon Mumbai, `chainId` 80001 — адреса заданы в коде).
+- **Бэкенд**: REST через **Axios** (`REACT_APP_API_URL`) — контент, новости, чат, подписки, контакты и др.
+- **Сокеты**: **Socket.io-client** для чата и новостей (`REACT_APP_SOCKET_URL`).
+- **Админка**: маршрут `/admin` (layout + главный экран) доступен при наличии сессионного токена.
+- **UI**: SASS, styled-components, анимации (AOS, WOW.js), слайдеры (react-slick), графики (**lightweight-charts**, виджеты TradingView), формы на **Formik** + **Yup**, часть состояния через **Redux Toolkit**.
 
-### `npm start`
+## Требования
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js (рекомендуется LTS)
+- npm или совместимый менеджер пакетов
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Установка и запуск
 
-### `npm test`
+```bash
+npm install
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+По умолчанию в `package.json` задан порт **5010** и отключена генерация source map в dev. На **Windows** переменные в скрипте в виде `PORT=5010` могут не сработать в cmd; при необходимости задайте порт вручную или используйте `cross-env`:
 
-### `npm run build`
+```bash
+set PORT=5010&& npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Сборка для продакшена:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm run build
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Переменные окружения
 
-### `npm run eject`
+Создайте файл `.env` в корне проекта (значения подставьте свои):
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Переменная | Назначение |
+|------------|------------|
+| `REACT_APP_API_URL` | Базовый URL REST API |
+| `REACT_APP_SOCKET_URL` | URL сервера Socket.io (чат, новости) |
+| `REACT_APP_PROJECT_ID` | Идентификатор проекта для WalletConnect |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Префикс `REACT_APP_` обязателен для переменных, доступных в браузере.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Структура проекта (кратко)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Путь | Описание |
+|------|----------|
+| `src/pages/` | Страницы и маршруты публичной части |
+| `src/components/` | Общие компоненты, лейауты секций лендинга, прелоадер |
+| `src/services/` | API, Web3, кошелёк, чат и др. |
+| `src/hooks/` | Хуки для сессии, контента, кошелька и т.д. |
+| `src/admin/` | Админ-интерфейс и конфиги |
 
-## Learn More
+Маршруты описаны в `src/pages/index.js` и дополнены в `src/App.js` (например, forgot-password и админка).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Скрипты
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Команда | Действие |
+|---------|----------|
+| `npm start` / `npm run dev` | Запуск dev-сервера (CRA) |
+| `npm run build` | Продакшен-сборка |
+| `npm test` | Тесты (Jest / Testing Library) |
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Пакет в `package.json` указан как `dexaireactjs` — это имя шаблона/сборки; репозиторий ориентирован на бренд **0xCoin**.
